@@ -1,0 +1,4 @@
+interface IHit
+{
+    void OnHit();
+}
