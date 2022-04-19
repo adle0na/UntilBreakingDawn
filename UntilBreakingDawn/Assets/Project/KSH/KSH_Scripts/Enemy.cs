@@ -206,7 +206,7 @@ public class Enemy : MonoBehaviour
         BombEnemy.SetActive(false);
 
         // 범위 내의 적을 찾는다.
-        RaycastHit[] exRayHits = Physics.SphereCastAll(transform.position, 5,
+        RaycastHit[] exRayHits = Physics.SphereCastAll(transform.position, 7,
                                                         Vector3.up, 0f, LayerMask.GetMask("Player"));
 
         // 찾을 시 Player 스크립트에서 HitByExplosion 함수(범위 내의 적에게 데미지) 호출 
