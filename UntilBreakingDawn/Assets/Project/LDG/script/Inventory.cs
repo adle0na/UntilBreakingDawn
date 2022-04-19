@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Inventory : MonoBehaviour
 {
     public static bool inventoryActivated = false;
@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     private GameObject go_InventoryBase;
     [SerializeField]
     private GameObject go_SlotsParent;
-    //½½·Ôµé
+    //??????
     private Slot[] slots;
 
 
@@ -70,4 +70,4 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-}
+}*/

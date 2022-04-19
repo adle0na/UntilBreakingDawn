@@ -15,50 +15,50 @@ public class StatusController : MonoBehaviour
     private int sp;
     private int currentSp;
 
-    //sp 증가량
+    //sp ??????
     [SerializeField]
     private int spIncreaseSpeed;
 
-    //sp 재회복 딜레이
+    //sp ?????? ??????
     [SerializeField]
     private int spRechargeTime;
     private int currentSpRechargeTime;
 
-    //sp 감소 여부
+    //sp ???? ????
     [SerializeField]
     private bool spUsed;
 
-    //방어력
+    //??????
     [SerializeField]
     private int dp;
     private int currentDp;
 
-    //배고픔
+    //??????
     [SerializeField]
     private int hungry;
     private int currentHungry;
 
-    //배고픔이 줄어드는속도
+    //???????? ????????????
     [SerializeField]
     private int hungryDecreaseTime;
     private int currentHungeryDecreaseTime;
 
-    //목마름
+    //??????
     [SerializeField]
     private int thirsty;
     private int currentThirsty;
 
-    //목마름이 줄어드는 속도
+    //???????? ???????? ????
     [SerializeField]
     private int thirstyDecreaseTime;
     private int currentThirstyDecreaseTime;
 
-    //만족도
+    //??????
     [SerializeField]
     private int satisfy;
     private int currentSatisfy;
 
-    //필요한 이미지
+    //?????? ??????
     [SerializeField]
     private Image[] images_Gauge;
 
@@ -93,7 +93,7 @@ public class StatusController : MonoBehaviour
             }
         }
         else
-            Debug.Log("배고픔 수치가 0이 되었습니다");
+            Debug.Log("?????? ?????? 0?? ??????????");
     }
     private void Thirsty()
     {
@@ -108,7 +108,7 @@ public class StatusController : MonoBehaviour
             }
         }
         else
-            Debug.Log("목마름 수치가 0이 되었습니다");
+            Debug.Log("?????? ?????? 0?? ??????????");
     }
     private void GaugeUpdate()
     {

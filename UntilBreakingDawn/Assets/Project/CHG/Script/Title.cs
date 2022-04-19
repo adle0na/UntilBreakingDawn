@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/*
 public class Title : MonoBehaviour
 {
     public string sceneName = "GameStage";
@@ -24,17 +24,17 @@ public class Title : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    //start 버튼
+    //start ????
     public void ClickStart()
     {
-        Debug.Log("로딩");
+        Debug.Log("????");
         SceneManager.LoadScene(sceneName);
     }
 
-    //start 버튼
+    //start ????
     public void ClickLoad()
     {
-        Debug.Log("로드");
+        Debug.Log("????");
 
         StartCoroutine(LoadCoroutin());
 
@@ -57,10 +57,10 @@ public class Title : MonoBehaviour
         }
     }
 
-    //start 버튼
+    //start ????
     public void ClickExit()
     {
-        Debug.Log("게임종료");
+        Debug.Log("????????");
         Application.Quit();
     }
-}
+}*/

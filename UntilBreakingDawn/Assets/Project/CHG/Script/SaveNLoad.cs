@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+/*
 [System.Serializable]
 public class SaveData
 {
@@ -26,10 +26,10 @@ public class SaveNLoad : MonoBehaviour
 
     void Start()
     {
-        //"/Saves/"; 파일에 저장
+        //"/Saves/"; ?????? ????
         SAVE_DATA_DIRECTORY = Application.dataPath + "/Saves/";
 
-        //경로에 뭐가 없으면 SAVE_DATA_DIRECTORY 생성
+        //?????? ???? ?????? SAVE_DATA_DIRECTORY ????
         if (!Directory.Exists(SAVE_DATA_DIRECTORY))
             Directory.CreateDirectory(SAVE_DATA_DIRECTORY);
 
@@ -40,7 +40,7 @@ public class SaveNLoad : MonoBehaviour
         thePlayer = FindObjectOfType<PlayerController>();
         theInven = FindObjectOfType<Inventory>();
 
-        //Player 위치 저장
+        //Player ???? ????
         saveData.playerPos = thePlayer.transform.position;
         saveData.playerRot = thePlayer.transform.eulerAngles;
 
@@ -55,13 +55,13 @@ public class SaveNLoad : MonoBehaviour
         //    }
         //}
 
-        //Player 위치를 json화 시키는것
+        //Player ?????? json?? ????????
         string json = JsonUtility.ToJson(saveData);
 
-        //텍스트들을 이 경로 파일 위치에 저장한다
+        //?????????? ?? ???? ???? ?????? ????????
         File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
 
-        Debug.Log("저장완료");
+        Debug.Log("????????");
         Debug.Log(json);
     }
 
@@ -75,7 +75,7 @@ public class SaveNLoad : MonoBehaviour
             thePlayer = FindObjectOfType<PlayerController>();
             theInven = FindObjectOfType<Inventory>();
 
-            //load 하면 위치가 save 된곳으로 이동
+            //load ???? ?????? save ???????? ????
             thePlayer.transform.position = saveData.playerPos;
             thePlayer.transform.eulerAngles = saveData.playerRot;
 
@@ -84,12 +84,12 @@ public class SaveNLoad : MonoBehaviour
                 //theInven.LoadToInven(saveData.invenArrayNumber[i], saveData.invenItemName[i], saveData.invenItemNumber[i]);
             }
 
-            Debug.Log("로그 완료");
+            Debug.Log("???? ????");
         }
         else
         {
-            Debug.Log("세이브 파일이 없습니다.");
+            Debug.Log("?????? ?????? ????????.");
         }
 
     }
-}
+}*/

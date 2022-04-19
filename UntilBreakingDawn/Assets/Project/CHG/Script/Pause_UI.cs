@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Pause_UI : MonoBehaviour
 {
     [SerializeField]
@@ -26,40 +26,41 @@ public class Pause_UI : MonoBehaviour
         }
     }
 
-    //매뉴 부르기
+    //???? ??????
     void CallManu()
     {
         GameManager.isPause = true;
         go_BaseUi.SetActive(true);
-        Time.timeScale = 0f;   //시간 멈춤
+        Time.timeScale = 0f;   //???? ????
     }
 
-    //매뉴 닫기
+    //???? ????
     void CloseManu()
     {
         GameManager.isPause = false;
         go_BaseUi.SetActive(false);
-        Time.timeScale = 1f;   //시간 다시 시작
+        Time.timeScale = 1f;   //???? ???? ????
     }
 
-    //게임 세이브
+    //???? ??????
     public void ClickSave()
     {
-        Debug.Log("세이브");
+        Debug.Log("??????");
         theSaveNLoad.SaveData();
     }
 
-    //게임 로드
+    //???? ????
     public void ClickLoad()
     {
-        Debug.Log("로드");
+        Debug.Log("????");
         theSaveNLoad.LoadData();
     }
 
-    //게임 나가기
+    //???? ??????
     public void ClickExit()
     {
-        Debug.Log("게임종료");
+        Debug.Log("????????");
         Application.Quit();
     }
 }
+*/
