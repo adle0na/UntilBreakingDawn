@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-/*
-public class Title : MonoBehaviour
+
+public class Title_CHG : MonoBehaviour
 {
     public string sceneName = "GameStage";
 
-    public static Title instance;
+    public static Title_CHG instance;
 
-    private SaveNLoad theSaveNLoae;
+    private SaveNLoad_CHG theSaveNLoae;
 
     private void Awake()
     {
@@ -24,17 +24,17 @@ public class Title : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    //start ????
+    //start 버튼
     public void ClickStart()
     {
-        Debug.Log("????");
+        Debug.Log("로딩");
         SceneManager.LoadScene(sceneName);
     }
 
-    //start ????
+    //start 버튼
     public void ClickLoad()
     {
-        Debug.Log("????");
+        Debug.Log("로드");
 
         StartCoroutine(LoadCoroutin());
 
@@ -49,7 +49,7 @@ public class Title : MonoBehaviour
                 yield return null;
             }
 
-            theSaveNLoae = FindObjectOfType<SaveNLoad>();
+            theSaveNLoae = FindObjectOfType<SaveNLoad_CHG>();
 
             theSaveNLoae.LoadData();
             Destroy(gameObject);
@@ -57,10 +57,10 @@ public class Title : MonoBehaviour
         }
     }
 
-    //start ????
+    //start 버튼
     public void ClickExit()
     {
-        Debug.Log("????????");
+        Debug.Log("게임종료");
         Application.Quit();
     }
-}*/
+}

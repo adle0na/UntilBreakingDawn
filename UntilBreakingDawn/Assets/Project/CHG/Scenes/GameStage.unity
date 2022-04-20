@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 416ee80c6a09f9b4fb43d9aa43f4a057, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.5485666, g: 0.85513043, b: 0.9221765, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -273,7 +273,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 382319269}
-        m_TargetAssemblyTypeName: Pause_UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pause_UI_CHG, Assembly-CSharp
         m_MethodName: ClickLoad
         m_Mode: 1
         m_Arguments:
@@ -406,7 +406,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 382319269}
-        m_TargetAssemblyTypeName: Pause_UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pause_UI_CHG, Assembly-CSharp
         m_MethodName: ClickExit
         m_Mode: 1
         m_Arguments:
@@ -484,11 +484,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 382319268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097b0efdab6d7744596e1df70eec5480, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b4541430a80f4049b78b672ac16f1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   go_BaseUi: {fileID: 730513551}
-  theSaveNLoad: {fileID: 1874444473}
+  theSaveNLoad: {fileID: 0}
 --- !u!114 &382319270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,7 +1291,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 382319269}
-        m_TargetAssemblyTypeName: Pause_UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pause_UI_CHG, Assembly-CSharp
         m_MethodName: ClickSave
         m_Mode: 1
         m_Arguments:
@@ -1739,9 +1739,9 @@ GameObject:
   - component: {fileID: 1149441513}
   - component: {fileID: 1149441512}
   - component: {fileID: 1149441511}
-  - component: {fileID: 1149441510}
   - component: {fileID: 1149441515}
   - component: {fileID: 1149441516}
+  - component: {fileID: 1149441510}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1758,22 +1758,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149441509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6756c3eda4ab01048a12c0ce200de4fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dfb915c9d69b2246adfe87cd0b5d2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
   runSpeed: 10
-  crouchSpeed: 2.5
+  crouchSpeed: 0
   applySpeed: 0
   jumpPower: 5
-  dashSpeed: 15
-  dashTime: 0.1
-  lookSensitivity: 2
-  cameraRotationLimit: 45
+  dashSpeed: 10
+  dashTime: 0
+  lookSensitivity: 0
+  cameraRotationLimit: 0
   crouchPosY: 0
   originPosY: 0
   theCamera: {fileID: 963194227}
   gameOver: {fileID: 865039723}
+  jump_Sound: jump_Sound
 --- !u!136 &1149441511
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2243,7 +2244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acc617f8fc465e46a13da1abb764bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goGameOverUI: {fileID: 2079037953}
 --- !u!4 &1874444475
 Transform:
   m_ObjectHideFlags: 0
@@ -2565,12 +2565,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2113560494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a731953a65b6945b20f503c65b82c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e89c8cba9464604fb88e27eeba27709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
   currentHp: 0
-  sp: 1000
+  sp: 100
   currentSp: 0
   spIncreaseSpeed: 10
   spRechargeTime: 300
@@ -2589,3 +2589,152 @@ MonoBehaviour:
   - {fileID: 489597147}
   - {fileID: 1952320835}
   - {fileID: 997181372}
+--- !u!1 &2117931351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2117931353}
+  - component: {fileID: 2117931352}
+  - component: {fileID: 2117931354}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2117931352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117931351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f368b17f3487e48aee310c8d703f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceEffects:
+  - {fileID: 2117931354}
+  - {fileID: 0}
+  audioSourceBgm: {fileID: 0}
+  playSoundName: []
+  effectSounds:
+  - name: jump_Sound
+    clip: {fileID: 8300000, guid: f65b8caedf0c89b4c9f6ea1408f5e362, type: 3}
+  bgmSounds: []
+--- !u!4 &2117931353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117931351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2117931354
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117931351}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
