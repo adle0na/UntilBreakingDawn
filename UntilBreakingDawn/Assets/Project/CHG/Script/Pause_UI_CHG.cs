@@ -7,6 +7,8 @@ public class Pause_UI_CHG : MonoBehaviour
     [SerializeField]
     private GameObject go_BaseUi;
     [SerializeField]
+    private GameObject status;
+    [SerializeField]
     private SaveNLoad_CHG theSaveNLoad;
 
 
@@ -31,6 +33,7 @@ public class Pause_UI_CHG : MonoBehaviour
     {
         GameManager_CHG.isPause = true;
         go_BaseUi.SetActive(true);
+        status.SetActive(false);
         Time.timeScale = 0f;   //Ω√∞£ ∏ÿ√„
     }
 
@@ -39,6 +42,7 @@ public class Pause_UI_CHG : MonoBehaviour
     {
         GameManager_CHG.isPause = false;
         go_BaseUi.SetActive(false);
+        status.SetActive(true);
         Time.timeScale = 1f;   //Ω√∞£ ¥ŸΩ√ Ω√¿€
     }
 
