@@ -22,8 +22,6 @@ public class CraftManual : MonoBehaviour
     private bool isActivated = false;
     private bool isPreviewActivated = false;
 
-    private int TabCount;
-
     [SerializeField]
     private GameObject go_BaseUI;   // 기본 베이스 UI
     [SerializeField]
@@ -57,6 +55,7 @@ public class CraftManual : MonoBehaviour
         craft_TabUI[0].transform.Find("SlotActive").gameObject.SetActive(true);
     }
 
+    // 제작 탭 클릭
     public void TabClick(int _TabNumber)
     {
         if (craftTab[_TabNumber].craftsName == $"제작탭_{_TabNumber}")
@@ -70,6 +69,7 @@ public class CraftManual : MonoBehaviour
         }
     }
 
+    // 슬롯 클릭
     public void SlotClick(int _slotNumber)
     {
         for (int i = 0; i < craftTab.Length; i++)
@@ -109,6 +109,7 @@ public class CraftManual : MonoBehaviour
             Cancel();
     }
 
+    // 클릭해서 설치할때 실행
     private void Build()
     {
         if (isPreviewActivated && go_Preview.GetComponent<PreviewObject>().isBuildable())
@@ -122,6 +123,7 @@ public class CraftManual : MonoBehaviour
         }
     }
 
+    // 설치 미리보기
     private void PreviewPositionUpdate()
     {
         if (Physics.Raycast(tf_Player.position, tf_Player.forward, out hitInfo, range, layerMask))
@@ -135,6 +137,7 @@ public class CraftManual : MonoBehaviour
         }
     }
 
+    // 설치 취소
     private void Cancel()
     {
         if (isPreviewActivated)
@@ -148,6 +151,7 @@ public class CraftManual : MonoBehaviour
         go_BaseUI.SetActive(false);
     }
 
+    // UI 켜기/끄기
     private void Window()
     {
         if (!isActivated)

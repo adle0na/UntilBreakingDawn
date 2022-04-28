@@ -10,17 +10,24 @@ public class DayAndNight : MonoBehaviour
     private float ChangeDayCount = 1.0f;   // 낮 밤 바꾸기 시작 시간초 
     private float RotateDay = 180f;        // 180도로 바꿔서 낮밤 유지
 
-    private SceneManager Scene;             // 씬 바꾸기
+    private SceneManager Scene;             // 씬 바꾸기용
 
     private bool isNight = false;           // 낮 밤 바꾸기용
 
     // Update is called once per frame
     void Update()
     {
+        ChangeDay();
+    }
+
+    // 밤/낮 바꾸기용
+    private void ChangeDay()
+    {
         // 게임 100초 = 현실 시간 1초
         // 지금은 현실 시간으로 계산
         ChangeDayCount += Time.deltaTime;
-        Debug.Log(ChangeDayCount);
+        Debug.Log(ChangeDayCount);// 게임 100초 = 현실 시간 1초
+
         if (ChangeDayCount >= dayChange)
         {
             transform.Rotate(Vector3.right, RotateDay);
@@ -36,6 +43,5 @@ public class DayAndNight : MonoBehaviour
                 ChangeDayCount = 0;
             }
         }
-
     }
 }
