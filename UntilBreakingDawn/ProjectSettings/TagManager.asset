@@ -4,11 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Melee
-  - Bullet
-  - Item
-  - Boulder
-  - Resource_Tree
+  - Wall
+  - Metal
+  - Blood
+  - Dirt
+  - Concrete
+  - ExplosiveBarrel
+  - Target
+  - GasTank
+  - Metal (Static)
+  - Wood (Static)
+  - Dirt (Static)
+  - Wood
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,16 +24,16 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - Craft
-  - Terrain
-  - 
+  - Wall
+  - First Person View
+  - Character
+  - Post Processing
+  - Post Processing Weapon
+  - Post Processing Scope
+  - Invisible Wall
+  - Projectile
   - 
   - 
   - 

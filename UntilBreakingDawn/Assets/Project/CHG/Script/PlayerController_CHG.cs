@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,10 +24,10 @@ public class PlayerController_CHG : MonoBehaviour
     [SerializeField]   //대쉬
     private float dashSpeed;
     public float dashTime;
-
+    
     [SerializeField]   //카메라
     private float lookSensitivity;    //카메라 민감도
-
+    
     // 카메라 한계
     [SerializeField]
     private float cameraRotationLimit;         // 카메라 시선의 각도 제한 (고개가 돌아가는 범위)
@@ -44,7 +45,7 @@ public class PlayerController_CHG : MonoBehaviour
     private bool isDash = false;     // 대쉬 안하고 있음
     private bool isDead = false;     // 사망
     private bool isHungry = false;   // 배고프면
-
+    
     // Rigidbody 선언
     // Collider로 충돌영역 설정, Rigidbody는 Collider에 물리학을 입히다
     // 사용하기 전에 선언이 필요
