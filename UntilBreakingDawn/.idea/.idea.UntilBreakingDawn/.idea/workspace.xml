@@ -2,56 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/brown_bear_col4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/brown_bear_col4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/chicken_col14.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/chicken_col14.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/iron_age_cattle_col3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/iron_age_cattle_col3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/wild_boar_col9.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animal pack deluxe/KSH_Models/Materials/wild_boar_col9.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Prefabs/Weapons/Using/Revolver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HQ Survival Pack/Prefabs/Weapons/Using/Revolver.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Scenes/GameStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Scenes/GameStage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Script/PlayerController_CHG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Script/PlayerController_CHG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Scenes/SampleScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Attack1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Attack1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Death1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Death1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Hit2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Hit2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Hit4.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Hit4.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Idle1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Idle1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Walk.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Animations/OtherSideBeast@Walk.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials/OthersideBeast1_1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials/OthersideBeast1_1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials/OthersideBeast1_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials/OthersideBeast1_2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials/OthersideBeast2_2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_OthersideBeast/KSH_Materials/OthersideBeast2_2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR/_InfinityPBR - Minotaur/_Fluffy Support/FluffyBuiltIn.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR/_InfinityPBR - Minotaur/_Fluffy Support/FluffyCommon.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR/_InfinityPBR - Minotaur/_Fluffy Support/FluffyHDRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR/_InfinityPBR - Minotaur/_Fluffy Support/FluffyURP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Animation/Player/PlayerAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Animation/Player/PlayerAnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolverHSW.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolverHSW.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Decals/HDRPdecal.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Decals/URPdecal.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Materials/GammaSpaceMaterials(WithoutNormal).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Materials/GammaSpaceMaterials.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Materials/LinearSpaceMaterials(WithoutNormal).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Materials/LinearSpaceMaterials.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Prefebs/OptimizedEffectsPrefebs.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Prefebs/OriginalEffectsPrefebs(WithoutDistort).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Prefebs/OriginalEffectsPrefebs.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Toon/ToonTypeMaterial(GammaSpace).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Toon/ToonTypeMaterial(LinearSpace).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpecialSkillsEffectsPack/Patch/Toon/ToonTypeTextures.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +99,9 @@
       <workItem from="1650237168146" duration="663000" />
       <workItem from="1650956747382" duration="2388000" />
       <workItem from="1651217770874" duration="3719000" />
+      <workItem from="1651558383286" duration="59000" />
+      <workItem from="1651558540539" duration="1000" />
+      <workItem from="1651560806306" duration="15346000" />
     </task>
     <servers />
   </component>
