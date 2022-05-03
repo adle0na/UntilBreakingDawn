@@ -19,8 +19,18 @@ public class PlayerAnimControlHSW : MonoBehaviour
         get => _animator.GetFloat("movementSpeed");
     }
 
+    public void OnReload()
+    {
+        _animator.SetTrigger("onReload");
+    }
+    
     public void Play(string stateName, int layer, float normalizedTime)
     {
         _animator.Play(stateName, layer, normalizedTime);
+    }
+
+    public bool CurrentAnimationIs(string name)
+    {
+        return _animator.GetCurrentAnimatorStateInfo(0).IsName(name);
     }
 }

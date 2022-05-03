@@ -26,10 +26,15 @@ public class WeaponAssultRifle : MonoBehaviour
     [SerializeField]
     private AudioClip            _audioClipFire;
 
+    [SerializeField]
+    private AudioClip            _audioClipReload;
+
     [Header("Weapon Setting")]
     [SerializeField]
     private WeaponSetting        _weaponSetting;
+    
     private float                _lastAttackTime = 0;
+    private bool                 _isReload = false;
     
     private AudioSource          _audioSource;
     private PlayerAnimControlHSW _animator;
@@ -56,6 +61,8 @@ public class WeaponAssultRifle : MonoBehaviour
 
     public void StartWeaponAction(int type = 0)
     {
+        if (_isReload == true) return;
+        
         if (type == 0)
         {
             if (_weaponSetting._isAutomaticAttack == true)
@@ -77,6 +84,14 @@ public class WeaponAssultRifle : MonoBehaviour
         }
     }
 
+    public void StartReload()
+    {
+        if (_isReload == true) return;
+        
+        StopWeaponAction();
+
+        StartCoroutine("OnReload");
+    }
     private IEnumerator OnAttackLoop()
     {
         while (true)
@@ -123,6 +138,29 @@ public class WeaponAssultRifle : MonoBehaviour
         yield return new WaitForSeconds(_weaponSetting._attackRate * 0.3f);
         
         _muzzleFlashEffect.SetActive(false);
+    }
+
+    private IEnumerator OnReload()
+    {
+        _isReload = true;
+        
+        _animator.OnReload();
+        PlaySound(_audioClipReload);
+
+        while (true)
+        {
+            if (_audioSource.isPlaying == false && _animator.CurrentAnimationIs("Movement"))
+            {
+                _isReload = false;
+
+                _weaponSetting._currentAmmo = _weaponSetting._maxAmmo;
+                _onAmmoEvent.Invoke(_weaponSetting._currentAmmo, _weaponSetting._maxAmmo);
+                
+                yield break;
+            }
+
+            yield return null;
+        }
     }
     
     private void PlaySound(AudioClip clip)

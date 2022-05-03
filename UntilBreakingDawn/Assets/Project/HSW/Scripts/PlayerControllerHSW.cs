@@ -6,9 +6,13 @@ using UnityEngine;
 public class PlayerControllerHSW : MonoBehaviour
 {
     [Header("Input KeyCodes")]
-    [SerializeField] private KeyCode _keyCodeRun   = KeyCode.LeftShift;
-    [SerializeField] private KeyCode _keyCodeJump  = KeyCode.Space;
-
+    [SerializeField] 
+    private KeyCode _keyCodeRun    = KeyCode.LeftShift;
+    [SerializeField] 
+    private KeyCode _keyCodeJump   = KeyCode.Space;
+    [SerializeField]
+    private KeyCode _keyCodeReload = KeyCode.R;
+    
     [Header("Audio Clips")]
     [SerializeField] private AudioClip _audioClipWalk;
     [SerializeField] private AudioClip _audioClipRun;
@@ -94,6 +98,10 @@ public class PlayerControllerHSW : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             _weapon.StopWeaponAction();
+        }
+        if (Input.GetKeyDown(_keyCodeReload))
+        {
+            _weapon.StartReload();
         }
     }
 }
