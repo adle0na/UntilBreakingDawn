@@ -7,10 +7,16 @@ using UnityEngine.Serialization;
 [System.Serializable]
 public class AmmoEvent : UnityEngine.Events.UnityEvent<int, int> { }
 
+[System.Serializable]
+public class MagazineEvent : UnityEngine.Events.UnityEvent<int> { }
+
 public class WeaponAssultRifle : MonoBehaviour
 {
     [HideInInspector]
-    public AmmoEvent             _onAmmoEvent = new AmmoEvent();
+    public AmmoEvent             _onAmmoEvent     = new AmmoEvent();
+
+    [HideInInspector]
+    public MagazineEvent         _OnMagazineEvent = new MagazineEvent();
     
     [Header("Fire Effects")]
     [SerializeField]
@@ -40,14 +46,17 @@ public class WeaponAssultRifle : MonoBehaviour
     private PlayerAnimControlHSW _animator;
     private CasingMemoryPool     _casingMemoryPool;
 
-    public WeaponName WeaponName => _weaponSetting._WeaponName;
-    
+    public WeaponName WeaponName      => _weaponSetting._WeaponName;
+    public int        CurrentMagazine => _weaponSetting._currentMagazine;
+    public int        maxMagazine     => _weaponSetting._maxMagazine;
+
     private void Awake()
     {
         _audioSource      = GetComponent<AudioSource>();
         _animator         = GetComponentInParent<PlayerAnimControlHSW>();
         _casingMemoryPool = GetComponent<CasingMemoryPool>();
 
+        _weaponSetting._currentMagazine = _weaponSetting._maxMagazine;
         _weaponSetting._currentAmmo = _weaponSetting._maxAmmo;
     }
 
@@ -56,6 +65,7 @@ public class WeaponAssultRifle : MonoBehaviour
         PlaySound(_audioClipTakeOutWeapon);
         _muzzleFlashEffect.SetActive(false);
         
+        _OnMagazineEvent.Invoke(_weaponSetting._currentMagazine);
         _onAmmoEvent.Invoke(_weaponSetting._currentAmmo, _weaponSetting._maxAmmo);
     }
 
@@ -86,7 +96,7 @@ public class WeaponAssultRifle : MonoBehaviour
 
     public void StartReload()
     {
-        if (_isReload == true) return;
+        if (_isReload == true || _weaponSetting._currentMagazine <= 0) return;
         
         StopWeaponAction();
 
@@ -153,6 +163,9 @@ public class WeaponAssultRifle : MonoBehaviour
             {
                 _isReload = false;
 
+                _weaponSetting._currentMagazine--;
+                _OnMagazineEvent.Invoke(_weaponSetting._currentMagazine);
+                
                 _weaponSetting._currentAmmo = _weaponSetting._maxAmmo;
                 _onAmmoEvent.Invoke(_weaponSetting._currentAmmo, _weaponSetting._maxAmmo);
                 
