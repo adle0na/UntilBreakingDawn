@@ -17,11 +17,12 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Enemy
+  - Resource_Tree
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Resource
   - Water
   - UI
   - 
