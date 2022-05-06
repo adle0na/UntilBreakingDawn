@@ -17,6 +17,9 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Enemy
+  - Normal
+  - Obstacle
+  - Resource_Tree
   layers:
   - Default
   - TransparentFX
