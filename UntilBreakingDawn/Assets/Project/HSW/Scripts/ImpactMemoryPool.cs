@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ImpactType {Normal = 0, obstacle, }
+public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3 }
 
 public class ImpactMemoryPool : MonoBehaviour
 {
@@ -23,13 +23,21 @@ public class ImpactMemoryPool : MonoBehaviour
 
     public void SpawnImpack(RaycastHit hit)
     {
-        if (hit.transform.CompareTag("Normal"))
+        if (hit.transform.CompareTag("Dirt"))
         {
-            OnSpawnImpack(ImpactType.Normal, hit.point, Quaternion.LookRotation(hit.normal));
+            OnSpawnImpack(ImpactType.Default, hit.point, Quaternion.LookRotation(hit.normal));
         }
-        else if (hit.transform.CompareTag("Obstacle"))
+        else if (hit.transform.CompareTag("Wood"))
         {
-            OnSpawnImpack(ImpactType.obstacle, hit.point, Quaternion.LookRotation(hit.normal));
+            OnSpawnImpack(ImpactType.Wood, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+        else if (hit.transform.CompareTag("Metal"))
+        {
+            OnSpawnImpack(ImpactType.Metal, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+        else if (hit.transform.CompareTag("Stone"))
+        {
+            OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
         }
     }
 

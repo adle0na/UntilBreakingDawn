@@ -14,8 +14,10 @@ public class PlayerControllerHSW : MonoBehaviour
     private KeyCode _keyCodeReload = KeyCode.R;
     
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip _audioClipWalk;
-    [SerializeField] private AudioClip _audioClipRun;
+    [SerializeField]
+    private AudioClip _audioClipWalk;
+    [SerializeField]
+    private AudioClip _audioClipRun;
     
     private RotateToMouseHSW     _rotateToMouseHsw;
     private MovementHSW          _movement;
@@ -23,7 +25,7 @@ public class PlayerControllerHSW : MonoBehaviour
     private PlayerAnimControlHSW _animator;
     private AudioSource          _audioSource;
     private WeaponAssultRifle    _weapon;
-    
+
     private void Awake()
     {
         Cursor.visible    = false;
@@ -99,6 +101,16 @@ public class PlayerControllerHSW : MonoBehaviour
         {
             _weapon.StopWeaponAction();
         }
+        
+        if (Input.GetMouseButtonDown(1))
+        {
+            _weapon.StartWeaponAction(1);
+        }
+        else if (Input.GetMouseButtonUp(1))
+        {
+            _weapon.StopWeaponAction(1);
+        }
+        
         if (Input.GetKeyDown(_keyCodeReload))
         {
             _weapon.StartReload();

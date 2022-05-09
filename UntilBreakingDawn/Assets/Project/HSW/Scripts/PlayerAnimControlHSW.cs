@@ -23,6 +23,12 @@ public class PlayerAnimControlHSW : MonoBehaviour
     {
         _animator.SetTrigger("onReload");
     }
+
+    public bool AimModeIs
+    {
+        set => _animator.SetBool("isAimMode", value);
+        get => _animator.GetBool("isAimMode");
+    }
     
     public void Play(string stateName, int layer, float normalizedTime)
     {

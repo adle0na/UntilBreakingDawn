@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
+    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="Gun Impact Effect">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ImpactNormal.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ImpactNormal.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ImpactObstacle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ImpactObstacle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerAnimControlHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerAnimControlHSW.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />

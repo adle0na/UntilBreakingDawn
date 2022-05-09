@@ -17,6 +17,9 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Enemy
+  - OilTank
+  - Stone
+  - Melee
   layers:
   - Default
   - TransparentFX
