@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
-public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3 }
+public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3, Blood = 4, ExplosiveBarrel = 5, }
 
 public class ImpactMemoryPool : MonoBehaviour
 {
@@ -39,13 +40,28 @@ public class ImpactMemoryPool : MonoBehaviour
         {
             OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
         }
+        else if (hit.transform.CompareTag("Enemy"))
+        {
+            OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+        else if (hit.transform.CompareTag("ExplosiveBarrel"))
+        {
+            Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
+            OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal), color);
+        }
     }
 
-    public void OnSpawnImpack(ImpactType type, Vector3 position, Quaternion rotation)
+    public void OnSpawnImpack(ImpactType type, Vector3 position, Quaternion rotation, Color color = new Color())
     {
         GameObject item = _memoryPool[(int) type].ActivatePoolItem();
         item.transform.position = position;
         item.transform.rotation = rotation;
         item.GetComponent<Impact>().Setup(_memoryPool[(int)type]);
+
+        if (type == ImpactType.ExplosiveBarrel)
+        {
+            ParticleSystem.MainModule main = item.GetComponent<ParticleSystem>().main;
+            main.startColor = color;
+        }
     }
 }

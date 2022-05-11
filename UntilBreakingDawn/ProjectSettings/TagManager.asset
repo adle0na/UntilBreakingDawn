@@ -20,6 +20,8 @@ TagManager:
   - OilTank
   - Stone
   - Melee
+  - Boulder
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Resource
   - Wall
   - First Person View
   - Character

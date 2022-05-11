@@ -359,11 +359,11 @@ GameObject:
   - component: {fileID: 7802702697659650973}
   m_Layer: 0
   m_Name: ghoul_RangedEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7802344168791013844
 Transform:
   m_ObjectHideFlags: 0
@@ -475,7 +475,8 @@ MonoBehaviour:
   PlayerSc: {fileID: 0}
   BombEnemy: {fileID: 0}
   Effect: {fileID: 0}
-  fireBall: {fileID: 3087478405258129613, guid: 0930cf561edfc4adfb888f6fd80e3471, type: 3}
+  fireBall: {fileID: 3087478405258129613, guid: 0930cf561edfc4adfb888f6fd80e3471,
+    type: 3}
   shoter: {fileID: 7802702697520312904}
 --- !u!1 &7803428501339259202
 GameObject:

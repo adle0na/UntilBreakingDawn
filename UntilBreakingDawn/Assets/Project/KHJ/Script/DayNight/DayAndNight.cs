@@ -10,10 +10,14 @@ public class DayAndNight : MonoBehaviour
     private float ChangeDayCount = 1.0f;   // 낮 밤 바꾸기 시작 시간초 
     private float RotateDay = 180f;        // 180도로 바꿔서 낮밤 유지
 
+    private EnemyMemoryPool _EnemyMemoryPool;
+    
     private SceneManager Scene;             // 씬 바꾸기용
+    
+    public bool isNight = false;           // 낮 밤 바꾸기용
 
-    private bool isNight = false;           // 낮 밤 바꾸기용
-
+    private int dayCount = 0;
+    
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +25,8 @@ public class DayAndNight : MonoBehaviour
     }
 
     // 밤/낮 바꾸기용
-    private void ChangeDay()
+    [HideInInspector]
+    public void ChangeDay()
     {
         // 게임 100초 = 현실 시간 1초
         // 지금은 현실 시간으로 계산
@@ -34,9 +39,11 @@ public class DayAndNight : MonoBehaviour
 
             if (!isNight)
             {
+                
                 isNight = true;
                 ChangeDayCount = 0;
             }
+            
             else
             {
                 isNight = false;
