@@ -1,15 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
-    public Slider _timerSlider;
-    public Text   _timerText;
-    public float  _gameTime;
-    public bool  _stopTimer;
+    public Slider     _timerSlider;
+    public Text       _timerText;
+    public float      _maxTime;
+    public bool       _stopTimer;
+    public GameObject _startMassage;
+    public GameObject _warningMessage;
 
+    private float       _gameTime = 300;
+    private float _timer = 0.00f;
+    private float _time;
+    private int _minutes;
+    private int _seconds;
+    
     private void Start()
     {
         _stopTimer = false;
@@ -19,29 +29,47 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        float time = _gameTime - Time.time;
-        int minutes = Mathf.FloorToInt(time / 60);
-        int seconds = Mathf.FloorToInt(time - minutes * 60f);
+        _timer += Time.deltaTime;
 
-        string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
-
-        if (time <= 0)
+        _time = _gameTime - _timer;
+        _minutes = Mathf.FloorToInt(_time / 60);
+        _seconds = Mathf.FloorToInt(_time - _minutes * 60f);
+        
+        string textTime = string.Format("{0:0}:{1:00}", _minutes, _seconds);
+        
+        if (_time <= 300 && _time > 270 )
         {
+            _startMassage.SetActive(true);
+        }
+        else if (_time <= 270 && _time > 30)
+        {
+            _startMassage.SetActive(false);
+            _warningMessage.SetActive(false);
+        }
+        else if (_time >= 40 && _time > 10)
+        {
+            _warningMessage.SetActive(true);
+        }
+        else if (_time <= 0)
+        {
+            _startMassage.SetActive(false);
+            _warningMessage.SetActive(false);
             if (_stopTimer == false)
             {
                 _stopTimer = true;
                 StartCoroutine(GameObject.Find("EnemyMemoryPool").GetComponent<EnemyMemoryPool>().SpawnTile());
+                return;
             }
         }
         else
         {
-            _stopTimer = false;
+            _time = _maxTime;
         }
 
         if (_stopTimer == false)
         {
             _timerText.text = textTime;
-            _timerSlider.value = time;
+            _timerSlider.value = _time;
         }
     }
 

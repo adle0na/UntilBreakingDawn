@@ -116,4 +116,14 @@ public class PlayerControllerHSW : MonoBehaviour
             _weapon.StartReload();
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        bool isDie = _status.DecreaseHP(damage);
+
+        if (isDie == true)
+        {
+            Debug.Log("GameOver");
+        }
+    }
 }

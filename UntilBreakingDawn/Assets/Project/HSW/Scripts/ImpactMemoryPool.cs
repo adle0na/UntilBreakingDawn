@@ -42,12 +42,12 @@ public class ImpactMemoryPool : MonoBehaviour
         }
         else if (hit.transform.CompareTag("Enemy"))
         {
-            OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
+            OnSpawnImpack(ImpactType.Blood, hit.point, Quaternion.LookRotation(hit.normal));
         }
         else if (hit.transform.CompareTag("ExplosiveBarrel"))
         {
             Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
-            OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal), color);
+            OnSpawnImpack(ImpactType.ExplosiveBarrel, hit.point, Quaternion.LookRotation(hit.normal), color);
         }
     }
 

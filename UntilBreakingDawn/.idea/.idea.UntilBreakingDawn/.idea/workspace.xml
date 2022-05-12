@@ -2,188 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/EnemySpawnPointMAT.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/EnemySpawnPointMAT.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/TimerBG.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/TimerBG.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/EnemySpawnPoint.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/EnemySpawnPoint.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ExplosiveBarrel.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ExplosiveBarrel.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemySpawnPoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemySpawnPoint.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ParticleAutoDestroyBytime.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ParticleAutoDestroyBytime.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/day-night-change-day-night-change-landscape-tree-142053233.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/day-night-change-day-night-change-landscape-tree-142053233.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Blue gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Blue gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Blue outline gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Blue outline gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Green gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Green gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Green outline gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Green outline gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Orange gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Orange gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Red gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Red gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Red outline gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Button/Red outline gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle blue .png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle blue .png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle blue full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle blue full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle green full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle green full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle green.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle red full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle red full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Circle yellow.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Gradient circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Circles/Gradient circle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Documentation.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Documentation.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts/ProductSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts/ProductSans-Regular.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts/Roboto-Regular.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Fonts/Roboto-Thin.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/Bolt colored.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/Bolt colored.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/Healthbar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/Healthbar.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/Heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/Heart.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/bolt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Icons/bolt.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Blue circular bar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Blue circular bar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Circle Green.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Circle Green.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Energy bar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Energy bar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Green circular bar full.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Green circular bar full.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Health bar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Health bar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/HealthBar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/HealthBar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Level bar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Level bar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Red circular bar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Bars/Red circular bar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button Green Outline.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button Green Outline.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button Green.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button Green.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button Red.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button Red.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button blue.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Button blue.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Sign in button .prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Sign in button .prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Sign in button Facebook.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Sign in button Facebook.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Sign in button Google.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Buttons/Sign in button Google.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/SampleScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/SampleScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders/Blue slider.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders/Blue slider.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders/Green slider.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders/Green slider.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders/Red slider.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Prefabs/Sliders/Red slider.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Scripts/FillValueNumber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI pack/Scripts/FillValueNumber.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Demo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Demo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/DemoSettings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/DemoSettings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Fonts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Fonts/Aero.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Fonts/Aero.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Bars.psd.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Bars.psd.zip.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/BackGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/BackGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/Filler.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/Filler.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/ForeGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/ForeGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/Mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Curved/Mask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar/BackGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar/BackGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar/Filler.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar/Filler.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar/Mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/DriveBar/Mask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana/BackGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana/BackGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana/ForeGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana/ForeGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana/Mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Mana/Mask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/StandardFill.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/StandardFill.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/BackGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/BackGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/Filler.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/Filler.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/ForeGround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/ForeGround.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/Mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Images/Tech/Mask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/ReadMe.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/ReadMe.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/ControlBar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/ControlBar.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/CriteriaRule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/CriteriaRule.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/UIBarScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/UIBarScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/UpdateAnimationRule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIBars/Scripts/UpdateAnimationRule.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/DefaultPreset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/DefaultPreset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightPreset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightPreset.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/ExplosiveBarrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/ExplosiveBarrel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/NormalBarrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/NormalBarrel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Demo_Scenes/Weapon_Demo_Scenes/Assault_Rifle_01_Demo/Assault_Rifle_01_Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Demo_Scenes/Weapon_Demo_Scenes/Assault_Rifle_01_Demo/Assault_Rifle_01_Demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Materials/GroundFog.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KHJ/Materials/GroundFog.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/DayNight/DayAndNight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KHJ/Script/DayNight/DayAndNight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Scenes/CWResourceScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Scenes/CWResourceScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Animation/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Animation/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Chicken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Chicken.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/ghoul_BombEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/ghoul_BombEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/ghoul_Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/ghoul_Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/ghoul_RangedEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/ghoul_RangedEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/MemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/MemoryPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Script/Player/KMSPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Script/Player/KMSPlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +104,8 @@
       <workItem from="1651751281153" duration="1231000" />
       <workItem from="1651825905799" duration="620000" />
       <workItem from="1651826553567" duration="5598000" />
-      <workItem from="1652240191670" duration="24303000" />
+      <workItem from="1652240191670" duration="25506000" />
+      <workItem from="1652333250616" duration="15070000" />
     </task>
     <servers />
   </component>

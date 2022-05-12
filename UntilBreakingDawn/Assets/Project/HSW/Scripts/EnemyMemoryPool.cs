@@ -65,7 +65,7 @@ public class EnemyMemoryPool : MonoBehaviour
 
         GameObject item = _enemyMemoryPool.ActivatePoolItem();
         item.transform.position = point.transform.position;
-        
+
         _spawnPointMemoryPool.DeactivatePoolItem(point);
     }
 }

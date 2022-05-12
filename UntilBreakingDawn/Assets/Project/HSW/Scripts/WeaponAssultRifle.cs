@@ -236,6 +236,12 @@ public class WeaponAssultRifle : MonoBehaviour
         if (Physics.Raycast(_impactSpawnPoint.position, attackDirection, out hit, _weaponSetting._attackDistance))
         {
             _impactMemoryPool.SpawnImpack(hit);
+
+            if (hit.transform.CompareTag("Enemy"))
+            {
+                //적 체력 스테이터스에 TakeDamege함수 넣을것
+                Debug.Log("적 타격됨");
+            }
         }
         Debug.DrawRay(_impactSpawnPoint.position, attackDirection*_weaponSetting._attackDistance, Color.blue);
     }

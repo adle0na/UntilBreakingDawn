@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour
         ExplosionSave = Explosion();
     }
 
+    /* 총알 프리팹 예시용
     private void OnTriggerEnter(Collider other)
     {
         // 총알에 맞았을 때 몬스터의 체력을 깎고 OnDamage 코루틴 시작 
@@ -56,6 +57,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(OnDamage());
         }
     }
+    */
 
     IEnumerator OnDamage()
     {

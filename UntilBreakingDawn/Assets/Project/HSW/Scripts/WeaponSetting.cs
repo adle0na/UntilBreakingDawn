@@ -5,6 +5,7 @@ public enum WeaponName {AssaultRifle = 0}
 public class WeaponSetting
 {
     public WeaponName _WeaponName;          // 무기 이름
+    public int        _damage;              // 무기 공격력
     public int        _currentMagazine;     // 현재 탄창 수
     public int        _maxMagazine;         // 최대 탄창 수
     public int        _currentAmmo;         // 현재 탄약 수
