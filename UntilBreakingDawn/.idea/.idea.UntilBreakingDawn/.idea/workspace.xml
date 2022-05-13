@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/DefaultPreset.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/DefaultPreset.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightPreset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightPreset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/ExplosiveBarrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/ExplosiveBarrel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/NormalBarrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HQ Survival Pack/Models/Decoration/Barrels/Materials/NormalBarrel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Demo_Scenes/Weapon_Demo_Scenes/Assault_Rifle_01_Demo/Assault_Rifle_01_Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Demo_Scenes/Weapon_Demo_Scenes/Assault_Rifle_01_Demo/Assault_Rifle_01_Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/MemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/MemoryPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Script/Player/KMSPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Script/Player/KMSPlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -106,6 +86,8 @@
       <workItem from="1651826553567" duration="5598000" />
       <workItem from="1652240191670" duration="25506000" />
       <workItem from="1652333250616" duration="15070000" />
+      <workItem from="1652430829226" duration="2940000" />
+      <workItem from="1652433817578" duration="3884000" />
     </task>
     <servers />
   </component>

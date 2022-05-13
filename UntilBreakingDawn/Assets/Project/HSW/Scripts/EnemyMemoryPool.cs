@@ -8,27 +8,26 @@ using Random = UnityEngine.Random;
 public class EnemyMemoryPool : MonoBehaviour
 {
     [SerializeField]
-    private GameObject  _enemySpawnPointPrefab;
+    private Transform  _target;
     [SerializeField]
-    private GameObject  _enemyPrefab;
+    private GameObject _enemySpawnPointPrefab;
     [SerializeField]
-    private float       _enemySpawnTime = 1;
+    private GameObject _enemyPrefab;
     [SerializeField]
-    private float       _enemySpawnLatency = 1;
-    private MemoryPool  _spawnPointMemoryPool;
-    private MemoryPool  _enemyMemoryPool;
+    private float      _enemySpawnTime    = 1;
+    [SerializeField]
+    private float      _enemySpawnLatency = 1;
+
+    private MemoryPool _spawnPointMemoryPool;
+    private MemoryPool _enemyMemoryPool;
 
     private int        numberOfEnemiesSpawnedAtOnce = 1;
-    private Vector2Int mapSize = new Vector2Int(100, 100);
+    private Vector2Int mapSize                      = new Vector2Int(100, 100);
 
     private void Awake()
     {
         _spawnPointMemoryPool = new MemoryPool(_enemySpawnPointPrefab);
         _enemyMemoryPool      = new MemoryPool(_enemyPrefab);
-    }
-
-    private void Update()
-    {
     }
 
     public IEnumerator SpawnTile()
@@ -42,12 +41,12 @@ public class EnemyMemoryPool : MonoBehaviour
             {
                 GameObject item = _spawnPointMemoryPool.ActivatePoolItem();
 
-                item.transform.position = new Vector3(Random.Range(-mapSize.x*0.49f, mapSize.x*0.49f), 3,
-                                                      Random.Range(-mapSize.y*0.49f, mapSize.y*0.49f));
+                item.transform.position = new Vector3(Random.Range(-mapSize.x * 0.49f, mapSize.x * 0.49f), 3,
+                    Random.Range(-mapSize.y * 0.49f, mapSize.y * 0.49f));
                 StartCoroutine("SpawnEnemy", item);
             }
 
-            currentNumber ++;
+            currentNumber++;
 
             if (currentNumber >= maximumNumber)
             {
@@ -65,6 +64,8 @@ public class EnemyMemoryPool : MonoBehaviour
 
         GameObject item = _enemyMemoryPool.ActivatePoolItem();
         item.transform.position = point.transform.position;
+
+        item.GetComponent<EnemyFSM>().Setup(_target);
 
         _spawnPointMemoryPool.DeactivatePoolItem(point);
     }
