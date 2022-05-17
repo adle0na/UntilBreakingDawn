@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 
-public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3, Blood = 4, ExplosiveBarrel = 5, }
+public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3, Enemy = 4, ExplosiveBarrel = 5, }
 
 public class ImpactMemoryPool : MonoBehaviour
 {
@@ -24,31 +24,36 @@ public class ImpactMemoryPool : MonoBehaviour
 
     public void SpawnImpack(RaycastHit hit)
     {
-        if (hit.transform.CompareTag("Dirt"))
+        switch (hit.transform.tag)
         {
-            OnSpawnImpack(ImpactType.Default, hit.point, Quaternion.LookRotation(hit.normal));
+            
+            case "Dirt" :
+                OnSpawnImpack(ImpactType.Default, hit.point, Quaternion.LookRotation(hit.normal));
+                break;
+                
+            case "Wood" :
+                OnSpawnImpack(ImpactType.Wood, hit.point, Quaternion.LookRotation(hit.normal));
+                break;
+            
+            case "Metal" :
+                OnSpawnImpack(ImpactType.Metal, hit.point, Quaternion.LookRotation(hit.normal));
+                break;
+            
+            case "Stone" :
+                OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
+                break;
+            
+            case "Enemy" :
+                OnSpawnImpack(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
+                break;
+            
+            case "ExplosiveBarrel" :
+                Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
+                OnSpawnImpack(ImpactType.ExplosiveBarrel, hit.point, Quaternion.LookRotation(hit.normal), color);
+                break;
+                
         }
-        else if (hit.transform.CompareTag("Wood"))
-        {
-            OnSpawnImpack(ImpactType.Wood, hit.point, Quaternion.LookRotation(hit.normal));
-        }
-        else if (hit.transform.CompareTag("Metal"))
-        {
-            OnSpawnImpack(ImpactType.Metal, hit.point, Quaternion.LookRotation(hit.normal));
-        }
-        else if (hit.transform.CompareTag("Stone"))
-        {
-            OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
-        }
-        else if (hit.transform.CompareTag("Enemy"))
-        {
-            OnSpawnImpack(ImpactType.Blood, hit.point, Quaternion.LookRotation(hit.normal));
-        }
-        else if (hit.transform.CompareTag("ExplosiveBarrel"))
-        {
-            Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
-            OnSpawnImpack(ImpactType.ExplosiveBarrel, hit.point, Quaternion.LookRotation(hit.normal), color);
-        }
+        
     }
 
     public void OnSpawnImpack(ImpactType type, Vector3 position, Quaternion rotation, Color color = new Color())

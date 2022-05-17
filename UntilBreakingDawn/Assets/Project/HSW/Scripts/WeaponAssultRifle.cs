@@ -240,7 +240,11 @@ public class WeaponAssultRifle : MonoBehaviour
             if (hit.transform.CompareTag("Enemy"))
             {
                 //적 체력 스테이터스에 TakeDamege함수 넣을것
-                Debug.Log("적 타격됨");
+                hit.transform.GetComponent<EnemyFSM>().TakeDamage(_weaponSetting._damage);
+            }
+            else if (hit.transform.CompareTag("ExplosiveBarrel"))
+            {
+                hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }
         }
         Debug.DrawRay(_impactSpawnPoint.position, attackDirection*_weaponSetting._attackDistance, Color.blue);

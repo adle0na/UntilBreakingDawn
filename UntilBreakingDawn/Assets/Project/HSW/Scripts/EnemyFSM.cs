@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+
 public enum EnemyState
 {
     None = -1,
@@ -16,9 +17,9 @@ public enum EnemyState
 
 public class EnemyFSM : MonoBehaviour
 {
-    [Header("Persuit")]
+    [Header("Pursuit")]
     [SerializeField] private float _targetRecognitionRange = 8;
-    [SerializeField] private float _persuitLimitRange      = 10;
+    [SerializeField] private float _pursuitLimitRange      = 10;
 
     private EnemyState      _enemyState = EnemyState.None;
 
@@ -27,12 +28,12 @@ public class EnemyFSM : MonoBehaviour
     private Transform       _target;
     private EnemyMemoryPool _enemyMemoryPool;
 
-    public void Setup(Transform target)
+    public void Setup(Transform target, EnemyMemoryPool enemyMemoryPool)
     {
         _status               = GetComponent<Status>();
         _navMeshAgent         = GetComponent<NavMeshAgent>();
-        _target               = target;
-        this._enemyMemoryPool = _enemyMemoryPool;
+        this._target          = target;
+        this._enemyMemoryPool = enemyMemoryPool;
 
         _navMeshAgent.updateRotation = false;
     }
@@ -103,7 +104,7 @@ public class EnemyFSM : MonoBehaviour
             {
                 ChangeState(EnemyState.Idle);
             }
-
+            
             DistanceCheck();
 
             yield return null;
@@ -112,13 +113,13 @@ public class EnemyFSM : MonoBehaviour
 
     private Vector3 CalculateWanderPosition()
     {
-        float wanderRadius = 10;
-        int wanderJitter = 0;
-        int wanderJitterMin = 0;
-        int wanderJitterMax = 360;
+        float wanderRadius    = 10;
+        int   wanderJitter    = 0;
+        int   wanderJitterMin = 0;
+        int   wanderJitterMax = 360;
 
         Vector3 rangePosition = Vector3.zero;
-        Vector3 rangeScale = Vector3.one * 100.0f;
+        Vector3 rangeScale    = Vector3.one * 100.0f;
 
         wanderJitter = Random.Range(wanderJitterMin, wanderJitterMax);
         Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
@@ -139,8 +140,8 @@ public class EnemyFSM : MonoBehaviour
 
         return position;
     }
-
-    private IEnumerator Persuit()
+    
+    private IEnumerator Pursuit()
     {
         while (true)
         {
@@ -155,6 +156,7 @@ public class EnemyFSM : MonoBehaviour
             yield return null;
         }
     }
+    
 
     private void LookRotationToTarget()
     {
@@ -174,7 +176,7 @@ public class EnemyFSM : MonoBehaviour
         {
             ChangeState(EnemyState.Pursuit);
         }
-        else if (distance >= _persuitLimitRange)
+        else if (distance >= _pursuitLimitRange)
         {
             ChangeState(EnemyState.Wander);
         }
@@ -182,11 +184,27 @@ public class EnemyFSM : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        bool isDie = status.DecreaseHP(damage);
+        bool isDie = _status.DecreaseHP(damage);
 
         if (isDie == true)
         {
-            EnemyMemoryPool.DeactivateEnemy(gameObject);
+            _enemyMemoryPool.DeactivateEnemy(gameObject);
         }
     }
+    
+    private void OnDrawGizmos()
+    {
+        if (_navMeshAgent == null)
+            return;
+ 
+        Gizmos.color = Color.black;
+        Gizmos.DrawRay(transform.position, _navMeshAgent.destination - transform.position);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _targetRecognitionRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, _pursuitLimitRange);
+    }
+
 }

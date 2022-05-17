@@ -94,29 +94,36 @@ public class PlayerHUD : MonoBehaviour
         }
     }
 
+    private Coroutine _coroutine;
+    
     private void UpdateHPHUD(int previous, int current)
     {
         _textHP.text = "HP " + current;
 
+        if (previous <= current) return;
+
         if (previous - current > 0)
         {
-            StopCoroutine("OnBloodScreen");
-            StartCoroutine("OnBloodScreen");
+            if (_coroutine != null) StopCoroutine(_coroutine);
+            _coroutine = StartCoroutine(OnBloodScreen());
         }
     }
 
     private IEnumerator OnBloodScreen()
     {
+        _BloodScreen.color = Color.white;
         float percent = 0;
         while (percent < 1)
         {
             percent += Time.deltaTime;
 
             Color color        = _BloodScreen.color;
-            color.a            = Mathf.Lerp(1, 0, _curveBloodScreen.Evaluate(percent));
+            color.a            = Mathf.Lerp(color.a, 0, _curveBloodScreen.Evaluate(percent));
             _BloodScreen.color = color;
-
-            yield return null;
+            
+            yield return new WaitForFixedUpdate();
         }
+
+        _coroutine = null;
     }
 }

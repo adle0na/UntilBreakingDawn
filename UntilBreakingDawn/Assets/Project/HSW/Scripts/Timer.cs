@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
     public GameObject _warningMessage;
 
     private float _gameTime;
-    private float _timer = 0.00f;
+    private float _timer = 1;
     private float _time;
     private int   _minutes;
     private int   _seconds;

@@ -12,9 +12,6 @@ TagManager:
   - ExplosiveBarrel
   - Target
   - GasTank
-  - Metal (Static)
-  - Wood (Static)
-  - Dirt (Static)
   - Wood
   - Enemy
   - OilTank
@@ -22,6 +19,7 @@ TagManager:
   - Melee
   - Boulder
   - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX

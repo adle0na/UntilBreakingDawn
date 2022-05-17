@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3779324379080041453
+--- !u!1 &4030414428318460470
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3782533616346627147}
-  - component: {fileID: 3748821336805243535}
-  - component: {fileID: 3756993421754077043}
-  - component: {fileID: 3788346807971905727}
-  - component: {fileID: 5902179685726549442}
+  - component: {fileID: 393179681771921646}
+  - component: {fileID: 2305955170512596590}
+  - component: {fileID: 3882441659374968732}
+  - component: {fileID: 2533919032045260922}
+  - component: {fileID: 5868866173012181441}
   m_Layer: 0
-  m_Name: ExplosiveBarrel
-  m_TagString: ExplosiveBarrel
+  m_Name: HealthItem
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3782533616346627147
+--- !u!4 &393179681771921646
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779324379080041453}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.185783, y: 4.2212114, z: -27.759811}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 4030414428318460470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3748821336805243535
+--- !u!33 &2305955170512596590
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779324379080041453}
-  m_Mesh: {fileID: 4300000, guid: 307168da9fed50c42a9e8b336f11df46, type: 3}
---- !u!23 &3756993421754077043
+  m_GameObject: {fileID: 4030414428318460470}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3882441659374968732
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779324379080041453}
+  m_GameObject: {fileID: 4030414428318460470}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ac10dcb71e502e41b51802e3901c5b3, type: 2}
+  - {fileID: 2100000, guid: a6cf5a37886300d4db2c6380f5b01462, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,35 +83,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3788346807971905727
-MeshCollider:
+--- !u!65 &2533919032045260922
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779324379080041453}
+  m_GameObject: {fileID: 4030414428318460470}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7e38d5bc926cd8645870d6f818d51a6e, type: 3}
---- !u!114 &5902179685726549442
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5868866173012181441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779324379080041453}
+  m_GameObject: {fileID: 4030414428318460470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 984800d72a12a354d8e3bb931d2db6d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 234122c69e242d84185e805889fc7ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 100
-  _explosionPrefab: {fileID: 7965168492199210891, guid: d94e4b5fb28ff964ba613295cfdc1c5c,
-    type: 3}
-  _explosionDelayTime: 0.3
-  _explosionRadius: 10
-  _explosionForce: 1000
+  _hpEffectPrefab: {fileID: 4030414428318460470}
+  _increaseHP: 50
+  _moveDistance: 0.2
+  _pingpongSpeed: 0.5
+  _rotateSpeed: 50

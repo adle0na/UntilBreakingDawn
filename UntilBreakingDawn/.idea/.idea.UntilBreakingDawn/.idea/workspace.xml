@@ -2,10 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/Explosion.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/Explosion.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/HealthEffect.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/HealthEffect.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/HealthItem.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/HealthItem.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/Explosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/Explosion.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/HealthEffect.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/HealthEffect.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/HealthItem.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/HealthItem.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ImpactBlood.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ImpactBlood.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ExplosionBarrel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ExplosionBarrel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/InteractionObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/InteractionObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMedicBag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMedicBag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/NormalBarrel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/NormalBarrel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerCollider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/HealthEffect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/HealthEffect.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/HealthItem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/HealthItem.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/EnemySample.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/EnemySample.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ExplosiveBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/ExplosiveBarrel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyFSM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyFSM.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/EnemyMemoryPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ParticleAutoDestroyBytime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ParticleAutoDestroyBytime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +63,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,10 +98,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33084">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="33084" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -88,6 +130,7 @@
       <workItem from="1652333250616" duration="15070000" />
       <workItem from="1652430829226" duration="2940000" />
       <workItem from="1652433817578" duration="3884000" />
+      <workItem from="1652781344753" duration="15189000" />
     </task>
     <servers />
   </component>

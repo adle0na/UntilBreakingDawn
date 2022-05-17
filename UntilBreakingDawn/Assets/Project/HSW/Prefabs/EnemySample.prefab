@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638a0c81111d2cc479bf4d96df89874c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetRecognitionRange: 8
+  _pursuitLimitRange: 10
 --- !u!114 &6234070442107448129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +156,8 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234070442107448134}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5000001
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

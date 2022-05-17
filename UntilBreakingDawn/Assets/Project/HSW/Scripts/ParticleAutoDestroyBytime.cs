@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class ParticleAutoDestroyBytime : MonoBehaviour
 {
-    private ParticleSystem particle;
+    private ParticleSystem _particle;
 
     private void Awake()
     {
-        particle = GetComponent<ParticleSystem>();
+       _particle = GetComponent<ParticleSystem>();
     }
 
     private void Update()
     {
-        if (particle.isPlaying == false)
+        if (_particle.isPlaying == false)
         {
             Destroy(gameObject);
         }
