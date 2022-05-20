@@ -19,12 +19,11 @@ public class PlayerControllerHSW : MonoBehaviour
     [SerializeField]
     private AudioClip _audioClipRun;
     
-    private RotateToMouseHSW     _rotateToMouseHsw;
-    private MovementHSW          _movement;
-    private Status               _status;
-    private PlayerAnimControlHSW _animator;
-    private AudioSource          _audioSource;
-    private WeaponAssultRifle    _weapon;
+    private RotateToMouseHSW  _rotateToMouseHsw;
+    private MovementHSW       _movement;
+    private Status            _status;
+    private AudioSource       _audioSource;
+    private WeaponAssultRifle _weapon;
 
     private void Awake()
     {
@@ -34,7 +33,6 @@ public class PlayerControllerHSW : MonoBehaviour
         _rotateToMouseHsw = GetComponent<RotateToMouseHSW>();
         _movement         = GetComponent<MovementHSW>();
         _status           = GetComponent<Status>();
-        _animator         = GetComponent<PlayerAnimControlHSW>();
         _audioSource      = GetComponent<AudioSource>();;
         _weapon           = GetComponentInChildren<WeaponAssultRifle>();
     }
@@ -64,15 +62,16 @@ public class PlayerControllerHSW : MonoBehaviour
         {
             bool isRun = false;
             
-            if (z > 0) isRun    = Input.GetKey(_keyCodeRun);
+            if (z > 0) isRun     = Input.GetKey(_keyCodeRun);
+            
             _movement._MoveSpeed = isRun == true ? _status.RunSpeed : _status.WalkSpeed;
-            _animator._MoveSpeed = isRun == true ? 1 : 0.5f;
-            _audioSource.clip   = isRun == true ? _audioClipRun : _audioClipWalk;
+            _weapon.Animator._MoveSpeed = isRun == true ? 1 : 0.5f;
+            _audioSource.clip    = isRun == true ? _audioClipRun : _audioClipWalk;
         }
         else
         {
-            _movement._MoveSpeed = 0;
-            _animator._MoveSpeed = 0;
+            _movement._MoveSpeed        = 0;
+            _weapon.Animator._MoveSpeed = 0;
 
             if (_audioSource.isPlaying == true)
             {

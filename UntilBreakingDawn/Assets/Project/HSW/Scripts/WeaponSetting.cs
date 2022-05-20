@@ -1,8 +1,8 @@
 
-public enum WeaponName {AssaultRifle = 0}
+public enum WeaponName {AssaultRifle = 0, Revolver, CombatKnife, HandGrenade}
 
 [System.Serializable]
-public class WeaponSetting
+public struct WeaponSetting
 {
     public WeaponName _WeaponName;          // 무기 이름
     public int        _damage;              // 무기 공격력
