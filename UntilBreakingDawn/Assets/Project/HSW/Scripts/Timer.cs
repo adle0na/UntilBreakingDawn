@@ -5,6 +5,8 @@ using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
+
 public class Timer : MonoBehaviour
 {
     public Slider     _timerSlider;
@@ -57,7 +59,7 @@ public class Timer : MonoBehaviour
             if (_stopTimer == false)
             {
                 _stopTimer = true;
-                StartCoroutine(GameObject.Find("EnemyMemoryPool").GetComponent<EnemyMemoryPool>().SpawnTile());
+                Debug.Log("소환테스트");
                 return;
             }
         }

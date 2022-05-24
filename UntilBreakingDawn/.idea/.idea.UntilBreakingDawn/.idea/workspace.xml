@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineEffect.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineEffect.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineItem.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineItem.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMagazine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMagazine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/HealthEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/HealthEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/MemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/MemoryPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Texture/HealthEffect.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/HealthEffect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +88,7 @@
       <workItem from="1652433817578" duration="3884000" />
       <workItem from="1652781344753" duration="15787000" />
       <workItem from="1653044807997" duration="6952000" />
+      <workItem from="1653388009880" duration="121000" />
     </task>
     <servers />
   </component>
