@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/Rook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/Rook.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/leaf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/leaf.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/red_potion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/red_potion.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/ItemEffectDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/ItemEffectDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +58,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../BuildFiles\UntilBreakingDawn.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Unity\BuildFiles" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />

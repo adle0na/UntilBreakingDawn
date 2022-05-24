@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,9 +11,11 @@ public class Inventory : MonoBehaviour
     private GameObject go_InventoryBase;
     [SerializeField]
     private GameObject go_SlotsParent;
-    //??????
-    private Slot[] slots;
 
+    private Slot[]     slots;
+    
+    [SerializeField]
+    private PlayerControllerHSW _playerSet;
 
     // Start is called before the first frame update
     void Start()
@@ -70,4 +73,44 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    public void ItemUseCheck(int keytype)
+    {
+        switch (keytype)
+        {
+            case 5:
+                ItemTypeCheck(0);
+                break;
+            case 6:
+                ItemTypeCheck(1);
+                break;
+            case 7:
+                ItemTypeCheck(2);
+                break;
+            case 8:
+                ItemTypeCheck(3);
+                break;
+        }
+    }
+
+    private void ItemTypeCheck(int inputslot)
+    {
+        Slot slot = slots[inputslot];
+        
+        switch (slot.GetItemType())
+        {
+            case Item.ItemType.Potion:
+                _playerSet.Status.IncreaseHP(slot.item.editableValue);
+                slot.UseSlot();
+                break;
+            case Item.ItemType.Magazine:
+                _playerSet.Weapon.IncreaseMagazine(slot.item.editableValue);
+                slot.UseSlot();
+                break;
+            default:
+                Debug.Log("사용 아이템이 아닙니다");
+                break;
+        }
+    }
+
 }

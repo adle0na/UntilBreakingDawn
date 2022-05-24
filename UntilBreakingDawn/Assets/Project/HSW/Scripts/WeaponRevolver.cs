@@ -18,4 +18,9 @@ public class WeaponRevolver : WeaponBase
     {
         
     }
+
+    public override void IncreaseMagazine(int magazine)
+    {
+        
+    }
 }

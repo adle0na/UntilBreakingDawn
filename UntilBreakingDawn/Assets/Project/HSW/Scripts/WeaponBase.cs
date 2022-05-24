@@ -51,5 +51,7 @@ using UnityEngine;
             _audioSource = GetComponent<AudioSource>();
             _animator    = GetComponent<PlayerAnimControlHSW>();
         }
+
+        public abstract void IncreaseMagazine(int magazine);
     }
 

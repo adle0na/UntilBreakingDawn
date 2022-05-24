@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class PlayerControllerHSW : MonoBehaviour
 {
@@ -12,19 +14,31 @@ public class PlayerControllerHSW : MonoBehaviour
     private KeyCode _keyCodeJump   = KeyCode.Space;
     [SerializeField]
     private KeyCode _keyCodeReload = KeyCode.R;
-    
+
+    private KeyCode _inventory5    = KeyCode.Alpha5;
+    private KeyCode _inventory6    = KeyCode.Alpha6;
+    private KeyCode _inventory7    = KeyCode.Alpha7;
+    private KeyCode _inventory8    = KeyCode.Alpha8;
+
+
+
     [Header("Audio Clips")]
     [SerializeField]
     private AudioClip _audioClipWalk;
     [SerializeField]
     private AudioClip _audioClipRun;
-    
+
+    private int               _keyNumber;
     private RotateToMouseHSW  _rotateToMouseHsw;
     private MovementHSW       _movement;
     private Status            _status;
     private AudioSource       _audioSource;
-    private WeaponAssultRifle _weapon;
+    private WeaponBase _weapon;
+    private Inventory         _inventory;
 
+    public Status Status => _status;
+    public WeaponBase Weapon => _weapon;
+    
     private void Awake()
     {
         Cursor.visible    = false;
@@ -35,6 +49,7 @@ public class PlayerControllerHSW : MonoBehaviour
         _status           = GetComponent<Status>();
         _audioSource      = GetComponent<AudioSource>();;
         _weapon           = GetComponentInChildren<WeaponAssultRifle>();
+        _inventory        = FindObjectOfType<Inventory>();
     }
 
     private void Update()
@@ -43,6 +58,7 @@ public class PlayerControllerHSW : MonoBehaviour
         UpdateMove();
         UpdateJump();
         UpdateWeaponAction();
+        UpdateInventoryUseCheck();
     }
 
     private void UpdateRotate()
@@ -109,13 +125,24 @@ public class PlayerControllerHSW : MonoBehaviour
         {
             _weapon.StopWeaponAction(1);
         }
-        
         if (Input.GetKeyDown(_keyCodeReload))
         {
             _weapon.StartReload();
         }
     }
 
+    private void UpdateInventoryUseCheck()
+    {
+        if (Input.GetKeyDown(_inventory5))
+            _inventory.ItemUseCheck(5);
+        if (Input.GetKeyDown(_inventory6))
+            _inventory.ItemUseCheck(6);
+        if (Input.GetKeyDown(_inventory7))
+            _inventory.ItemUseCheck(7);
+        if (Input.GetKeyDown(_inventory8))
+            _inventory.ItemUseCheck(8);
+    }
+    
     public void TakeDamage(int damage)
     {
         bool isDie = _status.DecreaseHP(damage);
@@ -125,4 +152,5 @@ public class PlayerControllerHSW : MonoBehaviour
             Debug.Log("GameOver");
         }
     }
+
 }

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8953165869931856820}
   - component: {fileID: 841569260697032491}
   - component: {fileID: -6277315705435343400}
-  m_Layer: 0
+  - component: {fileID: 6163607550314000118}
+  m_Layer: 18
   m_Name: MagazineItem
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -110,5 +111,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _magazineEffetPrefab: {fileID: 5424584233833323313, guid: a45863da06870eb4b98c97311c049cbd,
     type: 3}
-  _increaseMagazine: 2
+  _increaseMagazine: 1
   _rotateSpeed: 50
+--- !u!114 &6163607550314000118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940755027567764320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f3d68d2d641c44496616adc76fd2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: c5a3e186479e26c479bdb287df57cf1c, type: 2}

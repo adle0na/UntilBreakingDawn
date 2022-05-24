@@ -58,8 +58,19 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,IDrag
         if (itemCount <= 0)
             ClearSlot();
     }
+    
+    // 슬롯 아이템 사용
+    public void UseSlot()
+    {
+        itemCount--;
+        text_Count.text = itemCount.ToString();
+        
+        if (itemCount <= 0)
+            ClearSlot();
+    }
+    
     //슬롯 초기화
-    private void ClearSlot()
+    public void ClearSlot()
     {
         item = null;
         itemCount = 0;
@@ -127,5 +138,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,IDrag
         else
             DragSlot.instance.dragSlot.ClearSlot();
 
+    }
+
+    public Item.ItemType GetItemType()
+    {
+        return item != null ? item.itemType : Item.ItemType.None;
     }
 }

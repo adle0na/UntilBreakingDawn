@@ -21,7 +21,7 @@ public class Itemeffet : MonoBehaviour
 
     public void UseItem(Item _item)
     {
-        if(_item.itemType == Item.ItemType.Used)
+        if(_item.itemType == Item.ItemType.Potion)
         {
             for(int x=0;x<itemEffects.Length;x++)
             {

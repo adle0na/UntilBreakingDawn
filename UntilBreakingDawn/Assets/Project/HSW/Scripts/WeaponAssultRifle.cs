@@ -257,7 +257,7 @@ public class WeaponAssultRifle : WeaponBase
         _isModeChange = false;
     }
 
-    public void IncreaseMagazine(int magazine)
+    public override void IncreaseMagazine(int magazine)
     {
         _weaponSetting._currentMagazine =
             CurrentMagazine + magazine > MaxMagazine ? MaxMagazine : CurrentMagazine + magazine;
