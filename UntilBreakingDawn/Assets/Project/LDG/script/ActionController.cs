@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/*
+
 public class ActionController : MonoBehaviour
 {
     [SerializeField]
@@ -41,7 +41,7 @@ public class ActionController : MonoBehaviour
         {
             if(hitInfo.transform !=null)
             {
-                Debug.Log(hitInfo.transform.GetComponent<ItemPickup>().item.itemName + "????????????");
+                Debug.Log(hitInfo.transform.GetComponent<ItemPickup>().item.itemName + "»πµÊ«ﬂΩ¿¥œ¥Ÿ");
                 theinventory.AcquireItem(hitInfo.transform.GetComponent<ItemPickup>().item);
                 Destroy(hitInfo.transform.gameObject);
                 InfoDisappear();
@@ -64,7 +64,7 @@ public class ActionController : MonoBehaviour
     {
         pickupActivated = true;
         actionText.gameObject.SetActive(true);
-        actionText.text = hitInfo.transform.GetComponent<ItemPickup>().item.itemName + "????" + "<color=yellow>" + "(E)" + "</color>";
+        actionText.text = hitInfo.transform.GetComponent<ItemPickup>().item.itemName + "»πµÊ" + "<color=yellow>" + "(E)" + "</color>";
     }
     private void InfoDisappear()
     {
@@ -72,4 +72,3 @@ public class ActionController : MonoBehaviour
         actionText.gameObject.SetActive(false);
     }
 }
-*/
