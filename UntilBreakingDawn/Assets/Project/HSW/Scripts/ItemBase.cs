@@ -4,5 +4,17 @@ using UnityEngine;
 
 public abstract class ItemBase : MonoBehaviour
 {
-    public abstract void Use(GameObject entity);
+    [Header("ItemBase")]
+    [SerializeField]
+    public float rotateSpeed = 50;
+    
+    private IEnumerator Start()
+    {
+        while (true)
+        {
+            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+
+            yield return null;
+        }
+    }
 }

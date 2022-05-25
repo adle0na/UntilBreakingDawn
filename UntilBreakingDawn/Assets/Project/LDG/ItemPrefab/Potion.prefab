@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 7192430754876603553}
   - component: {fileID: 6088724031854129924}
   - component: {fileID: 8330403078672762830}
+  - component: {fileID: 8861940542052357444}
   - component: {fileID: 3670933583032083436}
   - component: {fileID: 8555190633874413396}
   - component: {fileID: 7002374682724942822}
   m_Layer: 18
-  m_Name: potion_red_item
+  m_Name: Potion
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,6 +86,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8861940542052357444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537747072157738523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65b9c8fa43bc8c4eb6c409752b933ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 50
 --- !u!65 &3670933583032083436
 BoxCollider:
   m_ObjectHideFlags: 0

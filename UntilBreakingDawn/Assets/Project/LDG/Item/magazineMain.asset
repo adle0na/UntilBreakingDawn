@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fefdfe282998194eb020c87fedd7f67, type: 3}
-  m_Name: magazine
+  m_Name: magazineMain
   m_EditorClassIdentifier: 
-  itemName: Magazine
+  itemName: MagazineMain
   itemType: 3
-  ItemImage: {fileID: 21300000, guid: ca8b7dfbb1e33a4479c0658cb3e84e73, type: 3}
-  itemPrefab: {fileID: 8940755027567764320, guid: c60809c96d0ed8849998ee92002b2b6d,
-    type: 3}
-  weponType: 
+  ItemImage: {fileID: 21300000, guid: d729217346d336d4cac454b19332bee9, type: 3}
   editableValue: 1

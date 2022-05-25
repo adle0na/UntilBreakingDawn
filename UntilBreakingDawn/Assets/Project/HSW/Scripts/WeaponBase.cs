@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    public enum WeaponType { Main=0, Sub, Melee, Throw, Axe, Pickage}
+    public enum WeaponType { Main=0, Sub, Melee, Throw}
 
-    [System.Serializable]
+    [System.Serializable] // 탄수 이벤트 처리
     public class AmmoEvent: UnityEngine.Events.UnityEvent<int, int> { }
-    [System.Serializable]
+    [System.Serializable] // 탄창 이벤트 처리
     public class MagazineEvent : UnityEngine.Events.UnityEvent<int> { }
 
     public abstract class WeaponBase : MonoBehaviour
     {
         [Header("WeaponBase")]
         [SerializeField]
-        protected WeaponType           _weaponType;
+        public WeaponType              _weaponType;
 
         [SerializeField]
         protected WeaponSetting        _weaponSetting;
@@ -37,6 +37,8 @@ using UnityEngine;
         
         public abstract void StartWeaponAction(int type = 0);
         public abstract void StopWeaponAction(int type = 0);
+        public abstract void IncreaseMagazineMain(int magazine);
+        public abstract void IncreaseMagazineSub(int magazine);
         public abstract void StartReload();
 
         protected void PlaySound(AudioClip clip)
@@ -51,7 +53,5 @@ using UnityEngine;
             _audioSource = GetComponent<AudioSource>();
             _animator    = GetComponent<PlayerAnimControlHSW>();
         }
-
-        public abstract void IncreaseMagazine(int magazine);
     }
 

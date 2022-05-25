@@ -90,6 +90,12 @@ public class Inventory : MonoBehaviour
             case 8:
                 ItemTypeCheck(3);
                 break;
+            case 9:
+                ItemTypeCheck(4);
+                break;
+            case 0:
+                ItemTypeCheck(5);
+                break;
         }
     }
 
@@ -103,10 +109,25 @@ public class Inventory : MonoBehaviour
                 _playerSet.Status.IncreaseHP(slot.item.editableValue);
                 slot.UseSlot();
                 break;
-            case Item.ItemType.Magazine:
-                _playerSet.Weapon.IncreaseMagazine(slot.item.editableValue);
-                slot.UseSlot();
+            
+            case Item.ItemType.MagazineMain:
+                if (_playerSet.Weapon._weaponType == WeaponType.Main)
+                {
+                    _playerSet.Weapon.IncreaseMagazineMain(slot.item.editableValue);
+                    slot.UseSlot();
+                }
+                else return;
                 break;
+            
+            case Item.ItemType.MagazineSub:
+                if (_playerSet.Weapon._weaponType == WeaponType.Sub)
+                {
+                    _playerSet.Weapon.IncreaseMagazineSub(slot.item.editableValue);
+                    slot.UseSlot();
+                }
+                else return;
+                break;
+            
             default:
                 Debug.Log("사용 아이템이 아닙니다");
                 break;

@@ -36,6 +36,7 @@ public class WeaponAssultRifle : WeaponBase
     private CasingMemoryPool _casingMemoryPool;
     private ImpactMemoryPool _impactMemoryPool;
     private Camera           _mainCamera;
+    private bool             _isInspecting;
 
     private void Awake()
     {
@@ -124,18 +125,12 @@ public class WeaponAssultRifle : WeaponBase
     {
         if (Time.time - _lastAttackTime > _weaponSetting._attackRate)
         {
-            if (_animator._MoveSpeed > 0.5f)
-            {
-                return;
-            }
+            if (_animator._MoveSpeed > 0.5f) return;
 
-            _lastAttackTime = Time.time;
+                _lastAttackTime = Time.time;
 
-            if (_weaponSetting._currentAmmo <= 0)
-            {
-                return;
-            }
-
+            if (_weaponSetting._currentAmmo <= 0) return;
+            
             _weaponSetting._currentAmmo--;
             _onAmmoEvent.Invoke(_weaponSetting._currentAmmo, _weaponSetting._maxAmmo);
 
@@ -204,7 +199,6 @@ public class WeaponAssultRifle : WeaponBase
         {
             targetPoint = ray.origin + ray.direction * _weaponSetting._attackDistance;
         }
-        Debug.DrawRay(ray.origin, ray.direction * _weaponSetting._attackDistance, Color.red);
 
         Vector3 attackDirection = (targetPoint - _impactSpawnPoint.position).normalized;
         if (Physics.Raycast(_impactSpawnPoint.position, attackDirection, out hit, _weaponSetting._attackDistance))
@@ -221,7 +215,6 @@ public class WeaponAssultRifle : WeaponBase
                 hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }
         }
-        Debug.DrawRay(_impactSpawnPoint.position, attackDirection*_weaponSetting._attackDistance, Color.blue);
     }
 
     private IEnumerator OnModeChange()
@@ -257,11 +250,16 @@ public class WeaponAssultRifle : WeaponBase
         _isModeChange = false;
     }
 
-    public override void IncreaseMagazine(int magazine)
+    public override void IncreaseMagazineMain(int magazineMain)
     {
         _weaponSetting._currentMagazine =
-            CurrentMagazine + magazine > MaxMagazine ? MaxMagazine : CurrentMagazine + magazine;
+            CurrentMagazine + magazineMain > MaxMagazine ? MaxMagazine : CurrentMagazine + magazineMain;
         
         _onMagazineEvent.Invoke(CurrentMagazine);
+    }
+    
+    public override void IncreaseMagazineSub(int magazineSub)
+    {
+        
     }
 }

@@ -33,10 +33,10 @@ public class PlayerControllerHSW : MonoBehaviour
     private MovementHSW       _movement;
     private Status            _status;
     private AudioSource       _audioSource;
-    private WeaponBase _weapon;
+    private WeaponBase        _weapon;
     private Inventory         _inventory;
 
-    public Status Status => _status;
+    public Status Status     => _status;
     public WeaponBase Weapon => _weapon;
     
     private void Awake()
@@ -151,6 +151,11 @@ public class PlayerControllerHSW : MonoBehaviour
         {
             Debug.Log("GameOver");
         }
+    }
+
+    public void SwitchingWeapon(WeaponBase newWeapon)
+    {
+        _weapon = newWeapon;
     }
 
 }

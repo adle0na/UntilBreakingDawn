@@ -2,21 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponKnife.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponKnife.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.overrideController" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.overrideController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/WoodMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/WoodMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemRotate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemRotate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGrenade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGrenade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSwitchSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSwitchSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineMain.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineMain.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineSub.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineSub.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Branch.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Branch.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineMain.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineMain.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineSub.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineSub.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Potion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Potion.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/MagazineItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMagazine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMagazine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMedicBag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMedicBag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerCollider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerCollider.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/Rook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/Rook.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/leaf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/leaf.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/red_potion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/red_potion.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazine.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazine.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Rock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/leaf.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/leaf.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/potion_red_item.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/potion_red_item.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/ItemEffectDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/ItemEffectDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Slot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +147,7 @@
       <workItem from="1652781344753" duration="15787000" />
       <workItem from="1653044807997" duration="6952000" />
       <workItem from="1653388009880" duration="121000" />
+      <workItem from="1653504376978" duration="12584000" />
     </task>
     <servers />
   </component>

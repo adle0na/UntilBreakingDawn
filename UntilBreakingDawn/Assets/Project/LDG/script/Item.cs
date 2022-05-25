@@ -15,7 +15,8 @@ public class Item : ScriptableObject
         None,
         Equipment, 
         Potion,
-        Magazine,
+        MagazineMain,
+        MagazineSub,
         Ingredient,
         ETC
     }
