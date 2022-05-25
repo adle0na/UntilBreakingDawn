@@ -370,77 +370,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_KHJ
       objectReference: {fileID: 0}
+    - target: {fileID: 2262807309398720397, guid: bf79b094c1ea2b04d903ff48658c8274,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf79b094c1ea2b04d903ff48658c8274, type: 3}
---- !u!1001 &947322636
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142384, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031053816836142385, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
-        type: 3}
-      propertyPath: m_Name
-      value: WoodWall
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7b4d4b784c06ae24095b0d7a230d56fe, type: 3}
 --- !u!1 &965324973
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +389,7 @@ GameObject:
   - component: {fileID: 965324976}
   - component: {fileID: 965324975}
   - component: {fileID: 965324974}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,6 +514,23 @@ PrefabInstance:
       propertyPath: tf_Player
       value: 
       objectReference: {fileID: 668070763}
+    - target: {fileID: 619945575000495312, guid: a0451b833bb759447a1150d3c2e6b4a0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 619945575000495312, guid: a0451b833bb759447a1150d3c2e6b4a0,
+        type: 3}
+      propertyPath: craftTab.Array.data[0].crafts.Array.data[0].go_Prefab
+      value: 
+      objectReference: {fileID: 7031053816836142385, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
+        type: 3}
+    - target: {fileID: 619945575000495312, guid: a0451b833bb759447a1150d3c2e6b4a0,
+        type: 3}
+      propertyPath: craftTab.Array.data[0].crafts.Array.data[0].go_PreviewPrefab
+      value: 
+      objectReference: {fileID: 3714706267428498507, guid: 70c1222b65257004db461d6a7c774d91,
+        type: 3}
     - target: {fileID: 619945575001541750, guid: a0451b833bb759447a1150d3c2e6b4a0,
         type: 3}
       propertyPath: m_IsActive
@@ -586,7 +539,7 @@ PrefabInstance:
     - target: {fileID: 619945575222988808, guid: a0451b833bb759447a1150d3c2e6b4a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 619945575286930762, guid: a0451b833bb759447a1150d3c2e6b4a0,
         type: 3}

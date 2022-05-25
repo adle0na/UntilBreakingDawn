@@ -57,20 +57,26 @@ MonoBehaviour:
   - craftsName: "\uC81C\uC791\uD0ED_0"
     crafts:
     - craftName: WoodenWall
-      go_Prefab: {fileID: 2345877933539000700, guid: ba16ce889f226cc4abd290f81cfee841, type: 3}
-      go_PreviewPrefab: {fileID: 2012507207018941033, guid: a59f82bc1f351af4a9d8dd4228a491d0, type: 3}
+      go_Prefab: {fileID: 2345877933539000700, guid: ba16ce889f226cc4abd290f81cfee841,
+        type: 3}
+      go_PreviewPrefab: {fileID: 2012507207018941033, guid: a59f82bc1f351af4a9d8dd4228a491d0,
+        type: 3}
     - craftName: StoneWall
-      go_Prefab: {fileID: 5523362690660810294, guid: 3a306612ff83c314791402b7131f8b21, type: 3}
-      go_PreviewPrefab: {fileID: 2012507207018941033, guid: 15031c27d3edf8b4dbb89a9bb11312ef, type: 3}
+      go_Prefab: {fileID: 5523362690660810294, guid: 3a306612ff83c314791402b7131f8b21,
+        type: 3}
+      go_PreviewPrefab: {fileID: 2012507207018941033, guid: 15031c27d3edf8b4dbb89a9bb11312ef,
+        type: 3}
   - craftsName: "\uC81C\uC791\uD0ED_1"
     crafts:
     - craftName: WoodenWall
-      go_Prefab: {fileID: 2345877933539000700, guid: ba16ce889f226cc4abd290f81cfee841, type: 3}
-      go_PreviewPrefab: {fileID: 2012507207018941033, guid: a59f82bc1f351af4a9d8dd4228a491d0, type: 3}
+      go_Prefab: {fileID: 2345877933539000700, guid: ba16ce889f226cc4abd290f81cfee841,
+        type: 3}
+      go_PreviewPrefab: {fileID: 2012507207018941033, guid: a59f82bc1f351af4a9d8dd4228a491d0,
+        type: 3}
   tf_Player: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 524288
   range: 10
 --- !u!1 &5665198439205323518
 GameObject:

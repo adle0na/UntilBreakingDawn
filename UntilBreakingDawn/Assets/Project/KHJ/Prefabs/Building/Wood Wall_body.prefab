@@ -2896,7 +2896,7 @@ GameObject:
   - component: {fileID: 8987554971355180834}
   - component: {fileID: 8072053237075578529}
   - component: {fileID: 6503733925512560378}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Wood Wall_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
