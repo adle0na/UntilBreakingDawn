@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4942392607013616777}
   m_Layer: 12
   m_Name: StoneWall
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9893335, y: 1.5335891, z: 0.30859208}
-  m_Center: {x: 0.013587761, y: 0.7722527, z: 0.0064124516}
+  m_Size: {x: 1.9893335, y: 1.5335891, z: 0.27218395}
+  m_Center: {x: 0.013587761, y: 0.7722527, z: 0.005513882}
 --- !u!65 &2319060596149155785
 BoxCollider:
   m_ObjectHideFlags: 0

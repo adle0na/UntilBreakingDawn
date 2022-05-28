@@ -10,13 +10,15 @@ public class WeaponAssultRifle : WeaponBase
     [Header("Fire Effects")]
     [SerializeField]
     private GameObject       _muzzleFlashEffect;
-
+    
     [Header("Spawn Points")]
     [SerializeField]
     private Transform        _casingSpawnPoints;
     [SerializeField]
     private Transform        _impactSpawnPoint;
-    
+    [SerializeField]
+    private Transform        _grenadeSpawnPoint;
+
     [Header("Audio Clips")]
     [SerializeField]
     private AudioClip        _audioClipTakeOutWeapon;
@@ -37,6 +39,17 @@ public class WeaponAssultRifle : WeaponBase
     private ImpactMemoryPool _impactMemoryPool;
     private Camera           _mainCamera;
     private bool             _isInspecting;
+    private bool             _isgrenadeThrowed;
+    public  float            _knifeDelay = 1;
+    private bool             _knifeUse;
+
+    [Header("Prefabs")]
+    public Transform         grenadePrefab;
+
+    [Header("Grenade Settings")]
+    public float mainGrenadeSpawnDelay = 0.35f;
+    public float grenadeThrowDelay     = 5f;
+    public int   grenadeCount          = 3;
 
     private void Awake()
     {
@@ -62,13 +75,39 @@ public class WeaponAssultRifle : WeaponBase
         ResetVariables();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown (KeyCode.Q) && !_knifeUse) 
+        {
+            _animator.Play ("Knife Attack 1", 0, 0f);
+            StartCoroutine("KnifeDelay");
+        }
+        if (Input.GetKeyDown (KeyCode.F) && !_knifeUse) 
+        {
+            _animator.Play ("Knife Attack 2", 0, 0f);
+            StartCoroutine("KnifeDelay");
+        }
+        if (Input.GetKeyDown (KeyCode.G) && !_isInspecting && grenadeCount > 0) 
+        {
+            StartCoroutine (GrenadeSpawnDelay ());
+            _animator.Play("GrenadeThrow", 0, 0.0f);
+        }
+    }
+    
+    private IEnumerator KnifeDelay()
+    {
+        _knifeUse = true;
+        yield return new WaitForSeconds(_knifeDelay);
+        _knifeUse = false;
+    }
+    
     public override void StartWeaponAction(int type = 0)
     {
         // 재장전 중 무기 액션 X
         if (_isReload == true) return;
         // 모드 전환중 무기 액션 X
         if (_isModeChange == true) return;
-        
+
         // 왼쪽 마우스 클릭시 공격
         if (type == 0)
         {
@@ -121,6 +160,8 @@ public class WeaponAssultRifle : WeaponBase
         }
     }
 
+    
+    
     public void OnAttack()
     {
         if (Time.time - _lastAttackTime > _weaponSetting._attackRate)
@@ -203,12 +244,13 @@ public class WeaponAssultRifle : WeaponBase
         Vector3 attackDirection = (targetPoint - _impactSpawnPoint.position).normalized;
         if (Physics.Raycast(_impactSpawnPoint.position, attackDirection, out hit, _weaponSetting._attackDistance))
         {
-            _impactMemoryPool.SpawnImpack(hit);
+            _impactMemoryPool.SpawnImpact(hit);
 
             if (hit.transform.CompareTag("Enemy"))
             {
+                Debug.Log("적 때림");
                 //적 체력 스테이터스에 TakeDamege함수 넣을것
-                hit.transform.GetComponent<EnemyFSM>().TakeDamage(_weaponSetting._damage);
+                //hit.transform.GetComponent<체력 값들어간 스크립트>().TakeDamage(_weaponSetting._damage);
             }
             else if (hit.transform.CompareTag("ExplosiveBarrel"))
             {
@@ -243,13 +285,25 @@ public class WeaponAssultRifle : WeaponBase
         _isModeChange = false;
     }
 
+    private IEnumerator GrenadeSpawnDelay ()
+    {
+        _isInspecting = true;
+        yield return new WaitForSeconds (mainGrenadeSpawnDelay);
+        Instantiate(grenadePrefab, _grenadeSpawnPoint.transform.position, _grenadeSpawnPoint.rotation);
+        grenadeCount--;
+        yield return new WaitForSeconds (grenadeThrowDelay);
+        _isInspecting = false;
+    }
     private void ResetVariables()
     {
-        _isReload     = false;
-        _isAttack     = false;
-        _isModeChange = false;
+        _isReload         = false;
+        _isAttack         = false;
+        _isModeChange     = false;
+        _isgrenadeThrowed = false;
     }
 
+
+    
     public override void IncreaseMagazineMain(int magazineMain)
     {
         _weaponSetting._currentMagazine =

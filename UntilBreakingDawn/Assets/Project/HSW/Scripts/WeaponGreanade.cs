@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponKnife : WeaponBase
+public class WeaponGrenade : WeaponBase
 {
-    [SerializeField] private WeaponKnifeCollider _weaponKnifeCollider;
-
     private void OnEnable()
     {
         _isAttack = false;
@@ -73,12 +71,6 @@ public class WeaponKnife : WeaponBase
         }
     }
 
-    public void StartWeaponKnifeCollider()
-    {
-        _weaponKnifeCollider.StartCollider(_weaponSetting._damage);
-    }
-    
-    
     // 사용 안된 메서드
     public override void StartReload()
     {

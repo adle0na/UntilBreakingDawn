@@ -39,4 +39,9 @@ public class PlayerAnimControlHSW : MonoBehaviour
     {
         return _animator.GetCurrentAnimatorStateInfo(0).IsName(name);
     }
+
+    public void SetFlaot(String paramName, float value)
+    {
+        _animator.SetFloat(paramName, value);
+    }
 }

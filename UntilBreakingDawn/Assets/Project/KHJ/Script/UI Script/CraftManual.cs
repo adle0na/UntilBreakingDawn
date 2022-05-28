@@ -19,8 +19,8 @@ public class Craft
 
 public class CraftManual : MonoBehaviour
 {
-    private bool isActivated = false;
-    private bool isPreviewActivated = false;
+    public  bool isActivated = false;
+    public  bool isPreviewActivated = false;
 
     [SerializeField]
     private GameObject go_BaseUI;   // 기본 베이스 UI

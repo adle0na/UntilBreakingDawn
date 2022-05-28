@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 182b7f11db452bc458d35a6c9eced06f
 ModelImporter:
-  serializedVersion: 21100
+  serializedVersion: 20200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -641,14 +641,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.2214765
-        functionName: SpawnGrenadeProjectile
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -765,10 +758,11 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.24832214
+      - time: 0.2771739
         functionName: StartWeaponKnifeCollider
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: c1ee7341f48e9d147a2cea0ae995d420,
+          type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -801,10 +795,19 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.2751678
+      - time: 0.2779661
         functionName: StartWeaponKnifeCollider
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: c1ee7341f48e9d147a2cea0ae995d420,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.27173913
+        functionName: StartWeaponKnifeCollider
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: c1ee7341f48e9d147a2cea0ae995d420,
+          type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

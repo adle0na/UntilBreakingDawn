@@ -22,41 +22,54 @@ public class ImpactMemoryPool : MonoBehaviour
         }
     }
 
-    public void SpawnImpack(RaycastHit hit)
+    public void SpawnImpact(RaycastHit hit)
     {
         switch (hit.transform.tag)
         {
             
             case "Dirt" :
-                OnSpawnImpack(ImpactType.Default, hit.point, Quaternion.LookRotation(hit.normal));
+                OnSpawnImpact(ImpactType.Default, hit.point, Quaternion.LookRotation(hit.normal));
                 break;
                 
             case "Wood" :
-                OnSpawnImpack(ImpactType.Wood, hit.point, Quaternion.LookRotation(hit.normal));
+                OnSpawnImpact(ImpactType.Wood, hit.point, Quaternion.LookRotation(hit.normal));
                 break;
             
             case "Metal" :
-                OnSpawnImpack(ImpactType.Metal, hit.point, Quaternion.LookRotation(hit.normal));
+                OnSpawnImpact(ImpactType.Metal, hit.point, Quaternion.LookRotation(hit.normal));
                 break;
             
             case "Stone" :
-                OnSpawnImpack(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
+                OnSpawnImpact(ImpactType.Stone, hit.point, Quaternion.LookRotation(hit.normal));
                 break;
             
             case "Enemy" :
-                OnSpawnImpack(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
+                OnSpawnImpact(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
                 break;
             
             case "ExplosiveBarrel" :
                 Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
-                OnSpawnImpack(ImpactType.ExplosiveBarrel, hit.point, Quaternion.LookRotation(hit.normal), color);
+                OnSpawnImpact(ImpactType.ExplosiveBarrel, hit.point, Quaternion.LookRotation(hit.normal), color);
                 break;
                 
         }
         
     }
 
-    public void OnSpawnImpack(ImpactType type, Vector3 position, Quaternion rotation, Color color = new Color())
+    public void SpawnImpact(Collider other, Transform knifeTransform)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            OnSpawnImpact(ImpactType.Enemy, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation));
+        }
+        else if (other.CompareTag("ExplosiveBarrel"))
+        {
+            Color color = other.transform.GetComponentInChildren<MeshRenderer>().material.color;
+            OnSpawnImpact(ImpactType.ExplosiveBarrel, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation), color);
+        }
+    }
+
+    public void OnSpawnImpact(ImpactType type, Vector3 position, Quaternion rotation, Color color = new Color())
     {
         GameObject item = _memoryPool[(int) type].ActivatePoolItem();
         item.transform.position = position;

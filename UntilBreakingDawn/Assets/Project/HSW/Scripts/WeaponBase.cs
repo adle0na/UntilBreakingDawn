@@ -23,18 +23,17 @@ using UnityEngine;
         protected bool                 _isAttack       = false;
         protected AudioSource          _audioSource;
         protected PlayerAnimControlHSW _animator;
+        public    bool                 _isInspecting;
 
         [HideInInspector]
         public AmmoEvent               _onAmmoEvent     = new AmmoEvent();
         [HideInInspector]
         public MagazineEvent           _onMagazineEvent = new MagazineEvent();
-
         public PlayerAnimControlHSW    Animator        => _animator;
         public WeaponName              WeaponName      => _weaponSetting._WeaponName;
         public int                     CurrentMagazine => _weaponSetting._currentMagazine;
         public int                     MaxMagazine     => _weaponSetting._maxMagazine;
-        
-        
+
         public abstract void StartWeaponAction(int type = 0);
         public abstract void StopWeaponAction(int type = 0);
         public abstract void IncreaseMagazineMain(int magazine);

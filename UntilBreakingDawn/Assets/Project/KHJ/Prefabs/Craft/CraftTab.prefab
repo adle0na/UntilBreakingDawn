@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d82ffb0e3116fb4b85a38fd42695b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActivated: 0
+  isPreviewActivated: 0
   go_BaseUI: {fileID: 5665198441040927921}
   craft_TabUI:
   - {fileID: 5665198439511629046}
@@ -57,9 +59,9 @@ MonoBehaviour:
   - craftsName: "\uC81C\uC791\uD0ED_0"
     crafts:
     - craftName: WoodenWall
-      go_Prefab: {fileID: 2345877933539000700, guid: ba16ce889f226cc4abd290f81cfee841,
+      go_Prefab: {fileID: 7031053816836142385, guid: 7b4d4b784c06ae24095b0d7a230d56fe,
         type: 3}
-      go_PreviewPrefab: {fileID: 2012507207018941033, guid: a59f82bc1f351af4a9d8dd4228a491d0,
+      go_PreviewPrefab: {fileID: 3714706267428498507, guid: 70c1222b65257004db461d6a7c774d91,
         type: 3}
     - craftName: StoneWall
       go_Prefab: {fileID: 5523362690660810294, guid: 3a306612ff83c314791402b7131f8b21,
@@ -76,7 +78,7 @@ MonoBehaviour:
   tf_Player: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 2048
   range: 10
 --- !u!1 &5665198439205323518
 GameObject:
@@ -238,7 +240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5665198439511629047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -537,7 +539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b844bffbe8e22d1489360e86dac65f42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd2db6895e2509a4d8233d745f5e5542, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -747,7 +749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b844bffbe8e22d1489360e86dac65f42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dee0c022e48fd0a439fa0bd401573b35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1021,7 +1023,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB098\uBB34\uBCBD"
+  m_Text: "\uD3ED\uBC1C \uB4DC\uB7FC\uD1B5"
 --- !u!1 &5665198440874073690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,7 +1584,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uAE30\uBCF8 \uB098\uBB34\uBCBD\n\uCCB4\uB825 : 50"
+  m_Text: "\uD3ED\uBC1C \uB4DC\uB7FC\uD1B5\n\uD3ED\uBC1C \uB370\uBBF8\uC9C0 : 50"
 --- !u!1 &5665198441040927921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,7 +1806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6aef7594305bb884aa77fdbc8e68bdad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc3baafce9e9c61479ebcf8d9350c276, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
