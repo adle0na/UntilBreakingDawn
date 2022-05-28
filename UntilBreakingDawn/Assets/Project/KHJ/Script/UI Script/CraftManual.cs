@@ -81,6 +81,7 @@ public class CraftManual : MonoBehaviour
                                             Quaternion.identity);
 
                 go_Prefab = craftTab[i].crafts[_slotNumber].go_Prefab;
+                Debug.Log(go_Prefab.name);
             }
             else
             {

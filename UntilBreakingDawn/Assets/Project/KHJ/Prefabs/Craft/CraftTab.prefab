@@ -70,10 +70,10 @@ MonoBehaviour:
         type: 3}
   - craftsName: "\uC81C\uC791\uD0ED_1"
     crafts:
-    - craftName: WoodenWall
-      go_Prefab: {fileID: 2345877933539000700, guid: ba16ce889f226cc4abd290f81cfee841,
+    - craftName: ExplosiveBarrel
+      go_Prefab: {fileID: 1007812410958436, guid: 0c491dc529381a547b04759aa96fa726,
         type: 3}
-      go_PreviewPrefab: {fileID: 2012507207018941033, guid: a59f82bc1f351af4a9d8dd4228a491d0,
+      go_PreviewPrefab: {fileID: 1007812410958436, guid: c3e8181a41b9d3240a814e8a554afcbc,
         type: 3}
   tf_Player: {fileID: 0}
   layerMask:
@@ -240,7 +240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5665198439511629047
 RectTransform:
   m_ObjectHideFlags: 0
