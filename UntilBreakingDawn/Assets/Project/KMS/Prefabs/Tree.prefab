@@ -139,5 +139,5 @@ MonoBehaviour:
   - {fileID: 1226683075510191432, guid: fcfa1ac8d72b10349b2aba73c25ba917, type: 3}
   - {fileID: 3108851207682891139, guid: d2263e5ba5495bd46834175bac7f2f1e, type: 3}
   AudioSources:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 9139504561666763132, guid: 183527ca7d037d14d817f633f703b52f, type: 3}
+  - {fileID: 1827158158961446971, guid: 0b69e4993b4b4fa41bc11263dfd8cc16, type: 3}

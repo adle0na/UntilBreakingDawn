@@ -7,7 +7,7 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
     IHit hit = null;
 
     // 이후 Start를 OnEnable로 바꿀것
-    private void OnEnable()
+    private void Start()
     {
         if (isPickaxe)
         {
@@ -37,7 +37,7 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
                         base.weaponDamage = 5;
                         Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
                         break;
-                    case "TestRock":
+                    case "Rock":
                         base.weaponDamage = 10;
                         Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
                         break;
