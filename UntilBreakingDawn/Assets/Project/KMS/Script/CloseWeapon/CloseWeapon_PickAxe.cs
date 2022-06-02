@@ -15,7 +15,6 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
             base.attackDelay = 1.7f;
             base.attackDelayA = 0.5f;
             base.attackDelayB = 0.1f;
-            
         }
     }
     void Update()
@@ -25,9 +24,9 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
     }
 
     protected override IEnumerator HitCoroutine()
-    {        
+    {
         while (isSwing)
-        {            
+        {
             if (CheckObject())
             {
                 isSwing = false;
