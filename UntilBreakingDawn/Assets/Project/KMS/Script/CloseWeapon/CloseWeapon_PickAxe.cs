@@ -7,7 +7,7 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
     IHit hit = null;
 
     // 이후 Start를 OnEnable로 바꿀것
-    private void Start()
+    private void OnEnable()
     {
         if (isPickaxe)
         {
