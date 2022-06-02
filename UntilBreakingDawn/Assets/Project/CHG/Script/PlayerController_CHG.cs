@@ -90,7 +90,7 @@ public class PlayerController_CHG : MonoBehaviour
     {
         IsGround();
         TryJump();
-        //TryRun();
+        TryRun();
         TryCrouch();
         TryDash();
         Move();
@@ -307,24 +307,24 @@ public class PlayerController_CHG : MonoBehaviour
     }
 
     //뛰는 시도
-    //void TryRun()
-    //{
-    //    //왼쪽 쉬프트 누르면 뛸수 있음
-    //    if (Input.GetKey(KeyCode.LeftShift) /*&& theStatusController.GetCurrentSP() > 0*/)
-    //    {
-    //        Running();
-    //    }
-    //    //왼쪽 쉬프트를 때면 뛰기 켄슬
-    //    if (Input.GetKeyUp(KeyCode.LeftShift) /*|| theStatusController.GetCurrentSP() <= 0*/)
-    //    {
-    //        RunningCancel();
-    //    }
-    //}
+    void TryRun()
+    {
+        //왼쪽 쉬프트 누르면 뛸수 있음
+        if (Input.GetKey(KeyCode.LeftShift) && theStatusController.GetCurrentSP() > 0)
+        {
+            Running();
+        }
+        //왼쪽 쉬프트를 때면 뛰기 켄슬
+        if (Input.GetKeyUp(KeyCode.LeftShift) || theStatusController.GetCurrentSP() <= 0)
+        {
+            RunningCancel();
+        }
+    }
     void TryJump()
     {
         //spacebar 누르면 점프
         //isGround 가 true 일때만 실행
-        if (Input.GetKeyDown(KeyCode.Space) && isGround /*&& theStatusController.GetCurrentSP() > 0*/)
+        if (Input.GetKeyDown(KeyCode.Space) && isGround && theStatusController.GetCurrentSP() > 0)
         {
             Jump();
             SoundManager_CHG.instance.PlaySE(jump_Sound);

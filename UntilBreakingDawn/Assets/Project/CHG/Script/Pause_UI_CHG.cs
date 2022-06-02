@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Pause_UI_CHG : MonoBehaviour
 {
@@ -9,8 +8,10 @@ public class Pause_UI_CHG : MonoBehaviour
     private GameObject go_BaseUi;
     [SerializeField]
     private GameObject status;
+    [SerializeField]
+    private SaveNLoad_CHG theSaveNLoad;
 
-    private string sceneName = "GameStage";
+
 
     void Update()
     {
@@ -45,18 +46,18 @@ public class Pause_UI_CHG : MonoBehaviour
         Time.timeScale = 1f;   //시간 다시 시작
     }
 
-    //게임 계속 진행
-    public void ClickContinue()
+    //게임 세이브
+    public void ClickSave()
     {
-        Debug.Log("계속진행");
-        CloseManu();
+        Debug.Log("세이브");
+        theSaveNLoad.SaveData();
     }
 
-    //게임 다시 시작
-    public void ClickRestart()
+    //게임 로드
+    public void ClickLoad()
     {
-        Debug.Log("다시시작");
-        SceneManager.LoadScene(sceneName);
+        Debug.Log("로드");
+        theSaveNLoad.LoadData();
     }
 
     //게임 나가기
