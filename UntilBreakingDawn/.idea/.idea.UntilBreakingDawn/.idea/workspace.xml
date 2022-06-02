@@ -2,56 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponKnife.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponKnife.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.overrideController" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.overrideController.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/WoodMat.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Materials/WoodMat.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemRotate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemRotate.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGrenade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGrenade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSwitchSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSwitchSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineMain.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineMain.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineSub.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazineSub.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Branch.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Branch.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineMain.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineMain.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineSub.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/MagazineSub.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Potion.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Potion.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Prefabs/Example_Prefabs/Grenades/Hand_Grenade_Prefab 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Prefabs/Example_Prefabs/Grenades/Hand_Grenade_Prefab 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/Hand_Grenade_Prefab.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Prefabs/Hand_Grenade_Prefab.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAxe.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAxe.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGreanade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGreanade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickage.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMagazine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMagazine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMedicBag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ItemMedicBag.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerCollider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerCollider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Animators/Assault_Rifle_01/assault_rifle_01.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Animators/Assault_Rifle_01/assault_rifle_01.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Meshes/Arms/Assault_Rifle_01/arms_assault_rifle_01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Meshes/Arms/Assault_Rifle_01/arms_assault_rifle_01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Meshes/Arms/Handgun_01/arms_handgun_01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Meshes/Arms/Handgun_01/arms_handgun_01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Scripts/Casings_&amp;_Projectiles/GrenadeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Scripts/Casings_&amp;_Projectiles/GrenadeScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Prefabs/Example_Prefabs/Grenades/Hand_Grenade_Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Prefabs/Example_Prefabs/Grenades/Hand_Grenade_Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponKnife.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponKnife.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponRevolver.overrideController" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerAnimControlHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerAnimControlHSW.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGrenade.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponGrenade.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazine.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/magazine.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Rock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/leaf.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/leaf.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/potion_red_item.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/potion_red_item.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +131,8 @@
       <workItem from="1653044807997" duration="6952000" />
       <workItem from="1653388009880" duration="121000" />
       <workItem from="1653504376978" duration="12584000" />
+      <workItem from="1653583326188" duration="1166000" />
+      <workItem from="1653602127254" duration="16927000" />
     </task>
     <servers />
   </component>

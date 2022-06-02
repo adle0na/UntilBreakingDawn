@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 82305533685823640}
   - component: {fileID: 114853094415237424}
   m_Layer: 0
-  m_Name: Hand_Grenade_Prefab
+  m_Name: Hand_Grenade_Prefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

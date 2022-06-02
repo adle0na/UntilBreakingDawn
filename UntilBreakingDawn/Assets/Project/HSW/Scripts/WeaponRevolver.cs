@@ -7,20 +7,35 @@ public class WeaponRevolver : WeaponBase
 {
     [Header("Fire Effects")]
     [SerializeField]
-    private GameObject       _muzzleFlashEffect; // 총구 이펙트
+    private GameObject        _muzzleFlashEffect; // 총구 이펙트
     
     [Header("Spawn Points")]
     [SerializeField]
-    private Transform        _bulletSpawnPoint;  // 총알 생성 위치
+    private Transform         _bulletSpawnPoint;
+    [SerializeField]
+    private Transform         _grenadeSpawnPoint; // 수류탄 생성 위치
     
     [Header("Audio Clips")]
     [SerializeField]
-    private AudioClip        _audioClipFire;     // 발사 사운드
+    private AudioClip         _audioClipFire;     // 발사 사운드
     [SerializeField]
-    private AudioClip        _audioClipReload;   // 장전 사운드
+    private AudioClip         _audioClipReload;   // 장전 사운드
+ 
+    private bool              _isInspecting;
+    private ImpactMemoryPool  _impactMemoryPool;  // 공격 효과 관리
+    private Camera            _mainCamera;        // RayCast
+    private bool              _isgrenadeThrowed;
+    public  GameObject        _weaponMain;
+    private WeaponAssultRifle _weaponAssultRifle;
+    public  float             _knifeDelay = 1;
+    private bool              _knifeUse;
 
-    private ImpactMemoryPool _impactMemoryPool;  // 공격 효과 관리
-    private Camera           _mainCamera;        // RayCast
+    [Header("Prefabs")]
+    public Transform grenadePrefab;
+    
+    [Header("Grenade Settings")]
+    public float subGrenadeSpawnDelay = 0.35f;
+    public float grenadeThrowDelay = 5f;
 
     private void OnEnable()
     {
@@ -36,14 +51,41 @@ public class WeaponRevolver : WeaponBase
     private void Awake()
     {
         base.Setup();
-        
+
+        _weaponAssultRifle              = _weaponMain.GetComponent<WeaponAssultRifle>();
         _impactMemoryPool               = GetComponent<ImpactMemoryPool>();
         _mainCamera                     = Camera.main;
-
+        
         _weaponSetting._currentMagazine = _weaponSetting._maxMagazine;
         _weaponSetting._currentAmmo     = _weaponSetting._maxAmmo;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown (KeyCode.Q) && !_knifeUse) 
+        {
+            _animator.Play ("Knife Attack 1", 0, 0f);
+            StartCoroutine("KnifeDelay");
+        }
+        if (Input.GetKeyDown (KeyCode.F) && !_knifeUse) 
+        {
+            _animator.Play ("Knife Attack 2", 0, 0f);
+            StartCoroutine("KnifeDelay");
+        }
+        if (Input.GetKeyDown(KeyCode.G) && !_isInspecting && _weaponAssultRifle.grenadeCount > 0)
+        {
+            StartCoroutine (GrenadeSpawnDelay ());
+            _animator.Play("GrenadeThrow", 0, 0.0f);
+        }
+    }
+
+    private IEnumerator KnifeDelay()
+    {
+        _knifeUse = true;
+        yield return new WaitForSeconds(_knifeDelay);
+        _knifeUse = false;
+    }
+    
     public override void StartWeaponAction(int type = 0)
     {
         if (type == 0 && _isAttack == false && _isReload == false)
@@ -155,12 +197,13 @@ public class WeaponRevolver : WeaponBase
         Vector3 attackDirection = (targetPoint - _bulletSpawnPoint.position).normalized;
         if (Physics.Raycast(_bulletSpawnPoint.position, attackDirection, out hit, _weaponSetting._attackDistance))
         {
-            _impactMemoryPool.SpawnImpack(hit);
+            _impactMemoryPool.SpawnImpact(hit);
 
             if (hit.transform.CompareTag("Enemy"))
             {
                 //적 체력 스테이터스에 TakeDamege함수 넣을것
-                hit.transform.GetComponent<EnemyFSM>().TakeDamage(_weaponSetting._damage);
+                Debug.Log("권총 타격");
+                //hit.transform.GetComponent<EnemyFSM>().TakeDamage(_weaponSetting._damage);
             }
             else if (hit.transform.CompareTag("ExplosiveBarrel"))
             {
@@ -168,11 +211,21 @@ public class WeaponRevolver : WeaponBase
             }
         }
     }
+    private IEnumerator GrenadeSpawnDelay ()
+    {
+        _isInspecting = true;
+        yield return new WaitForSeconds (subGrenadeSpawnDelay);
+        Instantiate(grenadePrefab, _grenadeSpawnPoint.transform.position, _grenadeSpawnPoint.rotation);
+        _weaponAssultRifle.grenadeCount--;
+        yield return new WaitForSeconds (grenadeThrowDelay);
+        _isInspecting = false;
+    }
     
     private void ResetVariables()
     {
         _isReload = false;
         _isAttack = false;
+        _isgrenadeThrowed = false;
     }
     
 }

@@ -15,7 +15,6 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
             base.attackDelay = 1.7f;
             base.attackDelayA = 0.5f;
             base.attackDelayB = 0.1f;
-            
         }
     }
     void Update()
@@ -25,9 +24,9 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
     }
 
     protected override IEnumerator HitCoroutine()
-    {        
+    {
         while (isSwing)
-        {            
+        {
             if (CheckObject())
             {
                 isSwing = false;
@@ -38,7 +37,7 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
                         base.weaponDamage = 5;
                         Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
                         break;
-                    case "TestRock":
+                    case "Rock":
                         base.weaponDamage = 10;
                         Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
                         break;

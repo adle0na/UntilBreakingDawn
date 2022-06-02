@@ -116,7 +116,6 @@ public class PlayerControllerHSW : MonoBehaviour
         {
             _weapon.StopWeaponAction();
         }
-        
         if (Input.GetMouseButtonDown(1))
         {
             _weapon.StartWeaponAction(1);

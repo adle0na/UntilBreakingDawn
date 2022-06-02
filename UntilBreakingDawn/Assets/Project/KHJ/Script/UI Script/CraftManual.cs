@@ -19,8 +19,8 @@ public class Craft
 
 public class CraftManual : MonoBehaviour
 {
-    private bool isActivated = false;
-    private bool isPreviewActivated = false;
+    public  bool isActivated = false;
+    public  bool isPreviewActivated = false;
 
     [SerializeField]
     private GameObject go_BaseUI;   // 기본 베이스 UI
@@ -45,6 +45,8 @@ public class CraftManual : MonoBehaviour
     [SerializeField]
     private float range;
 
+    private int TabSelectNumber;
+
     private void Start()
     {
         for (int i = 0; i < craft_TabUI.Length; i++)
@@ -67,29 +69,55 @@ public class CraftManual : MonoBehaviour
 
             craft_TabUI[_TabNumber].transform.Find("SlotActive").gameObject.SetActive(true);
         }
+        TabSelectNumber = _TabNumber;
     }
 
     // 슬롯 클릭
     public void SlotClick(int _slotNumber)
     {
-        for (int i = 0; i < craftTab.Length; i++)
+       /* for (int i = 0; i < craftTab.Length; i++)
         {
-            if (go_Prefab == null && go_Preview == null)
+            if (go_Prefab == null && go_Preview == null && i == TabSelectNumber)
             {
                 go_Preview = Instantiate(craftTab[i].crafts[_slotNumber].go_PreviewPrefab,
                                             tf_Player.position + tf_Player.forward,
                                             Quaternion.identity);
 
                 go_Prefab = craftTab[i].crafts[_slotNumber].go_Prefab;
+
+                Debug.Log(go_Preview.name);
+                Debug.Log(go_Prefab.name);
+
+                isPreviewActivated = true;
+                go_BaseUI.SetActive(false);
             }
             else
             {
                 break;
             }
+        }*/
+
+        if (go_Prefab == null && go_Preview == null)
+        {
+            go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                        tf_Player.position + tf_Player.forward,
+                                        Quaternion.identity);
+
+            go_Prefab = craftTab[TabSelectNumber].crafts[_slotNumber].go_Prefab;
+
+            Debug.Log(go_Preview.name);
+            Debug.Log(go_Prefab.name);
+
+            isPreviewActivated = true;
+            go_BaseUI.SetActive(false);
+        }
+        else
+        {
+            
         }
 
-        isPreviewActivated = true;
-        go_BaseUI.SetActive(false);
+        //isPreviewActivated = true;
+        //go_BaseUI.SetActive(false);
     }
 
     void Update()

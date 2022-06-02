@@ -7,7 +7,7 @@ public class GrenadeScript : MonoBehaviour {
 	[Header("Timer")]
 	//Time before the grenade explodes
 	[Tooltip("Time before the grenade explodes")]
-	public float grenadeTimer = 5.0f;
+	public float grenadeTimer = 3.0f;
 
 	[Header("Explosion Prefabs")]
 	//Explosion prefab
@@ -21,6 +21,8 @@ public class GrenadeScript : MonoBehaviour {
 	[Tooltip("The intensity of the explosion force")]
 	public float power = 350.0F;
 
+	public float damage = 100f;
+	
 	[Header("Throw Force")]
 	[Tooltip("Minimum throw force")]
 	public float minimumForce = 1500.0f;
@@ -95,12 +97,17 @@ public class GrenadeScript : MonoBehaviour {
 				//Toggle "isHit" on target object
 				hit.gameObject.GetComponent<TargetScript>().isHit = true;
 			}
+			
+			if (hit.GetComponent<Collider>().tag == "Player")
+			{
+				hit.gameObject.GetComponent<Status>().DecreaseHP(50);
+			}
 
 			//If the explosion hits "ExplosiveBarrel" tag
 			if (hit.GetComponent<Collider>().tag == "ExplosiveBarrel") 
 			{
 				//Toggle "explode" on explosive barrel object
-				hit.gameObject.GetComponent<ExplosiveBarrelScript> ().explode = true;
+				hit.gameObject.GetComponent<InteractionObject> ().TakeDamage(100);
 			}
 		}
 

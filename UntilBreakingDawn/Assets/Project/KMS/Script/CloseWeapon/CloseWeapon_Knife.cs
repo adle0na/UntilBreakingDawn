@@ -37,8 +37,8 @@ public class CloseWeapon_Knife : CloseWeapon_Base
                         base.weaponDamage = 5;
                         Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
                         break;
-                    case "TestRock":
-                        base.weaponDamage = 10;
+                    case "Rock":
+                        base.weaponDamage = 4;
                         Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
                         break;
                 }

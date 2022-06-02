@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 5170595753244093952}
   - component: {fileID: 8301061017279651589}
   - component: {fileID: 781777819661522644}
-  m_Layer: 0
+  - component: {fileID: 7491317993075417956}
+  - component: {fileID: 7491317993075417957}
+  - component: {fileID: 7491317993075417955}
+  m_Layer: 3
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +44,8 @@ Tree:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8088529467107398443}
   m_SpeedTreeWindAsset: {fileID: 0}
-  m_TreeData: {fileID: 114140293822690050, guid: d84f20f47c387e744a6d910a68b56a8e, type: 3}
+  m_TreeData: {fileID: 114140293822690050, guid: d84f20f47c387e744a6d910a68b56a8e,
+    type: 3}
 --- !u!33 &8301061017279651589
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -92,3 +96,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7491317993075417956
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088529467107398443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 43364355809479628, guid: d84f20f47c387e744a6d910a68b56a8e, type: 3}
+--- !u!135 &7491317993075417957
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088529467107398443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: -0.9899888, y: 0, z: 0.142807}
+--- !u!114 &7491317993075417955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088529467107398443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cb71b94e433cb4cb31842ab15df241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcePrefabs:
+  - {fileID: 1226683075510191432, guid: fcfa1ac8d72b10349b2aba73c25ba917, type: 3}
+  - {fileID: 3108851207682891139, guid: d2263e5ba5495bd46834175bac7f2f1e, type: 3}
+  AudioSources:
+  - {fileID: 9139504561666763132, guid: 183527ca7d037d14d817f633f703b52f, type: 3}
+  - {fileID: 1827158158961446971, guid: 0b69e4993b4b4fa41bc11263dfd8cc16, type: 3}
