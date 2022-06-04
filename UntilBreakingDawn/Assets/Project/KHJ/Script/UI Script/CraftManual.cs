@@ -15,6 +15,8 @@ public class Craft
     public string craftName;
     public GameObject go_Prefab;        // 실제 설치될 프리펩
     public GameObject go_PreviewPrefab; // 미리보기 프리펩
+    // 아이템
+    public Item item;
 }
 
 public class CraftManual : MonoBehaviour
@@ -45,7 +47,13 @@ public class CraftManual : MonoBehaviour
     [SerializeField]
     private float range;
 
+    // 탭 번호
     private int TabSelectNumber;
+
+    // 인벤토리
+    public Inventory inven;
+
+    private Item items;
 
     private void Start()
     {
@@ -75,41 +83,25 @@ public class CraftManual : MonoBehaviour
     // 슬롯 클릭
     public void SlotClick(int _slotNumber)
     {
-       /* for (int i = 0; i < craftTab.Length; i++)
+        items = craftTab[TabSelectNumber].crafts[_slotNumber].item;
+
+        if (go_Prefab == null && go_Preview == null)
         {
-            if (go_Prefab == null && go_Preview == null && i == TabSelectNumber)
+            if (items != null && items.itemType != Item.ItemType.Equipment)
             {
-                go_Preview = Instantiate(craftTab[i].crafts[_slotNumber].go_PreviewPrefab,
-                                            tf_Player.position + tf_Player.forward,
-                                            Quaternion.identity);
+                inven.AcquireItem(craftTab[TabSelectNumber].crafts[_slotNumber].item);
+            }
+            else
+            {
+                go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                                        tf_Player.position + tf_Player.forward,
+                                                        Quaternion.identity);
 
-                go_Prefab = craftTab[i].crafts[_slotNumber].go_Prefab;
-
-                Debug.Log(go_Preview.name);
-                Debug.Log(go_Prefab.name);
+                go_Prefab = craftTab[TabSelectNumber].crafts[_slotNumber].go_Prefab;
 
                 isPreviewActivated = true;
                 go_BaseUI.SetActive(false);
             }
-            else
-            {
-                break;
-            }
-        }*/
-
-        if (go_Prefab == null && go_Preview == null)
-        {
-            go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
-                                        tf_Player.position + tf_Player.forward,
-                                        Quaternion.identity);
-
-            go_Prefab = craftTab[TabSelectNumber].crafts[_slotNumber].go_Prefab;
-
-            Debug.Log(go_Preview.name);
-            Debug.Log(go_Prefab.name);
-
-            isPreviewActivated = true;
-            go_BaseUI.SetActive(false);
         }
         else
         {
