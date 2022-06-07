@@ -145,11 +145,8 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        woodCount -= 4;
-
                         inven.SetItemCount("leaf", woodCount);
-
-                        Debug.Log("목재 카운트 : " + woodCount);
+                        woodCount -= 4;
 
                         isPreviewActivated = true;
                         go_BaseUI.SetActive(false);
@@ -163,9 +160,8 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        rookCount -= 4;
-
                         inven.SetItemCount("Rook", rookCount);
+                        rookCount -= 4;
 
                         isPreviewActivated = true;
                         go_BaseUI.SetActive(false);
@@ -179,11 +175,11 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        woodCount -= 2;
-                        rookCount -= 2;
-
                         inven.SetItemCount("leaf", woodCount);
                         inven.SetItemCount("Rook", rookCount);
+
+                        woodCount -= 2;
+                        rookCount -= 2;
 
                         isPreviewActivated = true;
                         go_BaseUI.SetActive(false);
