@@ -53,7 +53,22 @@ public class CraftManual : MonoBehaviour
     // 인벤토리
     public Inventory inven;
 
+    [SerializeField]
+    private GameObject go_SlotsParent;
+    private Slot[] slots;
+
     private Item items;
+
+    // 재료 판별기
+    private int woodCount   = 0;
+    private int rookCount   = 0;
+    private int meatCount   = 0;
+
+
+    private void Awake()
+    {
+        slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+    }
 
     private void Start()
     {
@@ -89,27 +104,93 @@ public class CraftManual : MonoBehaviour
         {
             if (items != null && items.itemType != Item.ItemType.Equipment)
             {
-                inven.AcquireItem(craftTab[TabSelectNumber].crafts[_slotNumber].item);
+                for (int i = 0; i < slots.Length; i++)
+                {
+                    if (items.itemName == "Stake")
+                    {
+                        // 고기 차감할 곳
+                        inven.AcquireItem(items);
+                    }
+                }
             }
             else
             {
-                go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                go_Prefab = craftTab[TabSelectNumber].crafts[_slotNumber].go_Prefab;
+
+                for (int i = 0; i < slots.Length; i++)
+                {
+                    if (go_Prefab.name == "WoodWall")
+                    {
+                        woodCount = inven.GetItemCount("leaf");
+                        break;
+                    }
+                    else if (go_Prefab.name == "StoneWall")
+                    {
+                        rookCount = inven.GetItemCount("Rook");
+                        break;
+                    }
+                    else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
+                    {
+                        woodCount = inven.GetItemCount("leaf");
+                        rookCount = inven.GetItemCount("Rook");
+                        break;
+                    }
+                }
+
+                if (go_Prefab.name == "WoodWall")
+                {
+                    if (woodCount >= 4)
+                    {
+                        go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                go_Prefab = craftTab[TabSelectNumber].crafts[_slotNumber].go_Prefab;
+                        woodCount -= 4;
 
-                isPreviewActivated = true;
-                go_BaseUI.SetActive(false);
+                        inven.SetItemCount("leaf", woodCount);
+
+                        Debug.Log("목재 카운트 : " + woodCount);
+
+                        isPreviewActivated = true;
+                        go_BaseUI.SetActive(false);
+                    }
+                }
+                else if (go_Prefab.name == "StoneWall")
+                {
+                    if (rookCount >= 4)
+                    {
+                        go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                                        tf_Player.position + tf_Player.forward,
+                                                        Quaternion.identity);
+
+                        rookCount -= 4;
+
+                        inven.SetItemCount("Rook", rookCount);
+
+                        isPreviewActivated = true;
+                        go_BaseUI.SetActive(false);
+                    }
+                }
+                else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
+                {
+                    if (woodCount >= 2 && rookCount >=2)
+                    {
+                        go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                                        tf_Player.position + tf_Player.forward,
+                                                        Quaternion.identity);
+
+                        woodCount -= 2;
+                        rookCount -= 2;
+
+                        inven.SetItemCount("leaf", woodCount);
+                        inven.SetItemCount("Rook", rookCount);
+
+                        isPreviewActivated = true;
+                        go_BaseUI.SetActive(false);
+                    }
+                }
             }
         }
-        else
-        {
-            
-        }
-
-        //isPreviewActivated = true;
-        //go_BaseUI.SetActive(false);
     }
 
     void Update()
@@ -188,6 +269,9 @@ public class CraftManual : MonoBehaviour
 
     private void CloseWindow()
     {
+        go_Preview = null;
+        go_Prefab = null;
+
         isActivated = false;
         go_BaseUI.SetActive(false);
     }

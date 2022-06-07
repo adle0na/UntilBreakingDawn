@@ -55,6 +55,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,IDrag
         itemCount += _count;
         text_Count.text = itemCount.ToString();
 
+        Debug.Log("슬롯 아이템 카운트 : " + itemCount);
+
         if (itemCount <= 0)
             ClearSlot();
     }
