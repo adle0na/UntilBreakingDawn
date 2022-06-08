@@ -9,8 +9,6 @@ public class Title_CHG : MonoBehaviour
 
     public static Title_CHG instance;
 
-    private SaveNLoad_CHG theSaveNLoae;
-
     private void Awake()
     {
 
@@ -31,33 +29,7 @@ public class Title_CHG : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    //start 버튼
-    public void ClickLoad()
-    {
-        Debug.Log("로드");
-
-        StartCoroutine(LoadCoroutin());
-
-       
-        IEnumerator LoadCoroutin()
-        {
-
-            AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-
-            while (!operation.isDone)
-            {
-                yield return null;
-            }
-
-            theSaveNLoae = FindObjectOfType<SaveNLoad_CHG>();
-
-            theSaveNLoae.LoadData();
-            Destroy(gameObject);
-
-        }
-    }
-
-    //start 버튼
+    //exit 버튼
     public void ClickExit()
     {
         Debug.Log("게임종료");
