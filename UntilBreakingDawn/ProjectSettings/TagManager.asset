@@ -20,6 +20,8 @@ TagManager:
   - Boulder
   - Bullet
   - Item
+  - Tree
+  - Rock
   layers:
   - Default
   - TransparentFX

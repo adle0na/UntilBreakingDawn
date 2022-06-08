@@ -7,7 +7,7 @@ public class CloseWeapon_Knife : CloseWeapon_Base
     IHit hit = null;
 
     // 이후 Start를 OnEnable로 바꿀것
-    private void Start()
+    private void OnEnable()
     {
         if (isKnife)
         {
@@ -31,19 +31,23 @@ public class CloseWeapon_Knife : CloseWeapon_Base
             {
                 isSwing = false;
                 // Damage 변경
-                switch (hitInfo.transform.name)
+                if (hitInfo.transform.CompareTag("Tree"))
                 {
-                    case "Tree":
-                        base.weaponDamage = 5;
-                        Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
-                        break;
-                    case "Rock":
-                        base.weaponDamage = 4;
-                        Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
-                        break;
+                    base.weaponDamage = 5;
+                    Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
+                }
+                else if (hitInfo.transform.CompareTag("Rock"))
+                {
+                    base.weaponDamage = 3;
+                    Debug.Log($"{hitInfo.transform.name} : {weaponDamage}");
+                }
+                else
+                {
+                    Debug.Log("Error");
                 }
                 // 공격받은 오브젝트 내부 OnHit함수 실행
                 hit = hitInfo.collider.gameObject.GetComponent<IHit>();
+                hit.weaponDamage = weaponDamage;
                 hit.OnHit();
             }
             // IHit 실행함수 작성

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Resource_Rock : Resource_Base
 {
+    [Header("πŸ¿ß HP")]
+    public int rockHp = 20;
     public AudioSource[] AudioSources;
-
-    private const int rockHp = 20;
 
     private void OnEnable()
     {

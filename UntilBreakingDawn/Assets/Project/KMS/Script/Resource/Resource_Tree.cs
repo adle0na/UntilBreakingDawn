@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Resource_Tree : Resource_Base
 {
+    [Header("³ª¹« HP")]
+    public int TreeHp = 10;
     public AudioSource[] AudioSources;
-
-    private const int TreeHp = 10;
 
     private void OnEnable()
     {

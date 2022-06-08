@@ -15,12 +15,12 @@ GameObject:
   - component: {fileID: 7491317993075417956}
   - component: {fileID: 7491317993075417957}
   - component: {fileID: 7491317993075417955}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Tree
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8905164968120807971
 Transform:
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8088529467107398443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.27, y: 0, z: -10.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,7 +121,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 3.5
   m_Center: {x: -0.9899888, y: 0, z: 0.142807}
 --- !u!114 &7491317993075417955
 MonoBehaviour:
@@ -138,6 +138,7 @@ MonoBehaviour:
   ResourcePrefabs:
   - {fileID: 1226683075510191432, guid: fcfa1ac8d72b10349b2aba73c25ba917, type: 3}
   - {fileID: 3108851207682891139, guid: d2263e5ba5495bd46834175bac7f2f1e, type: 3}
+  TreeHp: 10
   AudioSources:
-  - {fileID: 9139504561666763132, guid: 183527ca7d037d14d817f633f703b52f, type: 3}
-  - {fileID: 1827158158961446971, guid: 0b69e4993b4b4fa41bc11263dfd8cc16, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}

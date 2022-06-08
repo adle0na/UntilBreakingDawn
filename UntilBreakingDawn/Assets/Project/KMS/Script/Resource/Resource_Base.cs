@@ -8,6 +8,11 @@ public class Resource_Base : MonoBehaviour, IHit
     private Transform resourceTranform = null;
 
     protected int HP;
+    public int weaponDamage
+    {
+        get;
+        set;
+    }
 
     protected GameObject resource = null; 
     public GameObject[] ResourcePrefabs = null; // 생성될 드롭 자원
@@ -23,8 +28,8 @@ public class Resource_Base : MonoBehaviour, IHit
     public virtual void OnHit()
     {
         Debug.Log("OnHit");
-        HP -= GameManager.Inst.Base.weaponDamage;
-        Debug.Log(GameManager.Inst.Base.weaponDamage);
+        HP -= weaponDamage;
+
         Debug.Log(HP);
     }
     // 오브젝트가 파괴되었을 때 실행할 함수

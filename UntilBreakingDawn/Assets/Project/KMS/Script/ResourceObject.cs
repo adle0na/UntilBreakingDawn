@@ -33,6 +33,8 @@ public class ResourceObject : MonoBehaviour, IHit
         }
     }
 
+    public int weaponDamage { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
     public void OnHit()
     {
         throw new System.NotImplementedException();

@@ -15,7 +15,8 @@ public class CloseWeapon_Base : MonoBehaviour
     protected bool isSwing = false;
 
     // Attack
-    public int weaponDamage = 5 ;
+    protected int weaponDamage = 5;
+
     protected float weaponRange;
     protected float attackDelay;
     protected float attackDelayA;
