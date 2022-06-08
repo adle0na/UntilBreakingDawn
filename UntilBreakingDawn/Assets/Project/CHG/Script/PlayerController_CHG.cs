@@ -57,7 +57,7 @@ public class PlayerController_CHG : MonoBehaviour
     [SerializeField]  //Camera 적용하기 위하여.. 컴포넌트에 없기 때문
     private Camera theCamera;
 
-    private StatusController_CHG theStatusController;
+    //private StatusController_CHG theStatusController;
 
     [SerializeField]  // 게임 오버
     private GameObject gameOver;
@@ -77,7 +77,7 @@ public class PlayerController_CHG : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
 
         capsuleCollider = GetComponent<CapsuleCollider>();
-        theStatusController = GameObject.Find("Status").GetComponent<StatusController_CHG>();
+        //theStatusController = GameObject.Find("Status").GetComponent<StatusController_CHG>();
         theGameManager = FindObjectOfType<GameManager_CHG>();
         anim = GetComponent<Animator>();
 
@@ -96,54 +96,40 @@ public class PlayerController_CHG : MonoBehaviour
         Move();
         CameraRotation();
         CharacterRotation();
-        Dead();
+       // Dead();
 
-        DecreaseSpeed();
+        //DecreaseSpeed();
     }
 
-    private void DecreaseSpeed()
-    {
-        if(theStatusController.currentHungry <= 0)
-        {
-            theStatusController.spIncreaseSpeed = 0;
-            theStatusController.currentSp = 0;
-            walkSpeed = 2;
-        }
-        if (theStatusController.currentThirsty <= 0)
-        {
-            theStatusController.spIncreaseSpeed = 0;
-            theStatusController.currentSp = 0;
-            walkSpeed = 2;
-        }
+    //private void DecreaseSpeed()
+    //{
+    //    if(theStatusController.currentHungry <= 0)
+    //    {
+    //        theStatusController.spIncreaseSpeed = 0;
+    //        theStatusController.currentSp = 0;
+    //        walkSpeed = 2;
+    //    }
+    //    if (theStatusController.currentThirsty <= 0)
+    //    {
+    //        theStatusController.spIncreaseSpeed = 0;
+    //        theStatusController.currentSp = 0;
+    //        walkSpeed = 2;
+    //    }
 
-    }
+    //}
 
 
-    private void Dead()
-    {
-        if (theStatusController.currentHp <= 0)
-        {
-            Time.timeScale = 0f;
+    //private void Dead()
+    //{
+    //    if (theStatusController.currentHp <= 0)
+    //    {
+    //        Time.timeScale = 0f;
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-90.0f, 0, 0), Time.time * 0.01f); 
+    //        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-90.0f, 0, 0), Time.time * 0.01f); 
 
-            theGameManager._goGameOverUI.SetActive(true);
-        }
-    }
-
-    // 적에게 맞았을때
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.CompareTag("Enemy"))
-        {
-            theStatusController.DecreaseHP(30);
-
-           
-
-            Vector3 pos = new Vector3(0, 0, -0.5f);
-            transform.position = Vector3.Lerp(transform.position, pos, 0.03f);
-        }
-    }
+    //        theGameManager._goGameOverUI.SetActive(true);
+    //    }
+    //}
 
     //private bool oneClick = false;
     //private double clickTimer = 0;
@@ -222,7 +208,7 @@ public class PlayerController_CHG : MonoBehaviour
 
         applySpeed *= dashSpeed;
 
-        theStatusController.DecreaseStamina(30);
+       // theStatusController.DecreaseStamina(30);
 
         yield return new WaitForSeconds(dashTime);
 
@@ -301,7 +287,7 @@ public class PlayerController_CHG : MonoBehaviour
         if (isCrouch)
             Crouch();
 
-        theStatusController.DecreaseStamina(50);
+        //theStatusController.DecreaseStamina(50);
         //jumpPower 만큼 trasform.up 방향으로 힘을 가하다
         rigid.velocity = transform.up * jumpPower;
     }
@@ -310,12 +296,12 @@ public class PlayerController_CHG : MonoBehaviour
     void TryRun()
     {
         //왼쪽 쉬프트 누르면 뛸수 있음
-        if (Input.GetKey(KeyCode.LeftShift) && theStatusController.GetCurrentSP() > 0)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             Running();
         }
         //왼쪽 쉬프트를 때면 뛰기 켄슬
-        if (Input.GetKeyUp(KeyCode.LeftShift) || theStatusController.GetCurrentSP() <= 0)
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             RunningCancel();
         }
@@ -324,7 +310,7 @@ public class PlayerController_CHG : MonoBehaviour
     {
         //spacebar 누르면 점프
         //isGround 가 true 일때만 실행
-        if (Input.GetKeyDown(KeyCode.Space) && isGround && theStatusController.GetCurrentSP() > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && isGround /*&& theStatusController.GetCurrentSP() > 0*/)
         {
             Jump();
             SoundManager_CHG.instance.PlaySE(jump_Sound);
@@ -340,7 +326,7 @@ public class PlayerController_CHG : MonoBehaviour
 
         //true 면 기본값으로 applySpeed 에 있던 walkSpeed 가 runSpeed 로 바뀜
         isRun = true;
-        theStatusController.DecreaseStamina(1);
+        //theStatusController.DecreaseStamina(1);
         applySpeed = runSpeed;
     }
 
