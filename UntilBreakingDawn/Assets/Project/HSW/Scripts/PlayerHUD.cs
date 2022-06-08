@@ -44,12 +44,20 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI  _textHP;
     [SerializeField]
+    private TextMeshProUGUI  _textHungry;
+    
+    [SerializeField]
     private Image            _BloodScreen;
     [SerializeField]
     private AnimationCurve   _curveBloodScreen;
     private void Awake()
     {
         _status._onHPEvent.AddListener(UpdateHPHUD);
+    }
+
+    private void Update()
+    {
+        _status.DecreaseHungry(1);
     }
 
     public void SetupAllWeapons(WeaponBase[] weapons)
@@ -113,6 +121,19 @@ public class PlayerHUD : MonoBehaviour
     private void UpdateHPHUD(int previous, int current)
     {
         _textHP.text = "HP " + current;
+
+        if (previous <= current) return;
+
+        if (previous - current > 0)
+        {
+            if (_coroutine != null) StopCoroutine(_coroutine);
+            _coroutine = StartCoroutine(OnBloodScreen());
+        }
+    }
+    
+    private void UpdateHungryHUD(int previous, int current)
+    {
+        _textHungry.text = "Hungry " + current;
 
         if (previous <= current) return;
 

@@ -110,6 +110,11 @@ public class Inventory : MonoBehaviour
                 slot.UseSlot();
                 break;
 
+            case Item.ItemType.Food:
+                _playerSet.Status.IncreaseHungry(slot.item.editableValue);
+                slot.UseSlot();
+                break;
+            
             case Item.ItemType.MagazineMain:
                 if (_playerSet.Weapon._weaponType == WeaponType.Main)
                 {

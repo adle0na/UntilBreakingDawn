@@ -19,6 +19,7 @@ public class Item : ScriptableObject
         MagazineMain,
         MagazineSub,
         Ingredient,
+        Food,
         ETC
     }
 }

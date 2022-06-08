@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fefdfe282998194eb020c87fedd7f67, type: 3}
-  m_Name: leaf
+  m_Name: Cooked_Meat
   m_EditorClassIdentifier: 
-  itemName: leaf
-  itemType: 4
-  ItemImage: {fileID: 21300000, guid: e42ee966e7e5dbf4cbc333a9e3c5b198, type: 3}
-  itemPrefab: {fileID: 8704102433823617419, guid: 07cc5bb308aed1849ac661b397551cf6,
+  itemName: CookedMeat
+  itemType: 6
+  ItemImage: {fileID: 21300000, guid: 1ac06b87277db8d4398f3489dbd89cbf, type: 3}
+  itemPrefab: {fileID: 126947220201560673, guid: 551527ec6db1fbf42ac3e0384b141bb8,
     type: 3}
-  weponType: 
-  editableValue: 0
+  editableValue: 50

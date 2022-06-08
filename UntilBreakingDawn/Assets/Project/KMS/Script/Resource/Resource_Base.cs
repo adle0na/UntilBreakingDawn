@@ -42,7 +42,7 @@ public class Resource_Base : MonoBehaviour, IHit
     public void ResourceGenerate()
     {
         int resourceType = Random.Range(0, ResourcePrefabs.Length);
-        GameObject gameObject = GameObject.Instantiate(ResourcePrefabs[resourceType], this.transform);
+        GameObject gameObject = Instantiate(ResourcePrefabs[resourceType], this.transform);
         gameObject.transform.parent = resourceTranform;
     }
 }
