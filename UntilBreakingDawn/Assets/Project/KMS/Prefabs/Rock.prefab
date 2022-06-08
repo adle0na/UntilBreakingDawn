@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4681428313845920018}
   - component: {fileID: 9172200921845793556}
   - component: {fileID: 2673432225211166881}
-  - component: {fileID: 7256143501114821658}
   - component: {fileID: 7256143501114821659}
   m_Layer: 7
   m_Name: Rock
@@ -123,19 +122,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4168634101341954146}
   m_Enabled: 1
---- !u!135 &7256143501114821658
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256143501114821656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: -0.0158149, y: 1.5753133, z: -0.002117157}
 --- !u!114 &7256143501114821659
 MonoBehaviour:
   m_ObjectHideFlags: 0

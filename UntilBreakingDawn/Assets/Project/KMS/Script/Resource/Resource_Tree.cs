@@ -16,16 +16,12 @@ public class Resource_Tree : Resource_Base
     {
         base.OnHit();
         AudioSources[0].Play();
-        
+        resource = this.gameObject;
         if (HP <= 0)
         {
             AudioSources[1].Play();
             base.ResourceGenerate();
             base.Destroyed();
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        resource = this.gameObject;
     }
 }
