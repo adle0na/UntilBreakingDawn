@@ -121,7 +121,7 @@ public class CraftManual : MonoBehaviour
                 {
                     if (go_Prefab.name == "WoodWall")
                     {
-                        woodCount = inven.GetItemCount("leaf");
+                        woodCount = inven.GetItemCount("Log");
                         break;
                     }
                     else if (go_Prefab.name == "StoneWall")
@@ -131,7 +131,7 @@ public class CraftManual : MonoBehaviour
                     }
                     else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
                     {
-                        woodCount = inven.GetItemCount("leaf");
+                        woodCount = inven.GetItemCount("Log");
                         rookCount = inven.GetItemCount("Rook");
                         break;
                     }
@@ -145,7 +145,7 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        inven.SetItemCount("leaf", woodCount);
+                        inven.SetItemCount("Log", woodCount);
                         woodCount -= 4;
 
                         isPreviewActivated = true;
@@ -175,7 +175,7 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        inven.SetItemCount("leaf", woodCount);
+                        inven.SetItemCount("Log", woodCount);
                         inven.SetItemCount("Rook", rookCount);
 
                         woodCount -= 2;
