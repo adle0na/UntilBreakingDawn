@@ -4051,7 +4051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 56ec0b9a5b8762642811ea26a5242e04, type: 3}
       propertyPath: m_Name
-      value: arms_Pickage
+      value: arms_Pickaxe
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 56ec0b9a5b8762642811ea26a5242e04, type: 3}
       propertyPath: m_IsActive
@@ -5580,8 +5580,8 @@ MonoBehaviour:
   _spriteWeaponIcons:
   - {fileID: 21300000, guid: 2f518f023a456ff448fb4686dae64d38, type: 3}
   - {fileID: 21300000, guid: 463b0b8675e508d4fba865e382dbdf02, type: 3}
-  - {fileID: 21300000, guid: 8779dbc83d05af8469887b16fcb3a5b7, type: 3}
-  - {fileID: 21300000, guid: 67cc3445058ac4f4d96bdcc31fd98aca, type: 3}
+  - {fileID: 21300000, guid: 255955853bacd0b439478eb97ffa25d9, type: 3}
+  - {fileID: 21300000, guid: ff72215cb9ecac9488033b9957b45d94, type: 3}
   _sizeWeaponIcons:
   - {x: 200, y: 100}
   - {x: 150, y: 100}
@@ -6574,9 +6574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ee7341f48e9d147a2cea0ae995d420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponType: 2
+  _weaponType: 3
   _weaponSetting:
-    _WeaponName: 2
+    _WeaponName: 3
     _damage: 50
     _currentMagazine: 0
     _maxMagazine: 0
@@ -7054,6 +7054,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CookedMeat
       objectReference: {fileID: 0}
+    - target: {fileID: 126947220201560673, guid: 551527ec6db1fbf42ac3e0384b141bb8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     - target: {fileID: 4006048668833589362, guid: 551527ec6db1fbf42ac3e0384b141bb8,
         type: 3}
       propertyPath: m_RootOrder
@@ -7485,6 +7490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RawMeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651806838463403576, guid: bef5638639c70c7409c7f56b725f5de2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bef5638639c70c7409c7f56b725f5de2, type: 3}

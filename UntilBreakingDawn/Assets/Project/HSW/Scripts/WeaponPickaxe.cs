@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponPickage : WeaponBase
+public class WeaponPickaxe : WeaponBase
 {
     public override void StartWeaponAction(int type = 0)
     {

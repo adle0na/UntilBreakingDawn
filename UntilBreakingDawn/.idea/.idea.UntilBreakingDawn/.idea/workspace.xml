@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickaxe.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickaxe.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Prefabs/Tools/Axe.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HQ Survival Pack/Prefabs/Tools/Axe.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAxe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAxe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Prefabs/PickAxe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Prefabs/PickAxe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Prefabs/lowPoly_arms_Axe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Prefabs/lowPoly_arms_Axe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KMS/Script/Resource/Resource_Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KMS/Script/Resource/Resource_Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/Rook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/Item/Rook.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/leaf.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/Item/leaf.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Branch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Branch.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Metal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/ItemPrefab/Metal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/LDG/script/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickage.overrideController" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickage.overrideController.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +110,7 @@
       <workItem from="1653504376978" duration="12584000" />
       <workItem from="1653583326188" duration="1166000" />
       <workItem from="1653602127254" duration="16927000" />
+      <workItem from="1654750615763" duration="184000" />
     </task>
     <servers />
   </component>

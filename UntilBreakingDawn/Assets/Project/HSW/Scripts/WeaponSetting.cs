@@ -1,5 +1,5 @@
 
-public enum WeaponName {AssaultRifle = 0, Revolver, CombatKnife, HandGrenade}
+public enum WeaponName {AssaultRifle = 0, Revolver, Axe, Pickaxe}
 
 [System.Serializable]
 public struct WeaponSetting

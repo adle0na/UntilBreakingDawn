@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    public enum WeaponType { Main=0, Sub, Melee, Throw}
+    public enum WeaponType { Main=0, Sub, Axe, Pickaxe}
 
     [System.Serializable] // 탄수 이벤트 처리
     public class AmmoEvent: UnityEngine.Events.UnityEvent<int, int> { }

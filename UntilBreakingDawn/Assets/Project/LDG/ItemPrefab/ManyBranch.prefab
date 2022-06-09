@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7588257161831271837}
   - component: {fileID: 4577537416877867870}
   - component: {fileID: 107361314950930843}
-  m_Layer: 18
+  m_Layer: 0
   m_Name: ManyBranch_1
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4685814197793304137}
   - component: {fileID: 9167849541218369870}
   - component: {fileID: 7001249226516796569}
-  m_Layer: 18
+  m_Layer: 0
   m_Name: ManyBranch
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 8361573576957498011}
   - component: {fileID: 8361573576957498009}
   - component: {fileID: 3184726078972239637}
-  m_Layer: 18
+  m_Layer: 0
   m_Name: ManyBranch
   m_TagString: Item
   m_Icon: {fileID: 0}
