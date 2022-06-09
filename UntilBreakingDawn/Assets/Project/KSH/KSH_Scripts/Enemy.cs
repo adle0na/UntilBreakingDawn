@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : InteractionObject
 {
     // 몬스터 타입을 enum으로 저장 
     public enum Type { MeleeE, BombE, RangedE};
@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
         ExplosionSave = Explosion();
     }
 
+    /*
     // 총알 프리팹 예시용
     private void OnTriggerEnter(Collider other)
     {
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(OnDamage());
         }
     }
-    
+    */
 
     IEnumerator OnDamage()
     {
@@ -71,7 +72,7 @@ public class Enemy : MonoBehaviour
         if (curHealth <= 0)
         {
             // 충돌을 없애기 위해 죽는 즉시 레이어를 변경해 모든 오브젝트와의 충돌을 막음 
-            gameObject.layer = 7;
+            gameObject.layer = 14;
             nav.enabled = false;
             anim.SetTrigger("onDeath");
             // 몬스터의 타입 별로 죽을 때 해야하는 행동 실행, 죽었을 때 공격 방지
@@ -80,7 +81,9 @@ public class Enemy : MonoBehaviour
                 case Type.MeleeE:
                     StopCoroutine("Attack");
                     // meleeArea가 true일 때 코루틴이 멈추면 죽은 시체가 계속 공격하기 때문에 false로 변경 
-                    meleeArea.enabled = false;
+                    //meleeArea.enabled = false;
+                    Debug.Log("적 사망");
+                    Destroy(meleeArea);
                     break;
                 case Type.BombE:
                     StopCoroutine("Explosion");
@@ -142,7 +145,6 @@ public class Enemy : MonoBehaviour
         // 만약 범위 내에 몬스터가 있을 시 어택 코루틴 실행 
         if(rayHits.Length > 0 && !isAttack)
         {
-            
             StartCoroutine("Attack");
         }
         
@@ -223,6 +225,15 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         Targetting();
+    }
+    public override void TakeDamage(int damage)
+    {
+        curHealth -= damage;
+
+        if (curHealth <= 0 )
+        {
+            StartCoroutine("OnDamage");
+        }
     }
 
 }

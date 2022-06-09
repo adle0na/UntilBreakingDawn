@@ -39,7 +39,7 @@ public class WeaponKnifeCollider : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            // other.GetComponentInParent< 여기에 적 체력 스크립트 >().TakeDamage(_damage);
+            other.GetComponent<InteractionObject>().TakeDamage(_damage);
             Debug.Log("적 칼로 때림");
         }
         else if (other.CompareTag("ExplosiveBarrel"))

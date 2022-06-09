@@ -249,8 +249,7 @@ public class WeaponAssultRifle : WeaponBase
             if (hit.transform.CompareTag("Enemy"))
             {
                 Debug.Log("적 때림");
-                //적 체력 스테이터스에 TakeDamege함수 넣을것
-                //hit.transform.GetComponent<체력 값들어간 스크립트>().TakeDamage(_weaponSetting._damage);
+                hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }
             else if (hit.transform.CompareTag("ExplosiveBarrel"))
             {

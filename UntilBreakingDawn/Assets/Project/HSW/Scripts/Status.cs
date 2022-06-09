@@ -23,7 +23,8 @@ public class Status : MonoBehaviour
     [Header("HP")]
     [SerializeField]
     private int    _maxHP = 100;
-    private int    _currentHP;
+    [SerializeField]
+    private int _currentHP;
     public float WalkSpeed => _walkSpeed;
     public float RunSpeed  => _runSpeed;
 
@@ -88,6 +89,19 @@ public class Status : MonoBehaviour
         _currentHungry = _currentHungry + hungry > _maxHungry ? _maxHungry : _currentHungry + hungry;
         
         _hungryEvent.Invoke(previousHungry, _currentHungry);
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Melee")
+        {
+            Debug.Log("ÃÄ¸ÂÀ½");
+            DecreaseHP(50);
+        }
+        else if (other.tag == "Boulder")
+        {
+            DecreaseHP(50);
+        }
     }
     
 }

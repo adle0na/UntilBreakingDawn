@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickaxe.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickaxe.cs.meta" afterDir="false" />
+    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="적 전투 구현 진행중">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickage.overrideController" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickage.overrideController.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponPickage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ExplosionBarrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ExplosionBarrel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs000/ghoul_Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs000/ghoul_Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +108,7 @@
       <workItem from="1653583326188" duration="1166000" />
       <workItem from="1653602127254" duration="16927000" />
       <workItem from="1654750615763" duration="184000" />
+      <workItem from="1654774268047" duration="4696000" />
     </task>
     <servers />
   </component>
@@ -134,5 +132,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="적 전투 구현 진행중" />
+    <option name="LAST_COMMIT_MESSAGE" value="적 전투 구현 진행중" />
   </component>
 </project>
