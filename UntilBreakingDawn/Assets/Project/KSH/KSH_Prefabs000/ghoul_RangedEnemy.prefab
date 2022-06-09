@@ -468,15 +468,13 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 100
   exDamage: 0
-  target: {fileID: 0}
   meleeArea: {fileID: 0}
   isChase: 0
   isAttack: 0
-  PlayerSc: {fileID: 0}
+  PlayerSc: {fileID: 44819573436159256, guid: 203f5b40dcd6e4cf08ad4c78f011d3a0, type: 3}
   BombEnemy: {fileID: 0}
   Effect: {fileID: 0}
-  fireBall: {fileID: 3087478405258129613, guid: 0930cf561edfc4adfb888f6fd80e3471,
-    type: 3}
+  Boulder: {fileID: 3087478405258129613, guid: 0930cf561edfc4adfb888f6fd80e3471, type: 3}
   shoter: {fileID: 7802702697520312904}
 --- !u!1 &7803428501339259202
 GameObject:

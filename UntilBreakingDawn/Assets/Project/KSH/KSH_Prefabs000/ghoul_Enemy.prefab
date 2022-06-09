@@ -2340,14 +2340,13 @@ MonoBehaviour:
   maxHealth: 150
   curHealth: 150
   exDamage: 0
-  target: {fileID: 0}
   meleeArea: {fileID: 7663947428627970724}
   isChase: 0
   isAttack: 0
   PlayerSc: {fileID: 0}
   BombEnemy: {fileID: 0}
   Effect: {fileID: 0}
-  fireBall: {fileID: 0}
+  Boulder: {fileID: 0}
   shoter: {fileID: 0}
 --- !u!1 &7665028727170193187
 GameObject:

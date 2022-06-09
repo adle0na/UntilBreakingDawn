@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &396444091402201561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396444091402201567}
+  - component: {fileID: 396444091402201566}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396444091402201567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396444091402201561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.56, y: 1.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396444091402201566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396444091402201561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebda148bec60a4c6089c464fb48a0bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 0
+  enemy: {fileID: 7665027686205548249, guid: 21a5dba8f235140f0991ab0f05251a21, type: 3}
+  rangedEnemy: {fileID: 7803413159469268668, guid: 34cf6c4c9e9634e1d9693660392cfa0a,
+    type: 3}
+  bombEnemy: {fileID: 5391055380044106474, guid: 2642d3eb375db4199a0fd1b81aac0c23,
+    type: 3}
+  minotaur: {fileID: 8990239401448623163, guid: d090474777ec942e3ac73552bcf97502,
+    type: 3}
+  medusa: {fileID: 7066500445642709365, guid: ca1f6ae696ab4481e93cb021d3ba20c1, type: 3}
+  waveInterval: 1
+  spawnCount: 1
+  spawnInterval: 1

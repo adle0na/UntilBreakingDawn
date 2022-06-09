@@ -22,4 +22,5 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
+
 }

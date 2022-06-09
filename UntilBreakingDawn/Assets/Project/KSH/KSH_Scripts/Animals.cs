@@ -9,7 +9,7 @@ public class Animals : MonoBehaviour
     public Type animals;
 
     public BoxCollider meleeArea;
-    public Transform target;
+    private KSH_Player target;
 
     public int aniHealth;
     public float walkSpeed;
@@ -40,6 +40,7 @@ public class Animals : MonoBehaviour
 
     private void Awake()
     {
+        target = FindObjectOfType<KSH_Player>();
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
@@ -58,7 +59,7 @@ public class Animals : MonoBehaviour
         {
             if (nav.enabled)
             {
-                nav.SetDestination(target.position);
+                nav.SetDestination(target.transform.position);
                 anim.SetBool("isAttackRun", isAttackRun);
                 nav.isStopped = !isStop;
             }

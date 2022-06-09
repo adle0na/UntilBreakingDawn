@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public int curHealth;
     public int exDamage;
 
-    public Transform target;
+    private PlayerControllerHSW target;
     public BoxCollider meleeArea;
     public bool isChase;
     public bool isAttack;
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     public GameObject PlayerSc;
     public GameObject BombEnemy;
     public GameObject Effect;
-    public GameObject fireBall;
+    public GameObject Boulder;
     public Transform shoter;
 
     NavMeshAgent nav;
@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        target = FindObjectOfType<PlayerControllerHSW>();
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
@@ -46,7 +47,7 @@ public class Enemy : MonoBehaviour
         ExplosionSave = Explosion();
     }
 
-    /* 총알 프리팹 예시용
+    // 총알 프리팹 예시용
     private void OnTriggerEnter(Collider other)
     {
         // 총알에 맞았을 때 몬스터의 체력을 깎고 OnDamage 코루틴 시작 
@@ -57,7 +58,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(OnDamage());
         }
     }
-    */
+    
 
     IEnumerator OnDamage()
     {
@@ -92,7 +93,7 @@ public class Enemy : MonoBehaviour
             }
             // 죽고 3초 뒤 몬스터 사라짐 
             yield return new WaitForSeconds(3f);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
@@ -107,7 +108,7 @@ public class Enemy : MonoBehaviour
     {
         if (nav.enabled)
         {
-            nav.SetDestination(target.position);
+            nav.SetDestination(target.transform.position);
             nav.isStopped = !isChase;
         }
     }
@@ -183,11 +184,11 @@ public class Enemy : MonoBehaviour
             case Type.RangedE:
                 // 투사체를 지정해논 투사체 발사대에 생성한 뒤 힘을 주어 앞으로 던짐 
                 yield return new WaitForSeconds(0.2f);
-                GameObject instantFireBall = Instantiate(fireBall, shoter);
+                GameObject instantFireBall = Instantiate(Boulder, shoter.position, shoter.rotation);
                 Rigidbody rigidFire = instantFireBall.GetComponent<Rigidbody>();
                 rigidFire.velocity = transform.forward * 20;
                 
-                yield return new WaitForSeconds(1.4f);
+                yield return new WaitForSeconds(1f);
                 break;
         }
 
@@ -201,11 +202,6 @@ public class Enemy : MonoBehaviour
         // 2초 대기한 뒤 
         yield return new WaitForSeconds(2.5f);
 
-        // 폭팔 이펙트 실행 
-        Effect.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
-        // 몬스터 소멸 
-        BombEnemy.SetActive(false);
 
         // 범위 내의 적을 찾는다.
         RaycastHit[] exRayHits = Physics.SphereCastAll(transform.position, 7,
@@ -217,6 +213,11 @@ public class Enemy : MonoBehaviour
             PlayerSc.GetComponent<KSH_Player>().HitByExplosion(exDamage);
         }
 
+        // 폭팔 이펙트 실행 
+        Effect.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        // 몬스터 소멸 
+        BombEnemy.SetActive(false);
     }
 
     private void FixedUpdate()

@@ -99,4 +99,16 @@ public class KSH_Player : MonoBehaviour
         health -= exDamage;
         StartCoroutine(OnDamage());
     }
+
+    public void BossSkill(int skill1Damage)
+    {
+        health -= skill1Damage;
+        StartCoroutine(OnDamage());
+    }
+
+    public void FireSkill(int fireDamage)
+    {
+        health -= fireDamage;
+        StartCoroutine(OnDamage());
+    }
 }
