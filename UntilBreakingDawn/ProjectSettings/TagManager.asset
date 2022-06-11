@@ -23,6 +23,7 @@ TagManager:
   - Tree
   - Rock
   - Mail
+  - Animals
   layers:
   - Default
   - TransparentFX

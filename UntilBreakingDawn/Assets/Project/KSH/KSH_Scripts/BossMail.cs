@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossMail : MonoBehaviour
+public class BossMail : InteractionObject
 {
     public int mailHealth = 500;
 
-    private void OnTriggerEnter(Collider other)
+    public override void TakeDamage(int damage)
     {
-        if (other.tag == "Bullet")
-        {
-            Bullet bullet = other.GetComponent<Bullet>();
-            mailHealth -= bullet.damage;
-        }
+        mailHealth-= damage;
     }
+
 }

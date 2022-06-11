@@ -18,25 +18,28 @@ public class Enemy : InteractionObject
     public bool isChase;
     public bool isAttack;
 
-    public GameObject PlayerSc;
+    private Status status;
     public GameObject BombEnemy;
     public GameObject Effect;
     public GameObject Boulder;
     public Transform shoter;
 
-    NavMeshAgent nav;
-    Animator anim;
-    Rigidbody rigid;
+    private NavMeshAgent nav;
+    private Animator anim;
+    private Rigidbody rigid;
+    private CapsuleCollider collider;
 
     private IEnumerator AttackSave;
     private IEnumerator ExplosionSave;
 
     private void Awake()
     {
+        status = FindObjectOfType<Status>();
         target = FindObjectOfType<PlayerControllerHSW>();
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
+        collider = GetComponent<CapsuleCollider>();
         StartCoroutine(ChaseStart());
 
     }
@@ -65,14 +68,17 @@ public class Enemy : InteractionObject
     {
         // 맞았을 때 isHit 애니메이션 동작 
         anim.SetBool("isHit", true);
+        nav.enabled = false;
         yield return new WaitForSeconds(0.1f);
+        nav.enabled = true;
         anim.SetBool("isHit", false);
 
         // 체력이 0이 되었을 때 
         if (curHealth <= 0)
         {
             // 충돌을 없애기 위해 죽는 즉시 레이어를 변경해 모든 오브젝트와의 충돌을 막음 
-            gameObject.layer = 14;
+            //gameObject.layer = 14;
+            collider.enabled = false;
             nav.enabled = false;
             anim.SetTrigger("onDeath");
             // 몬스터의 타입 별로 죽을 때 해야하는 행동 실행, 죽었을 때 공격 방지
@@ -82,7 +88,6 @@ public class Enemy : InteractionObject
                     StopCoroutine("Attack");
                     // meleeArea가 true일 때 코루틴이 멈추면 죽은 시체가 계속 공격하기 때문에 false로 변경 
                     //meleeArea.enabled = false;
-                    Debug.Log("적 사망");
                     Destroy(meleeArea);
                     break;
                 case Type.BombE:
@@ -126,7 +131,7 @@ public class Enemy : InteractionObject
         switch (enemyType)
         {
             case Type.MeleeE:
-                targetRadius = 1.5f;
+                targetRadius = 1.0f;
                 targetRange = 1.5f;
                 break;
             case Type.BombE:
@@ -151,12 +156,9 @@ public class Enemy : InteractionObject
     }
 
     IEnumerator Attack()
-    {
-        
+    { 
         isChase = false;
         isAttack = true;
-
-
 
         anim.SetBool("isAttack", true);
 
@@ -178,7 +180,7 @@ public class Enemy : InteractionObject
                 // 사정거리 내에 들어왔으면 추격을 멈추고
                 nav.enabled = false;
                 yield return new WaitForSeconds(0.5f);
-                anim.SetTrigger("onIdle");
+                
                 // Explosion 코루틴 실행
                 StartCoroutine("Explosion");
                 break;
@@ -201,6 +203,7 @@ public class Enemy : InteractionObject
 
     IEnumerator Explosion()
     {
+        anim.SetTrigger("onIdle");
         // 2초 대기한 뒤 
         yield return new WaitForSeconds(2.5f);
 
@@ -212,7 +215,7 @@ public class Enemy : InteractionObject
         // 찾을 시 Player 스크립트에서 HitByExplosion 함수(범위 내의 적에게 데미지) 호출 
         if(exRayHits.Length > 0)
         {
-            PlayerSc.GetComponent<KSH_Player>().HitByExplosion(exDamage);
+            status.HitByExplosion(exDamage);
         }
 
         // 폭팔 이펙트 실행 
@@ -226,14 +229,13 @@ public class Enemy : InteractionObject
     {
         Targetting();
     }
+
     public override void TakeDamage(int damage)
     {
         curHealth -= damage;
 
-        if (curHealth <= 0 )
-        {
-            StartCoroutine("OnDamage");
-        }
+        StartCoroutine(OnDamage());
+        
     }
 
 }

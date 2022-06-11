@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Animals : MonoBehaviour
+public class Animals : InteractionObject
 {
     public enum Type { Boar, Caw, Chicken, Bear};
     public Type animals;
 
     public BoxCollider meleeArea;
-    private KSH_Player target;
+    public GameObject meat;
+    private PlayerControllerHSW target;
 
     public int aniHealth;
     public float walkSpeed;
@@ -40,7 +41,7 @@ public class Animals : MonoBehaviour
 
     private void Awake()
     {
-        target = FindObjectOfType<KSH_Player>();
+        target = FindObjectOfType<PlayerControllerHSW>();
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
@@ -226,9 +227,22 @@ public class Animals : MonoBehaviour
         isAttack = false;
         isWalk = false;
         isRun = false;
-        gameObject.layer = 7;
+        boxCollider.enabled = false;
+        //gameObject.layer = 14;
 
         anim.SetTrigger("onDead");
+
+        if (animals == Type.Bear)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Instantiate(meat, transform.position, transform.rotation);
+            }
+        }
+        else
+        {
+            Instantiate(meat, transform.position, transform.rotation);
+        }
 
         yield return new WaitForSeconds(3f);
 
@@ -236,14 +250,12 @@ public class Animals : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public override void TakeDamage(int damage)
     {
-        if (other.tag == "Bullet")
-        {
-            Bullet bullet = other.GetComponent<Bullet>();
-            aniHealth -= bullet.damage;
-            StartCoroutine(OnDamage());
-        }
+        aniHealth -= damage;
+
+        StartCoroutine(OnDamage());
+
     }
 
     IEnumerator OnDamage()

@@ -134,11 +134,11 @@ public class Inventory : MonoBehaviour
                 break;
 
             default:
-                Debug.Log("사용 아이템이 아닙니다");
+                Debug.Log("?? ???? ????");
                 break;
         }
     }
-    //시험삼아 만든 소모 아이템 스크립트
+    //???? ?? ?? ??? ????
     public int GetItemCount(string _itemName)
     {
         int temp = SearchSlotItem(slots, _itemName);

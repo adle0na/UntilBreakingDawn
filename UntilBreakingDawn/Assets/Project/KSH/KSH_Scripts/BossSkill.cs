@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSkill : MonoBehaviour
+public class BossSkill : InteractionObject
 {
     public float skillHealth = 100.0f;
 
-    private void OnTriggerEnter(Collider other)
+    public override void TakeDamage(int damage)
     {
-        if (other.tag == "Bullet")
-        {
-            Bullet bullet = other.GetComponent<Bullet>();
-            skillHealth -= bullet.damage;
-        }
+        skillHealth -= damage;
     }
 }

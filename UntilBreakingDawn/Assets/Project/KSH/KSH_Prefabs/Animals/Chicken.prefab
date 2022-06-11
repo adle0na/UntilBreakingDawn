@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 3177185314064161301}
   m_Layer: 0
   m_Name: Chicken
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,9 +343,9 @@ Rigidbody:
   m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &3177185314064161303
 BoxCollider:
@@ -372,8 +372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9cd0ed0abf84448a31b3c891f0c4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHP: 100
   animals: 2
   meleeArea: {fileID: 0}
+  meat: {fileID: 2651806838463403576, guid: bef5638639c70c7409c7f56b725f5de2, type: 3}
   aniHealth: 80
   walkSpeed: 2
   walkTime: 6

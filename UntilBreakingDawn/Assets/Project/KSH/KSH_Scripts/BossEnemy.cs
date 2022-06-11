@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BossEnemy : MonoBehaviour
+public class BossEnemy : InteractionObject
 {
     public enum BossType { minotaur, medusa};
     public BossType Type;
@@ -16,7 +16,8 @@ public class BossEnemy : MonoBehaviour
     private float brokenDamage = 1.2f;
     public float fireSkillDelay = 20.0f;
 
-    private KSH_Player target;
+    private PlayerControllerHSW target;
+    private Status status;
     public GameObject PlayerSc;
 
     //미노타우르스 
@@ -38,17 +39,19 @@ public class BossEnemy : MonoBehaviour
 
     Animator anim;
     Rigidbody rigid;
-
+    BoxCollider collider;
     NavMeshAgent nav;
 
     private void Awake()
     {
-        target = FindObjectOfType<KSH_Player>();
+        status = FindObjectOfType<Status>();
+        target = FindObjectOfType<PlayerControllerHSW>();
         nav = GetComponent<NavMeshAgent>();
+        collider = GetComponent<BoxCollider>();
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
-        StartCoroutine(ChaseStart());
+        //StartCoroutine(ChaseStart());
     }
 
     IEnumerator ChaseStart()
@@ -61,11 +64,11 @@ public class BossEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (nav.enabled)
-        {
-            nav.SetDestination(target.transform.position);
-            nav.isStopped = !isChase;
-        }
+        //if (nav.enabled)
+        //{
+        //    nav.SetDestination(target.transform.position);
+        //    nav.isStopped = !isChase;
+        //}
         if (skill1)
         {
             ChargingSkill();
@@ -125,8 +128,8 @@ public class BossEnemy : MonoBehaviour
 
         switch (Type) {
             case BossType.minotaur:
-                targetRadius = 1.5f;
-                targetRange = 1.5f;
+                targetRadius = 1.0f;
+                targetRange = 2.0f;
                 break;
 
             case BossType.medusa:
@@ -268,6 +271,7 @@ public class BossEnemy : MonoBehaviour
     {
         if(mail.GetComponent<BossMail>().mailHealth <= 0)
         {
+            collider.enabled = true;
             isBroken = true;
             mail.SetActive(false);
         }
@@ -296,11 +300,11 @@ public class BossEnemy : MonoBehaviour
                 yield return new WaitForSeconds(1.3f);
                 fireSkill.SetActive(true);
 
-                RaycastHit[] fireRayHits = Physics.SphereCastAll(transform.position, 10,
+                RaycastHit[] fireRayHits = Physics.SphereCastAll(transform.position, 7,
                                                         Vector3.up, 0f, LayerMask.GetMask("Player"));
                 if (fireRayHits.Length > 0)
                 {
-                    PlayerSc.GetComponent<KSH_Player>().FireSkill(fireDamage);
+                    status.FireSkill(fireDamage);
                 }
 
                 yield return new WaitForSeconds(1.8f);
@@ -316,7 +320,7 @@ public class BossEnemy : MonoBehaviour
                                                         Vector3.up, 0f, LayerMask.GetMask("Player"));
                 if (fireRayHits1.Length > 0)
                 {
-                    PlayerSc.GetComponent<KSH_Player>().FireSkill(fireDamage);
+                    status.FireSkill(fireDamage);
                 }
 
                 yield return new WaitForSeconds(1.0f);
@@ -327,4 +331,11 @@ public class BossEnemy : MonoBehaviour
         nav.enabled = true;
     }
 
+    public override void TakeDamage(int damage)
+    {
+        curHealth -= damage;
+
+        StartCoroutine(OnDamage());
+
+    }
 }

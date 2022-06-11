@@ -95,7 +95,7 @@ public class Status : MonoBehaviour
     {
         if (other.tag == "Melee")
         {
-            Debug.Log("ÃÄ¸ÂÀ½");
+            Debug.Log("??????");
             DecreaseHP(50);
         }
         else if (other.tag == "Boulder")
@@ -103,5 +103,18 @@ public class Status : MonoBehaviour
             DecreaseHP(50);
         }
     }
-    
+    public void HitByExplosion(int exDamage)
+    {
+        DecreaseHP(exDamage);
+    }
+
+    public void BossSkill()
+    {
+        DecreaseHP(100);
+    }
+
+    public void FireSkill(int fireDamage)
+    {
+        DecreaseHP(fireDamage);
+    }
 }

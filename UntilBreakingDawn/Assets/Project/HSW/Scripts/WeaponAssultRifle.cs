@@ -103,30 +103,30 @@ public class WeaponAssultRifle : WeaponBase
     
     public override void StartWeaponAction(int type = 0)
     {
-        // 재장전 중 무기 액션 X
+        // ?????? ?? ???? ???? X
         if (_isReload == true) return;
-        // 모드 전환중 무기 액션 X
+        // ???? ?????? ???? ???? X
         if (_isModeChange == true) return;
 
-        // 왼쪽 마우스 클릭시 공격
+        // ???? ?????? ?????? ????
         if (type == 0)
         {
-            // 연속 공격
+            // ???? ????
             if (_weaponSetting._isAutomaticAttack == true)
             {
                 _isAttack = true;
                 StartCoroutine("OnAttackLoop");
             }
-            // 단발 공격
+            // ???? ????
             else
             {
                 OnAttack();
             }
         }
-        // 마우스 오른쪽 클릭시 모드 전환
+        // ?????? ?????? ?????? ???? ????
         else
         {
-            // 공격중일때 모드전환 X
+            // ?????????? ???????? X
             if (_isAttack == true) return;
 
             StartCoroutine("OnModeChange");
@@ -175,7 +175,7 @@ public class WeaponAssultRifle : WeaponBase
             _weaponSetting._currentAmmo--;
             _onAmmoEvent.Invoke(_weaponSetting._currentAmmo, _weaponSetting._maxAmmo);
 
-            // 무기 애니메이션 (모드에 따라 AimFire, Fire)
+            // ???? ?????????? (?????? ???? AimFire, Fire)
             string animation = _animator.AimModeIs == true ? "AimFire" : "Fire";
             _animator.Play(animation, -1, 0);
 
@@ -248,10 +248,15 @@ public class WeaponAssultRifle : WeaponBase
 
             if (hit.transform.CompareTag("Enemy"))
             {
-                Debug.Log("적 때림");
+                Debug.Log("?? ????");
                 hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }
             else if (hit.transform.CompareTag("ExplosiveBarrel"))
+            {
+                hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
+            }
+
+            else if (hit.transform.CompareTag("Animals"))
             {
                 hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }

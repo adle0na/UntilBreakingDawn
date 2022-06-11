@@ -23,7 +23,7 @@ public class ExplosionBarrel : InteractionObject
         if (_currentHP <= 0 && _isExplode == false)
         {
             StartCoroutine("ExplodeBarrel");
-            // 죽는거 넣으면 완성
+            // ??? ??? ??
         }
     }
 
