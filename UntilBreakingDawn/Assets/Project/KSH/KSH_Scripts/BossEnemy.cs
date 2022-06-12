@@ -138,7 +138,7 @@ public class BossEnemy : InteractionObject
                 break;
 
             case BossType.medusa:
-                targetRadius = 1.3f;
+                targetRadius = 0.5f;
                 targetRange = 20.0f;
                 break;
         }

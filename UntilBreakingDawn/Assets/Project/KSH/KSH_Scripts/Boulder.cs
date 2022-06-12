@@ -20,7 +20,7 @@ public class Boulder : MonoBehaviour
 
         else if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
