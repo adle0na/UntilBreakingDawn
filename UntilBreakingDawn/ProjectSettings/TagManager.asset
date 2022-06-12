@@ -25,6 +25,7 @@ TagManager:
   - Mail
   - Animals
   - Skill
+  - Terrain
   layers:
   - Default
   - TransparentFX

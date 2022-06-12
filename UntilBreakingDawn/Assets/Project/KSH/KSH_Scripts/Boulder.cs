@@ -13,7 +13,7 @@ public class Boulder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Floor")
+        if (other.gameObject.tag == "Terrain")
         {
             Destroy(gameObject);
         }
