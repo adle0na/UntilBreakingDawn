@@ -713,6 +713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minotaur_Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8990239401448623163, guid: d090474777ec942e3ac73552bcf97502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8991491100275225539, guid: d090474777ec942e3ac73552bcf97502,
         type: 3}
       propertyPath: m_RootOrder
@@ -4715,7 +4720,7 @@ PrefabInstance:
     - target: {fileID: 7066500445642709365, guid: ca1f6ae696ab4481e93cb021d3ba20c1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7069908853453112861, guid: ca1f6ae696ab4481e93cb021d3ba20c1,
         type: 3}

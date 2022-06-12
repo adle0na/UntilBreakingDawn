@@ -176,29 +176,31 @@ public class BossEnemy : InteractionObject
 
                 anim.SetBool("isAttack", true);
 
-                yield return new WaitForSeconds(0.8f);
+                yield return new WaitForSeconds(2.45f);
 
-                GameObject instantFireBall = Instantiate(fireBall, shoter.position, shoter.rotation);
-                Rigidbody rigidFireBall = instantFireBall.GetComponent<Rigidbody>();
-                rigidFireBall.velocity = transform.forward * 20;
+                //yield return new WaitForSeconds(0.8f);
 
-                GameObject instantFireBall2 = Instantiate(fireBall, shoter.position, shoter.rotation);
-                Rigidbody rigidFireBall2 = instantFireBall2.GetComponent<Rigidbody>();
-                rigidFireBall2.velocity = transform.TransformDirection (new Vector3(1, 0, 1).normalized) * 20;
+                //GameObject instantFireBall = Instantiate(fireBall, shoter.position, shoter.rotation);
+                //Rigidbody rigidFireBall = instantFireBall.GetComponent<Rigidbody>();
+                //rigidFireBall.velocity = transform.forward * 20;
 
-                GameObject instantFireBall3 = Instantiate(fireBall, shoter.position, shoter.rotation);
-                Rigidbody rigidFireBall3 = instantFireBall3.GetComponent<Rigidbody>();
-                rigidFireBall3.velocity = transform.TransformDirection (new Vector3(-1, 0, 1).normalized) * 20;
+                //GameObject instantFireBall2 = Instantiate(fireBall, shoter.position, shoter.rotation);
+                //Rigidbody rigidFireBall2 = instantFireBall2.GetComponent<Rigidbody>();
+                //rigidFireBall2.velocity = transform.TransformDirection (new Vector3(1, 0, 1).normalized) * 20;
 
-                GameObject instantFireBall4 = Instantiate(fireBall, shoter.position, shoter.rotation);
-                Rigidbody rigidFireBall4 = instantFireBall4.GetComponent<Rigidbody>();
-                rigidFireBall4.velocity = transform.TransformDirection(new Vector3(1, 0, 2).normalized) * 20;
+                //GameObject instantFireBall3 = Instantiate(fireBall, shoter.position, shoter.rotation);
+                //Rigidbody rigidFireBall3 = instantFireBall3.GetComponent<Rigidbody>();
+                //rigidFireBall3.velocity = transform.TransformDirection (new Vector3(-1, 0, 1).normalized) * 20;
 
-                GameObject instantFireBall5 = Instantiate(fireBall, shoter.position, shoter.rotation);
-                Rigidbody rigidFireBall5 = instantFireBall5.GetComponent<Rigidbody>();
-                rigidFireBall5.velocity = transform.TransformDirection(new Vector3(-1, 0, 2).normalized) * 20;
+                //GameObject instantFireBall4 = Instantiate(fireBall, shoter.position, shoter.rotation);
+                //Rigidbody rigidFireBall4 = instantFireBall4.GetComponent<Rigidbody>();
+                //rigidFireBall4.velocity = transform.TransformDirection(new Vector3(1, 0, 2).normalized) * 20;
 
-                yield return new WaitForSeconds(1.65f);
+                //GameObject instantFireBall5 = Instantiate(fireBall, shoter.position, shoter.rotation);
+                //Rigidbody rigidFireBall5 = instantFireBall5.GetComponent<Rigidbody>();
+                //rigidFireBall5.velocity = transform.TransformDirection(new Vector3(-1, 0, 2).normalized) * 20;
+
+                //yield return new WaitForSeconds(1.65f);
 
                 anim.SetBool("isAttack", false);
                 break;
@@ -342,4 +344,30 @@ public class BossEnemy : InteractionObject
         StartCoroutine(OnDamage());
 
     }
+
+    public void MedusaAttack()
+    {
+
+        GameObject instantFireBall = Instantiate(fireBall, shoter.position, shoter.rotation);
+        Rigidbody rigidFireBall = instantFireBall.GetComponent<Rigidbody>();
+        rigidFireBall.velocity = transform.forward * 20;
+
+        GameObject instantFireBall2 = Instantiate(fireBall, shoter.position, shoter.rotation);
+        Rigidbody rigidFireBall2 = instantFireBall2.GetComponent<Rigidbody>();
+        rigidFireBall2.velocity = transform.TransformDirection(new Vector3(1, 0, 1).normalized) * 20;
+
+        GameObject instantFireBall3 = Instantiate(fireBall, shoter.position, shoter.rotation);
+        Rigidbody rigidFireBall3 = instantFireBall3.GetComponent<Rigidbody>();
+        rigidFireBall3.velocity = transform.TransformDirection(new Vector3(-1, 0, 1).normalized) * 20;
+
+        GameObject instantFireBall4 = Instantiate(fireBall, shoter.position, shoter.rotation);
+        Rigidbody rigidFireBall4 = instantFireBall4.GetComponent<Rigidbody>();
+        rigidFireBall4.velocity = transform.TransformDirection(new Vector3(1, 0, 2).normalized) * 20;
+
+        GameObject instantFireBall5 = Instantiate(fireBall, shoter.position, shoter.rotation);
+        Rigidbody rigidFireBall5 = instantFireBall5.GetComponent<Rigidbody>();
+        rigidFireBall5.velocity = transform.TransformDirection(new Vector3(-1, 0, 2).normalized) * 20;
+
+    }
+
 }
