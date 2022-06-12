@@ -9,21 +9,23 @@ public class BossEnemy : InteractionObject
     public BossType Type;
 
     public float curHealth = 2000.0f;
+    public float maxHealth = 2000.0f;
     public float chargingSkillDelay = 15.0f;
-    public int skill1Damage = 500;
+    //public int skill1Damage = 500;
     public int fireDamage = 100;
 
-    private float brokenDamage = 1.2f;
+    //private float brokenDamage = 1.2f;
     public float fireSkillDelay = 20.0f;
 
     private PlayerControllerHSW target;
+    //public GameObject bossSkill1;
     private Status status;
-    public GameObject PlayerSc;
+    //public GameObject PlayerSc;
 
     //미노타우르스 
     public BoxCollider meleeArea;
-    public GameObject effect;
-    public GameObject bossSkill1;
+    //public GameObject effect;
+    public GameObject player;
     public GameObject mail;
     public GameObject fireSkill;
 
@@ -33,9 +35,9 @@ public class BossEnemy : InteractionObject
 
     private bool isChase;
     private bool isAttack;
-    public bool isBroken;
-    private bool skill1 = true;
-    public bool charging;
+    private bool isBroken = true;
+    //private bool skill1 = true;
+    //public bool charging;
 
     Animator anim;
     Rigidbody rigid;
@@ -51,7 +53,7 @@ public class BossEnemy : InteractionObject
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
-        //StartCoroutine(ChaseStart());
+        StartCoroutine(ChaseStart());
     }
 
     IEnumerator ChaseStart()
@@ -64,50 +66,53 @@ public class BossEnemy : InteractionObject
 
     private void Update()
     {
-        //if (nav.enabled)
-        //{
-        //    nav.SetDestination(target.transform.position);
-        //    nav.isStopped = !isChase;
-        //}
-        if (skill1)
+        if (nav.enabled)
         {
-            ChargingSkill();
-        }
+            nav.SetDestination(target.transform.position);
+            nav.isStopped = !isChase;
 
-        BrokenMail();
-        FireSkill();
-        
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!charging)
-        {
-            if (other.tag == "Bullet")
+            if (isBroken)
             {
-                Bullet bullet = other.GetComponent<Bullet>();
-
-                if (isBroken)
-                {
-                    curHealth -= bullet.damage * brokenDamage;
-                    StartCoroutine(OnDamage());
-
-                }
-                else
-                {
-                    curHealth -= bullet.damage;
-                    StartCoroutine(OnDamage());
-                }
+                StartCoroutine(BrokenMail());
             }
         }
+        FireSkill();
+        //if (skill1)
+        //{
+        //    ChargingSkill();
+        //}
+
     }
+
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (!charging)
+    //    {
+    //        if (other.tag == "Bullet")
+    //        {
+    //            Bullet bullet = other.GetComponent<Bullet>();
+
+    //            if (isBroken)
+    //            {
+    //                curHealth -= bullet.damage * brokenDamage;
+    //                StartCoroutine(OnDamage());
+
+    //            }
+    //            else
+    //            {
+    //                curHealth -= bullet.damage;
+    //                StartCoroutine(OnDamage());
+    //            }
+    //        }
+    //    }
+    //}
 
     IEnumerator OnDamage()
     { 
         if (curHealth <= 0)
         {
-            gameObject.layer = 7;
+            collider.enabled = false;
             nav.enabled = false;
             anim.SetTrigger("onDeath");
             StopCoroutine("Attack");
@@ -133,8 +138,8 @@ public class BossEnemy : InteractionObject
                 break;
 
             case BossType.medusa:
-                targetRadius = 1.5f;
-                targetRange = 30.0f;
+                targetRadius = 1.3f;
+                targetRange = 20.0f;
                 break;
         }
 
@@ -144,7 +149,6 @@ public class BossEnemy : InteractionObject
         if (rayHits.Length > 0 && !isAttack)
         {
             StartCoroutine("Attack");
-
         }
     }
 
@@ -186,6 +190,14 @@ public class BossEnemy : InteractionObject
                 Rigidbody rigidFireBall3 = instantFireBall3.GetComponent<Rigidbody>();
                 rigidFireBall3.velocity = transform.TransformDirection (new Vector3(-1, 0, 1).normalized) * 20;
 
+                GameObject instantFireBall4 = Instantiate(fireBall, shoter.position, shoter.rotation);
+                Rigidbody rigidFireBall4 = instantFireBall4.GetComponent<Rigidbody>();
+                rigidFireBall4.velocity = transform.TransformDirection(new Vector3(1, 0, 2).normalized) * 20;
+
+                GameObject instantFireBall5 = Instantiate(fireBall, shoter.position, shoter.rotation);
+                Rigidbody rigidFireBall5 = instantFireBall5.GetComponent<Rigidbody>();
+                rigidFireBall5.velocity = transform.TransformDirection(new Vector3(-1, 0, 2).normalized) * 20;
+
                 yield return new WaitForSeconds(1.65f);
 
                 anim.SetBool("isAttack", false);
@@ -197,95 +209,107 @@ public class BossEnemy : InteractionObject
         isAttack = false;
     }
 
-    private void ChargingSkill()
+    //private void ChargingSkill()
+    //{
+    //    if (curHealth < 3000)
+    //    {
+    //        charging = true;
+    //        StopCoroutine("Attack");
+    //        nav.enabled = false;
+    //        bossSkill1.SetActive(true);
+    //        anim.SetBool("isCharging", true);
+
+    //        fireSkillDelay = 100.0f;
+    //        chargingSkillDelay -= Time.deltaTime;
+
+    //        switch (Type)
+    //        {
+    //            case BossType.minotaur:
+    //                if (bossSkill1.GetComponent<BossSkill>().skillHealth < 0)
+    //                {
+    //                    anim.SetBool("isCharging", false);
+    //                    nav.enabled = true;
+    //                    skill1 = false;
+    //                    charging = false;
+    //                    Destroy(bossSkill1);
+
+    //                    fireSkillDelay = 10.0f;
+    //                }
+    //                break;
+    //            case BossType.medusa:
+    //                if (bossSkill1.GetComponent<BossSkill_Medusa>().allDestroy == true)
+    //                {
+    //                    anim.SetBool("isCharging", false);
+    //                    nav.enabled = true;
+    //                    skill1 = false;
+    //                    Destroy(bossSkill1);
+    //                    charging = false;
+    //                    fireSkillDelay = 5.0f;
+    //                }
+    //                break;
+    //        }
+    //        if(chargingSkillDelay < 0)
+    //        {
+    //            effect.SetActive(true);
+
+    //            switch (Type)
+    //            {
+    //                case BossType.minotaur:
+    //                    Destroy(bossSkill1.GetComponent<BossSkill>().gameObject);
+    //                    break;
+    //                case BossType.medusa:
+    //                    Destroy(bossSkill1.GetComponent<BossSkill_Medusa>().gameObject);
+    //                    break;
+    //            }
+
+    //            anim.SetBool("isCharging", false);
+    //            nav.enabled = true;
+    //            skill1 = false;
+    //            charging = false;
+    //            Destroy(effect, 1);
+
+    //            RaycastHit[] skillRayHits = Physics.SphereCastAll(transform.position, 7,
+    //                                                    Vector3.up, 0f, LayerMask.GetMask("Player"));
+
+    //            if (skillRayHits.Length > 0)
+    //            {
+    //                PlayerSc.GetComponent<KSH_Player>().BossSkill(skill1Damage);
+    //            }
+    //        }
+    //    }
+    //}
+
+    IEnumerator BrokenMail()
     {
-        if (curHealth < 3000)
+        
+        if (curHealth < maxHealth/2)
         {
-            charging = true;
-            StopCoroutine("Attack");
-            nav.enabled = false;
-            bossSkill1.SetActive(true);
-            anim.SetBool("isCharging", true);
-
-            fireSkillDelay = 100.0f;
-            chargingSkillDelay -= Time.deltaTime;
-
-            switch (Type)
-            {
-                case BossType.minotaur:
-                    if (bossSkill1.GetComponent<BossSkill>().skillHealth < 0)
-                    {
-                        anim.SetBool("isCharging", false);
-                        nav.enabled = true;
-                        skill1 = false;
-                        charging = false;
-                        Destroy(bossSkill1);
-
-                        fireSkillDelay = 10.0f;
-                    }
-                    break;
-                case BossType.medusa:
-                    if (bossSkill1.GetComponent<BossSkill_Medusa>().allDestroy == true)
-                    {
-                        anim.SetBool("isCharging", false);
-                        nav.enabled = true;
-                        skill1 = false;
-                        Destroy(bossSkill1);
-                        charging = false;
-                        fireSkillDelay = 5.0f;
-                    }
-                    break;
-            }
-            if(chargingSkillDelay < 0)
-            {
-                effect.SetActive(true);
-
-                switch (Type)
-                {
-                    case BossType.minotaur:
-                        Destroy(bossSkill1.GetComponent<BossSkill>().gameObject);
-                        break;
-                    case BossType.medusa:
-                        Destroy(bossSkill1.GetComponent<BossSkill_Medusa>().gameObject);
-                        break;
-                }
-
-                anim.SetBool("isCharging", false);
-                nav.enabled = true;
-                skill1 = false;
-                charging = false;
-                Destroy(effect, 1);
-
-                RaycastHit[] skillRayHits = Physics.SphereCastAll(transform.position, 7,
-                                                        Vector3.up, 0f, LayerMask.GetMask("Player"));
-
-                if (skillRayHits.Length > 0)
-                {
-                    PlayerSc.GetComponent<KSH_Player>().BossSkill(skill1Damage);
-                }
-            }
-        }
-    }
-
-    private void BrokenMail()
-    {
-        if(mail.GetComponent<BossMail>().mailHealth <= 0)
-        {
-            collider.enabled = true;
-            isBroken = true;
+            
+            anim.SetTrigger("onHit");
             mail.SetActive(false);
+            nav.enabled = false;
+            yield return new WaitForSeconds(1.2f);
+            nav.enabled = true;
+            isBroken = false;
+            
         }
+
     }
 
     private void FireSkill()
     {
-        fireSkillDelay -= Time.deltaTime;
-
-        if(fireSkillDelay < 0)
+        switch (Type)
         {
-            anim.SetTrigger("onFireSkill");
-            StartCoroutine(FireSkillEffect());
-            fireSkillDelay = 10.0f;
+            case BossType.minotaur:
+            fireSkillDelay -= Time.deltaTime;
+
+            if (fireSkillDelay < 0)
+            {
+               anim.SetTrigger("onFireSkill");
+               StartCoroutine(FireSkillEffect());
+               fireSkillDelay = 10.0f;
+            }
+                break;
         }
     }
 
@@ -293,41 +317,21 @@ public class BossEnemy : InteractionObject
     {
         nav.enabled = false;
 
-        switch (Type)
+        yield return new WaitForSeconds(1.3f);
+        fireSkill.SetActive(true);
+
+        RaycastHit[] fireRayHits = Physics.SphereCastAll(transform.position, 7,
+                                                            Vector3.up, 0f, LayerMask.GetMask("Player"));
+        if (fireRayHits.Length > 0)
         {
-            case BossType.minotaur:
-
-                yield return new WaitForSeconds(1.3f);
-                fireSkill.SetActive(true);
-
-                RaycastHit[] fireRayHits = Physics.SphereCastAll(transform.position, 7,
-                                                        Vector3.up, 0f, LayerMask.GetMask("Player"));
-                if (fireRayHits.Length > 0)
-                {
-                    status.FireSkill(fireDamage);
-                }
-
-                yield return new WaitForSeconds(1.8f);
-
-                fireSkill.SetActive(false);
-                break;
-            case BossType.medusa:
-
-                yield return new WaitForSeconds(1.1f);
-                fireSkill.SetActive(true);
-
-                RaycastHit[] fireRayHits1 = Physics.SphereCastAll(transform.position, 10,
-                                                        Vector3.up, 0f, LayerMask.GetMask("Player"));
-                if (fireRayHits1.Length > 0)
-                {
-                    status.FireSkill(fireDamage);
-                }
-
-                yield return new WaitForSeconds(1.0f);
-
-                fireSkill.SetActive(false);
-                break;
+            status.FireSkill(fireDamage);
         }
+
+        yield return new WaitForSeconds(1.8f);
+
+        fireSkill.SetActive(false);
+             
+        
         nav.enabled = true;
     }
 

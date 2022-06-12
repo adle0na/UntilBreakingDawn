@@ -140,7 +140,7 @@ public class Enemy : InteractionObject
                 break;
             case Type.RangedE:
                 targetRadius = 0.5f;
-                targetRange = 30f;
+                targetRange = 20f;
                 break;
         }
         // RayCastHit의 SphareCastAll을 사용해 범위 내의 모든 적 찾기 

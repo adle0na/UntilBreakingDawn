@@ -260,6 +260,11 @@ public class WeaponAssultRifle : WeaponBase
             {
                 hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }
+
+            else if (hit.transform.CompareTag("Skill"))
+            {
+                hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
+            }
         }
     }
 

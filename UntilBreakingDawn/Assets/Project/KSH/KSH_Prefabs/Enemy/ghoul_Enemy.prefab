@@ -2234,7 +2234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7659054386771170267
 Transform:
   m_ObjectHideFlags: 0
@@ -2344,7 +2344,6 @@ MonoBehaviour:
   meleeArea: {fileID: 7663947428627970724}
   isChase: 0
   isAttack: 0
-  PlayerSc: {fileID: 0}
   BombEnemy: {fileID: 0}
   Effect: {fileID: 0}
   Boulder: {fileID: 0}
