@@ -247,7 +247,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uD5C8\uAE30 50 \uD68C\uBCF5"
+  m_Text: "\uD5C8\uAE30 50 \uD68C\uBCF5\n\uACE0\uAE30 : 1\uAC1C \uC18C\uBAA8"
 --- !u!1 &640117773
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +776,7 @@ MonoBehaviour:
     m_Bits: 2048
   range: 10
   inven: {fileID: 0}
+  go_SlotsParent: {fileID: 0}
 --- !u!1 &5665198439205323518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2202,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uAE30\uBCF8 \uB3CC\uBCBD\n\uCCB4\uB825 : 100"
+  m_Text: "\uAE30\uBCF8 \uB3CC\uBCBD\n\uCCB4\uB825 : 100\n\uB3CC : 4\uAC1C \uC18C\uBAA8"
 --- !u!1 &5665198440940167850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uD3ED\uBC1C \uB4DC\uB7FC\uD1B5\n\uD3ED\uBC1C \uB370\uBBF8\uC9C0 : 50"
+  m_Text: "\uD3ED\uBC1C \uB4DC\uB7FC\uD1B5\n\uD3ED\uBC1C \uB370\uBBF8\uC9C0 : 50\n~~\uC18C\uBAA8"
 --- !u!1 &5665198441040927921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,7 +2592,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uAE30\uBCF8 \uB098\uBB34\uBCBD\n\uCCB4\uB825 : 50"
+  m_Text: "\uAE30\uBCF8 \uB098\uBB34\uBCBD\n\uCCB4\uB825 : 50\n\uB098\uBB34 : 4\uAC1C
+    \uC18C\uBAA8"
 --- !u!1 &5665198441221708240
 GameObject:
   m_ObjectHideFlags: 0

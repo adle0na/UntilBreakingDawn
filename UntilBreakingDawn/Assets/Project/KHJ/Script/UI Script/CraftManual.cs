@@ -60,9 +60,11 @@ public class CraftManual : MonoBehaviour
     private Item items;
 
     // 재료 판별기
-    private int woodCount   = 0;
-    private int rookCount   = 0;
-    private int meatCount   = 0;
+    private int woodCount       = 0;
+    private int rookCount       = 0;
+    private int metalCount      = 0;
+    private int meatCount       = 0;
+    private int cookMeatCount   = 0;
 
 
     private void Awake()
@@ -106,12 +108,26 @@ public class CraftManual : MonoBehaviour
             {
                 for (int i = 0; i < slots.Length; i++)
                 {
-                    if (items.itemName == "Stake")
+                    if (go_Prefab.name == "Cooked_Meat")
                     {
-                        // 고기 차감할 곳
-                        inven.AcquireItem(items);
+                        meatCount       = inven.GetItemCount("Raw_Meat");
+                        cookMeatCount   = inven.GetItemCount("Cooked_Meat");
+                        break;
                     }
                 }
+
+                if (go_Prefab.name == "Cooked_Meat")
+                {
+                    if (meatCount >= 1)
+                    {
+                        // 고기 차감할 곳
+                        meatCount       -= 1;
+                        cookMeatCount   += 1;
+
+                        inven.SetItemCount("Raw_Meat", meatCount);
+                        inven.SetItemCount("Cooked_Meat", cookMeatCount);
+                    }
+                }  
             }
             else
             {
@@ -131,8 +147,8 @@ public class CraftManual : MonoBehaviour
                     }
                     else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
                     {
-                        woodCount = inven.GetItemCount("Log");
-                        rookCount = inven.GetItemCount("Rook");
+                        metalCount = inven.GetItemCount("Metal");
+                        rookCount  = inven.GetItemCount("Rook");
                         break;
                     }
                 }
@@ -169,16 +185,16 @@ public class CraftManual : MonoBehaviour
                 }
                 else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
                 {
-                    if (woodCount >= 2 && rookCount >=2)
+                    if (metalCount >= 2 && rookCount >=2)
                     {
                         go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        inven.SetItemCount("Log", woodCount);
+                        inven.SetItemCount("Metal", metalCount);
                         inven.SetItemCount("Rook", rookCount);
 
-                        woodCount -= 2;
+                        metalCount -= 2;
                         rookCount -= 2;
 
                         isPreviewActivated = true;
