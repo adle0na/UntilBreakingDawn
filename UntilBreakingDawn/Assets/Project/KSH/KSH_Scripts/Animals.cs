@@ -17,7 +17,7 @@ public class Animals : InteractionObject
     public float walkTime;
     public float waitTime;
     public float runTime = 5;
-    private float runSpeed = 15;
+    public float runSpeed = 15;
     private float applySpeed;
     
     private float currentTime;
@@ -234,7 +234,14 @@ public class Animals : InteractionObject
 
         if (animals == Type.Bear)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
+            {
+                Instantiate(meat, transform.position, transform.rotation);
+            }
+        }
+        else if (animals == Type.Boar)
+        {
+            for (int i = 0; i < 2; i++)
             {
                 Instantiate(meat, transform.position, transform.rotation);
             }

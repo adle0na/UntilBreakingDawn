@@ -21,6 +21,8 @@ public class BossEnemy : InteractionObject
     //public GameObject bossSkill1;
     private Status status;
     //public GameObject PlayerSc;
+    private bool skillAct;
+    private bool skillCheck;
 
     //미노타우르스 
     public BoxCollider meleeArea;
@@ -28,6 +30,9 @@ public class BossEnemy : InteractionObject
     public GameObject player;
     public GameObject mail;
     public GameObject fireSkill;
+    public GameObject effect;
+    public GameObject bossSkill1;
+    public GameObject skillPosition;
 
     //메두사
     public GameObject fireBall;
@@ -77,36 +82,11 @@ public class BossEnemy : InteractionObject
             }
         }
         FireSkill();
-        //if (skill1)
-        //{
-        //    ChargingSkill();
-        //}
+        {
+            ChargingSkill();
+        }
 
     }
-
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (!charging)
-    //    {
-    //        if (other.tag == "Bullet")
-    //        {
-    //            Bullet bullet = other.GetComponent<Bullet>();
-
-    //            if (isBroken)
-    //            {
-    //                curHealth -= bullet.damage * brokenDamage;
-    //                StartCoroutine(OnDamage());
-
-    //            }
-    //            else
-    //            {
-    //                curHealth -= bullet.damage;
-    //                StartCoroutine(OnDamage());
-    //            }
-    //        }
-    //    }
-    //}
 
     IEnumerator OnDamage()
     { 
@@ -211,75 +191,78 @@ public class BossEnemy : InteractionObject
         isAttack = false;
     }
 
-    //private void ChargingSkill()
-    //{
-    //    if (curHealth < 3000)
-    //    {
-    //        charging = true;
-    //        StopCoroutine("Attack");
-    //        nav.enabled = false;
-    //        bossSkill1.SetActive(true);
-    //        anim.SetBool("isCharging", true);
+    private void ChargingSkill()
+    {
+        if (curHealth < 3000 && skillCheck == false)
+        {
+            // charging = true;
+            StopCoroutine("Attack");
+            nav.enabled = false;
+            
+            Instantiate(bossSkill1, skillPosition.transform.position, skillPosition.transform.rotation);
+                
+            
+            anim.SetBool("isCharging", true);
 
-    //        fireSkillDelay = 100.0f;
-    //        chargingSkillDelay -= Time.deltaTime;
+            fireSkillDelay = 100.0f;
+            chargingSkillDelay -= Time.deltaTime;
 
-    //        switch (Type)
-    //        {
-    //            case BossType.minotaur:
-    //                if (bossSkill1.GetComponent<BossSkill>().skillHealth < 0)
-    //                {
-    //                    anim.SetBool("isCharging", false);
-    //                    nav.enabled = true;
-    //                    skill1 = false;
-    //                    charging = false;
-    //                    Destroy(bossSkill1);
+            switch (Type)
+            {
+                case BossType.minotaur:
+                    if (bossSkill1.GetComponent<BossSkill>().skillHealth < 0)
+                    {
+                        anim.SetBool("isCharging", false);
+                        nav.enabled = true;
+                        // skill1 = false;
+                        // charging = false;
+                        Destroy(bossSkill1);
 
-    //                    fireSkillDelay = 10.0f;
-    //                }
-    //                break;
-    //            case BossType.medusa:
-    //                if (bossSkill1.GetComponent<BossSkill_Medusa>().allDestroy == true)
-    //                {
-    //                    anim.SetBool("isCharging", false);
-    //                    nav.enabled = true;
-    //                    skill1 = false;
-    //                    Destroy(bossSkill1);
-    //                    charging = false;
-    //                    fireSkillDelay = 5.0f;
-    //                }
-    //                break;
-    //        }
-    //        if(chargingSkillDelay < 0)
-    //        {
-    //            effect.SetActive(true);
+                        fireSkillDelay = 10.0f;
+                    }
+                    break;
+                case BossType.medusa:
+                    if (bossSkill1.GetComponent<BossSkill_Medusa>().allDestroy == true)
+                    {
+                        anim.SetBool("isCharging", false);
+                        nav.enabled = true;
+                        // skill1 = false;
+                        Destroy(bossSkill1);
+                        // charging = false;
+                        fireSkillDelay = 5.0f;
+                    }
+                    break;
+            }
+            if(chargingSkillDelay < 0)
+            {
+                effect.SetActive(true);
 
-    //            switch (Type)
-    //            {
-    //                case BossType.minotaur:
-    //                    Destroy(bossSkill1.GetComponent<BossSkill>().gameObject);
-    //                    break;
-    //                case BossType.medusa:
-    //                    Destroy(bossSkill1.GetComponent<BossSkill_Medusa>().gameObject);
-    //                    break;
-    //            }
+                switch (Type)
+                {
+                    case BossType.minotaur:
+                        Destroy(bossSkill1.GetComponent<BossSkill>().gameObject);
+                        break;
+                    case BossType.medusa:
+                        Destroy(bossSkill1.GetComponent<BossSkill_Medusa>().gameObject);
+                        break;
+                }
 
-    //            anim.SetBool("isCharging", false);
-    //            nav.enabled = true;
-    //            skill1 = false;
-    //            charging = false;
-    //            Destroy(effect, 1);
+                anim.SetBool("isCharging", false);
+                nav.enabled = true;
+                // skill1 = false;
+                // charging = false;
+                Destroy(effect, 1);
 
-    //            RaycastHit[] skillRayHits = Physics.SphereCastAll(transform.position, 7,
-    //                                                    Vector3.up, 0f, LayerMask.GetMask("Player"));
+                RaycastHit[] skillRayHits = Physics.SphereCastAll(transform.position, 7,
+                                                        Vector3.up, 0f, LayerMask.GetMask("Player"));
 
-    //            if (skillRayHits.Length > 0)
-    //            {
-    //                PlayerSc.GetComponent<KSH_Player>().BossSkill(skill1Damage);
-    //            }
-    //        }
-    //    }
-    //}
+                if (skillRayHits.Length > 0)
+                {
+                    // PlayerSc.GetComponent<KSH_Player>().BossSkill(skill1Damage);
+                }
+            }
+        }
+    }
 
     IEnumerator BrokenMail()
     {

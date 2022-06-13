@@ -13,20 +13,23 @@ public class EnemySpawn : MonoBehaviour
     public GameObject minotaur = null;
     public GameObject medusa = null;
 
-    public float waveInterval = 3.0f;
-    public int spawnCount = 3;
+    public float waveInterval  = 3.0f;
+    public int   spawnCount    = 3;
     public float spawnInterval = 1.5f;
+    private float spawnRate    = 1f;
 
-    WaitForSeconds waitSpawnInterval = null;
-
+    WaitForSeconds waitSpawnInterval      = null;
+    WaitForSeconds waitSpawnIntervalFirst = null;
     private void Start()
     {
         waitSpawnInterval = new WaitForSeconds(spawnInterval);
+        waitSpawnIntervalFirst = new WaitForSeconds(spawnRate);
         StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn()
     {
+        yield return waitSpawnInterval;
         for (int j = 0; j < waveInterval; j++)
         {
             for (int i = 0; i < spawnCount; i++)
@@ -60,8 +63,8 @@ public class EnemySpawn : MonoBehaviour
 
 
                 }
+                yield return waitSpawnIntervalFirst;
             }
-            yield return waitSpawnInterval;
         }
     }
 

@@ -140,7 +140,7 @@ public class Enemy : InteractionObject
                 break;
             case Type.RangedE:
                 targetRadius = 0.5f;
-                targetRange = 20f;
+                targetRange = 10f;
                 break;
         }
         // RayCastHit의 SphareCastAll을 사용해 범위 내의 모든 적 찾기 
@@ -148,7 +148,7 @@ public class Enemy : InteractionObject
             Physics.SphereCastAll(transform.position, targetRadius,
                                     transform.forward, targetRange, LayerMask.GetMask("Player"));
         // 만약 범위 내에 몬스터가 있을 시 어택 코루틴 실행 
-        if(rayHits.Length > 0 && !isAttack)
+        if(rayHits.Length > 0)
         {
             StartCoroutine("Attack");
         }

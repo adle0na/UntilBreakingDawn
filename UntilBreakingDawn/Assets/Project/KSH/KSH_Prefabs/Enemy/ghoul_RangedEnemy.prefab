@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4fd78876cb44e73ba966a877d62886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHP: 100
   enemyType: 2
   maxHealth: 100
   curHealth: 100
@@ -471,7 +472,6 @@ MonoBehaviour:
   meleeArea: {fileID: 0}
   isChase: 0
   isAttack: 0
-  PlayerSc: {fileID: 44819573436159256, guid: 203f5b40dcd6e4cf08ad4c78f011d3a0, type: 3}
   BombEnemy: {fileID: 0}
   Effect: {fileID: 0}
   Boulder: {fileID: 3087478405258129613, guid: 0930cf561edfc4adfb888f6fd80e3471, type: 3}

@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="적 전투 구현 진행중">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/SkillManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/SkillManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ExplosionBarrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ExplosionBarrel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs000/ghoul_Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs000/ghoul_Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/InfinityPBR/_InfinityPBR - Minotaur/Textures &amp; Materials/MinotaurArmor1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/InfinityPBR/_InfinityPBR - Minotaur/Textures &amp; Materials/MinotaurArmor1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Enemy/ghoul_BombEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Enemy/ghoul_BombEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Enemy/ghoul_Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Enemy/ghoul_Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Enemy/ghoul_RangedEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Enemy/ghoul_RangedEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Animals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Animals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/BossEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/BossEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/BossSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/BossSkill.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/EnemySpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Scripts/EnemySpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

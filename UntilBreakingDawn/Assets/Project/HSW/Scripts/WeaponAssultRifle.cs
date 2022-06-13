@@ -251,6 +251,7 @@ public class WeaponAssultRifle : WeaponBase
                 Debug.Log("?? ????");
                 hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
             }
+            
             else if (hit.transform.CompareTag("ExplosiveBarrel"))
             {
                 hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
@@ -263,7 +264,7 @@ public class WeaponAssultRifle : WeaponBase
 
             else if (hit.transform.CompareTag("Skill"))
             {
-                hit.transform.GetComponent<InteractionObject>().TakeDamage(_weaponSetting._damage);
+                hit.transform.GetComponent<SkillManager>().TakeDamage2(_weaponSetting._damage);
             }
         }
     }
