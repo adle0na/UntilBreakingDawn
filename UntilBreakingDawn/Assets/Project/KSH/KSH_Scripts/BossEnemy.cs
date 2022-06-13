@@ -82,9 +82,7 @@ public class BossEnemy : InteractionObject
             }
         }
         FireSkill();
-        {
-            ChargingSkill();
-        }
+        //ChargingSkill();
 
     }
 

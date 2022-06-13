@@ -215,7 +215,6 @@ public class Animals : InteractionObject
         meleeArea.enabled = false;
 
         yield return new WaitForSeconds(0.1f);
-
         isAttack = false;
         isStop = true;
         isAttackRun = true;
