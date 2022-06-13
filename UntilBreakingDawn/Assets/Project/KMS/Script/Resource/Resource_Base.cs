@@ -43,6 +43,7 @@ public class Resource_Base : MonoBehaviour, IHit
     {
         int resourceType = Random.Range(0, ResourcePrefabs.Length);
         GameObject gameObject = Instantiate(ResourcePrefabs[resourceType], this.transform);
+        gameObject.transform.position = gameObject.transform.position + new Vector3(0, 1, 0);
         gameObject.transform.parent = resourceTranform;
     }
 }
