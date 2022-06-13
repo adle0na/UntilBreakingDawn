@@ -5588,6 +5588,17 @@ PrefabInstance:
       propertyPath: slots.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5665198439174920792, guid: e87bef9034e0835499b3f4478b00364d,
+        type: 3}
+      propertyPath: craftTab.Array.data[2].crafts.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: a9395014e7038054b80f647f14927b14,
+        type: 2}
+    - target: {fileID: 5665198439174920792, guid: e87bef9034e0835499b3f4478b00364d,
+        type: 3}
+      propertyPath: craftTab.Array.data[2].crafts.Array.data[0].craftName
+      value: Cooked_Meat
+      objectReference: {fileID: 0}
     - target: {fileID: 5665198439174920794, guid: e87bef9034e0835499b3f4478b00364d,
         type: 3}
       propertyPath: m_Name

@@ -108,24 +108,23 @@ public class CraftManual : MonoBehaviour
             {
                 for (int i = 0; i < slots.Length; i++)
                 {
-                    if (go_Prefab.name == "Cooked_Meat")
+                    if (items.name == "Cooked_Meat")
                     {
-                        meatCount       = inven.GetItemCount("Raw_Meat");
-                        cookMeatCount   = inven.GetItemCount("Cooked_Meat");
+                        meatCount       = inven.GetItemCount("RawMeat");
+                        cookMeatCount   = inven.GetItemCount("CookedMeat");
+
                         break;
                     }
                 }
 
-                if (go_Prefab.name == "Cooked_Meat")
+                if (items.name == "Cooked_Meat")
                 {
                     if (meatCount >= 1)
                     {
+                        int meatMiuns = 1;
                         // 고기 차감할 곳
-                        meatCount       -= 1;
-                        cookMeatCount   += 1;
-
-                        inven.SetItemCount("Raw_Meat", meatCount);
-                        inven.SetItemCount("Cooked_Meat", cookMeatCount);
+                        inven.SetItemCount("RawMeat", meatMiuns);
+                        inven.AcquireItem(items);
                     }
                 }  
             }
@@ -161,8 +160,9 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        inven.SetItemCount("Log", woodCount);
-                        woodCount -= 4;
+                        int woodMinus = 4;
+
+                        inven.SetItemCount("Log", woodMinus);
 
                         isPreviewActivated = true;
                         go_BaseUI.SetActive(false);
@@ -176,8 +176,9 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        inven.SetItemCount("Rook", rookCount);
-                        rookCount -= 4;
+                        int rookMinus = 4;
+
+                        inven.SetItemCount("Rook", rookMinus);
 
                         isPreviewActivated = true;
                         go_BaseUI.SetActive(false);
@@ -191,11 +192,11 @@ public class CraftManual : MonoBehaviour
                                                         tf_Player.position + tf_Player.forward,
                                                         Quaternion.identity);
 
-                        inven.SetItemCount("Metal", metalCount);
-                        inven.SetItemCount("Rook", rookCount);
+                        int metalMinus = 2;
+                        int rookMinus  = 2;
 
-                        metalCount -= 2;
-                        rookCount -= 2;
+                        inven.SetItemCount("Metal", metalMinus);
+                        inven.SetItemCount("Rook", rookMinus);
 
                         isPreviewActivated = true;
                         go_BaseUI.SetActive(false);
