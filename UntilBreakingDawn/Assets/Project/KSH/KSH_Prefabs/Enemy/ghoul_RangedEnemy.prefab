@@ -490,12 +490,14 @@ MonoBehaviour:
   Effect: {fileID: 0}
   Boulder: {fileID: 3087478405258129613, guid: 0930cf561edfc4adfb888f6fd80e3471, type: 3}
   shoter: {fileID: 7802702697520312904}
+  Player: {fileID: 0}
   enemyAttack: {fileID: 8300000, guid: ae55b87405ab344a7908ae5ecdeabf0a, type: 3}
   enemyHit: {fileID: 8300000, guid: 0bc0bb7e526314dcdaa4e1532e7e5f9b, type: 3}
   enemyDeath: {fileID: 8300000, guid: 017e9d1b881914333b8bc5d7f19c78ad, type: 3}
   enemyRangedAttack: {fileID: 8300000, guid: d5dc29589b7fa4551b7f1b0849beff2d, type: 3}
   enemyBombEx: {fileID: 8300000, guid: 7dcf39305ce78495b897ffb2b280f5ee, type: 3}
   enemyFoot: {fileID: 8300000, guid: c337b265d2e7e49b6a94546232c5c3b9, type: 3}
+  explosion: {fileID: 0}
 --- !u!82 &595169020
 AudioSource:
   m_ObjectHideFlags: 0
