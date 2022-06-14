@@ -12,8 +12,8 @@ public class CloseWeapon_PickAxe : CloseWeapon_Base
         if (isPickaxe)
         {
             base.weaponRange = 3.0f;
-            base.attackDelay = 1.7f;
-            base.attackDelayA = 0.5f;
+            base.attackDelay = 2.2f;
+            base.attackDelayA = 0.32f;
             base.attackDelayB = 0.1f;
         }
     }

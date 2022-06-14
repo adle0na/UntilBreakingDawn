@@ -58,7 +58,7 @@ public class WeaponKnife : WeaponBase
         _isAttack = true;
         
         _animator.SetFlaot("attackType", type);
-        _animator.Play("Fire", -1, 0);
+        //_animator.Play("Fire", -1, 0);
 
         yield return new WaitForEndOfFrame();
 

@@ -11,9 +11,9 @@ public class CloseWeapon_Axe : CloseWeapon_Base
         if (isAxe)
         {
             base.weaponRange = 3.0f;
-            base.attackDelay = 1.7f;
-            base.attackDelayA = 0.5f;
-            base.attackDelayB = 0.1f;
+            base.attackDelay = 1.0f;
+            base.attackDelayA = 0.2f;
+            base.attackDelayB = 0.2f;
         }
     }
     void Update()
