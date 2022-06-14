@@ -52956,7 +52956,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.033333335
-    functionName: FootStep
+    functionName: FootSE
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: c337b265d2e7e49b6a94546232c5c3b9,
       type: 3}
@@ -52964,7 +52964,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.46666667
-    functionName: FootStep
+    functionName: FootSE
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: c337b265d2e7e49b6a94546232c5c3b9,
       type: 3}

@@ -49,8 +49,19 @@ public class BossEnemy : InteractionObject
     BoxCollider collider;
     NavMeshAgent nav;
 
+    private AudioSource Audio;
+
+    public AudioClip minoAttack1;
+    public AudioClip minoAttack2;
+    public AudioClip minoDeath;
+    public AudioClip minoFoots;
+    public AudioClip meduAttack;
+    public AudioClip meduFoots;
+    public AudioClip fireSkillSE;
+
     private void Awake()
     {
+        Audio = GetComponent<AudioSource>();
         status = FindObjectOfType<Status>();
         target = FindObjectOfType<PlayerControllerHSW>();
         nav = GetComponent<NavMeshAgent>();
@@ -303,6 +314,8 @@ public class BossEnemy : InteractionObject
         yield return new WaitForSeconds(1.3f);
         fireSkill.SetActive(true);
 
+        PlaySE(fireSkillSE);
+
         RaycastHit[] fireRayHits = Physics.SphereCastAll(transform.position, 7,
                                                             Vector3.up, 0f, LayerMask.GetMask("Player"));
         if (fireRayHits.Length > 0)
@@ -349,6 +362,37 @@ public class BossEnemy : InteractionObject
         Rigidbody rigidFireBall5 = instantFireBall5.GetComponent<Rigidbody>();
         rigidFireBall5.velocity = transform.TransformDirection(new Vector3(-1, 0, 2).normalized) * 20;
 
+    }
+
+    private void PlaySE(AudioClip _clip)
+    {
+        Audio.clip = _clip;
+        Audio.Play();
+    }
+
+    public void minoFootSE()
+    {
+        PlaySE(minoFoots);
+    }
+    public void minoAt1()
+    {
+        PlaySE(minoAttack1);
+    }
+    public void minoAt2()
+    {
+        PlaySE(minoAttack2);
+    }
+    public void minoDie()
+    {
+        PlaySE(minoDeath);
+    }
+    public void meduFoot()
+    {
+        PlaySE(meduFoots);
+    }
+    public void meduAt1()
+    {
+        PlaySE(meduAttack);
     }
 
 }

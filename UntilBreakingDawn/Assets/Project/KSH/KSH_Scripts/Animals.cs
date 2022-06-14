@@ -39,8 +39,26 @@ public class Animals : InteractionObject
     private BoxCollider boxCollider;
     private NavMeshAgent nav;
 
+    private AudioSource Audio;
+
+    public AudioClip bearAttack;
+    public AudioClip bearDie;
+    public AudioClip bearIdle;
+    public AudioClip bearStep;
+    public AudioClip chiIdle;
+    public AudioClip chiEat;
+    public AudioClip chiDie;
+    public AudioClip chiRun;
+    public AudioClip cowIdle;
+    public AudioClip cowRun;
+    public AudioClip pigIdle;
+    public AudioClip pigRun;
+    public AudioClip pigDie;
+    public AudioClip pigStep;
+
     private void Awake()
     {
+        Audio = GetComponent<AudioSource>();
         target = FindObjectOfType<PlayerControllerHSW>();
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
@@ -282,5 +300,77 @@ public class Animals : InteractionObject
             StartCoroutine(Attack());
         }
     }
+
+    private void PlaySE(AudioClip _clip)
+    {
+        Audio.clip = _clip;
+        Audio.Play();
+    }
+
+    public void BearAt()
+    {
+        PlaySE(bearAttack);
+    }
+
+    public void BearDeath()
+    {
+        PlaySE(bearDie);
+    }
+
+    public void BearIdle()
+    {
+        PlaySE(bearIdle);
+    }
+    public void BearStep()
+    {
+        PlaySE(bearStep);
+    }
+
+    public void PigStep()
+    {
+        PlaySE(pigStep);
+    }
+
+    public void PigIdle()
+    {
+        PlaySE(pigIdle);
+    }
+
+    public void PigRun()
+    {
+        PlaySE(pigRun);
+    }
+
+    public void PigDie()
+    {
+        PlaySE(pigDie);
+    }
+    public void ChiIdle()
+    {
+        PlaySE(chiIdle);
+    }
+
+    public void ChiEat()
+    {
+        PlaySE(chiEat);
+    }
+    public void ChiRun()
+    {
+        PlaySE(chiRun);
+    }
+    public void ChiDie()
+    {
+        PlaySE(chiDie);
+    }
+
+    public void CowIdle()
+    {
+        PlaySE(cowIdle);
+    }
+    public void CowEat()
+    {
+        PlaySE(cowRun);
+    }
+
 }
     

@@ -61719,7 +61719,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: EnemyDie
+    functionName: BearDeath
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: a444c97b55c0f4054b2eb760f9414300,
       type: 3}

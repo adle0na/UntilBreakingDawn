@@ -84574,7 +84574,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 2.3333333
-    functionName: AnimalsIdle
+    functionName: CowIdle
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8c0e6b162377c40da99c1bba890d1eee,
       type: 3}

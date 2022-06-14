@@ -70590,7 +70590,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 2.9666667
-    functionName: AnimalsIdle
+    functionName: ChiIdle
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 1904b4e35d2434fc1a9e45de46f5f106,
       type: 3}

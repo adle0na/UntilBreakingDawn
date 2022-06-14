@@ -64767,7 +64767,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.23333333
-    functionName: EnemyDie
+    functionName: CowEat
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: fa9c7b3914890453bbd2356766fb2dfc,
       type: 3}

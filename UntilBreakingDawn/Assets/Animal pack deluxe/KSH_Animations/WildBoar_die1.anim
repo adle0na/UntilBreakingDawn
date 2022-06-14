@@ -49692,7 +49692,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.06666667
-    functionName: EnemyDie
+    functionName: PigDie
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8a0114fbf90834a9386ef1c5fe55d0d0,
       type: 3}

@@ -23,17 +23,27 @@ public class Enemy : InteractionObject
     public GameObject Effect;
     public GameObject Boulder;
     public Transform shoter;
+    public GameObject Player;
 
     private NavMeshAgent nav;
     private Animator anim;
     private Rigidbody rigid;
     private CapsuleCollider collider;
 
-    private IEnumerator AttackSave;
-    private IEnumerator ExplosionSave;
+
+    private AudioSource Audio;
+
+    public AudioClip enemyAttack;
+    public AudioClip enemyHit;
+    public AudioClip enemyDeath;
+    public AudioClip enemyRangedAttack;
+    public AudioClip enemyBombEx;
+    public AudioClip enemyFoot;
+    public AudioClip explosion;
 
     private void Awake()
     {
+        Audio = GetComponent<AudioSource>();
         status = FindObjectOfType<Status>();
         target = FindObjectOfType<PlayerControllerHSW>();
         nav = GetComponent<NavMeshAgent>();
@@ -44,43 +54,23 @@ public class Enemy : InteractionObject
 
     }
 
-    private void Start()
-    {
-        AttackSave = Attack();
-        ExplosionSave = Explosion();
-    }
-
-    /*
-    // 총알 프리팹 예시용
-    private void OnTriggerEnter(Collider other)
-    {
-        // 총알에 맞았을 때 몬스터의 체력을 깎고 OnDamage 코루틴 시작 
-        if(other.tag == "Bullet")
-        {
-            Bullet bullet = other.GetComponent<Bullet>();
-            curHealth -= bullet.damage;
-            StartCoroutine(OnDamage());
-        }
-    }
-    */
-
     IEnumerator OnDamage()
     {
         // 맞았을 때 isHit 애니메이션 동작 
         anim.SetBool("isHit", true);
         nav.enabled = false;
-        yield return new WaitForSeconds(0.1f);
+        PlaySE(enemyHit);
+        yield return new WaitForSeconds(0.2f);
         nav.enabled = true;
         anim.SetBool("isHit", false);
 
         // 체력이 0이 되었을 때 
         if (curHealth <= 0)
         {
-            // 충돌을 없애기 위해 죽는 즉시 레이어를 변경해 모든 오브젝트와의 충돌을 막음 
-            //gameObject.layer = 14;
             collider.enabled = false;
             nav.enabled = false;
             anim.SetTrigger("onDeath");
+            PlaySE(enemyDeath);
             // 몬스터의 타입 별로 죽을 때 해야하는 행동 실행, 죽었을 때 공격 방지
             switch (enemyType)
             {
@@ -160,7 +150,6 @@ public class Enemy : InteractionObject
         isChase = false;
         isAttack = true;
 
-        Debug.Log("어택 ");
         // 타입 별로 공격 방식 차별화 
         switch (enemyType)
         {
@@ -168,20 +157,20 @@ public class Enemy : InteractionObject
 
                 anim.SetBool("isAttack", true);
                 yield return new WaitForSeconds(0.2f);
+                PlaySE(enemyAttack);
                 meleeArea.enabled = true;
 
                 yield return new WaitForSeconds(1f);
                 meleeArea.enabled = false;
 
                 yield return new WaitForSeconds(0.1f);
-
                 anim.SetBool("isAttack", false);
                 break;
 
             case Type.BombE:
                 // 사정거리 내에 들어왔으면 추격을 멈추고
                 nav.enabled = false;
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.4f);
                 
                 // Explosion 코루틴 실행
                 StartCoroutine("Explosion");
@@ -189,8 +178,12 @@ public class Enemy : InteractionObject
 
             case Type.RangedE:
 
+                Player = GameObject.FindWithTag("Player");
+                transform.LookAt(Player.transform);
+
                 anim.SetBool("isAttack", true);
-                // 투사체를 지정해논 투사체 발사대에 생성한 뒤 힘을 주어 앞으로 던짐 
+                // 투사체를 지정해논 투사체 발사대에 생성한 뒤 힘을 주어 앞으로 던짐
+                PlaySE(enemyRangedAttack);
                 yield return new WaitForSeconds(0.2f);
                 GameObject instantFireBall = Instantiate(Boulder, shoter.position, shoter.rotation);
                 Rigidbody rigidFire = instantFireBall.GetComponent<Rigidbody>();
@@ -202,7 +195,6 @@ public class Enemy : InteractionObject
                 break;
         }
 
-        Debug.Log("어택 끝 ");
         isChase = true;
         isAttack = false;
     }
@@ -210,6 +202,7 @@ public class Enemy : InteractionObject
     IEnumerator Explosion()
     {
         anim.SetTrigger("onIdle");
+        PlaySE(enemyBombEx);
         // 2초 대기한 뒤 
         yield return new WaitForSeconds(2.5f);
 
@@ -224,9 +217,10 @@ public class Enemy : InteractionObject
             status.HitByExplosion(exDamage);
         }
 
-        // 폭팔 이펙트 실행 
+        // 폭팔 이펙트 실행
+        PlaySE(explosion);
         Effect.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         // 몬스터 소멸 
         BombEnemy.SetActive(false);
     }
@@ -240,8 +234,17 @@ public class Enemy : InteractionObject
     {
         curHealth -= damage;
 
-        StartCoroutine(OnDamage());
-        
+        StartCoroutine(OnDamage());   
     }
 
+    private void PlaySE(AudioClip _clip)
+    {
+        Audio.clip = _clip;
+        Audio.Play();
+    }
+
+    public void FootSE()
+    {
+        PlaySE(enemyFoot);
+    }
 }

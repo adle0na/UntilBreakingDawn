@@ -43827,7 +43827,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.13333334
-    functionName: FootStep
+    functionName: BearStep
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8fe2da8ba364244379b8cc094c34a25e,
       type: 3}
@@ -43835,7 +43835,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.46666667
-    functionName: FootStep
+    functionName: BearStep
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8fe2da8ba364244379b8cc094c34a25e,
       type: 3}
