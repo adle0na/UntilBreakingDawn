@@ -41,6 +41,7 @@ public class Status : MonoBehaviour
 
     private void Update()
     {
+        
         if (_currentHungry >= 0)
         {
             DecreaseHungry(0.5f*Time.deltaTime);

@@ -1575,7 +1575,7 @@ MonoBehaviour:
   walkTime: 4
   waitTime: 6
   runTime: 10
-  runSpeed: 15
+  runSpeed: 5
   bearAttack: {fileID: 8300000, guid: e6f3076b2d3a649cd96b7309b13cb397, type: 3}
   bearDie: {fileID: 8300000, guid: a444c97b55c0f4054b2eb760f9414300, type: 3}
   bearIdle: {fileID: 8300000, guid: 078f88585b9624fa2a4d44282633bcc5, type: 3}

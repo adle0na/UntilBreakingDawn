@@ -1,128 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="적 전투 구현 진행중">
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/Script.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/Script/RotateCamera.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/Script/RotateCamera.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-1.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-10.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-10.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-10Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-10Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-11.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-11.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-11Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-11Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-12.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-12.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-12Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-12Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-1Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-1Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-2.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-2.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-2Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-2Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-3.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-3.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-3Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-3Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-4.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-4.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-4Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-4Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-5.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-5.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-5Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-5Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-6.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-6.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-6Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-6Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-7.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-7.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-7Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-7Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-8.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-8.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-8Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-8Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-9.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-9.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-9Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Example Scenes/sky-9Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/ReadMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/ReadMe.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-10.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-10.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-11.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-11.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-12.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-12.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-7.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-7.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-8.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-8.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-9.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Material/sky-9.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-11.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-12.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-7.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/8K Skybox Pack Free/Skyboxes/Texture/sky-9.png.meta" afterDir="false" />
+    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="StageSetting 오류 수정, 디테일 작업">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/LoadingScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/LoadingScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LoadingSceneController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LoadingSceneController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/UBD_rabel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/UBD_rabel.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar-frame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar-frame.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EffectExamples/Shared/Materials/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EffectExamples/Shared/Materials/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Scripts/Casings_&amp;_Projectiles/GrenadeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Scripts/Casings_&amp;_Projectiles/GrenadeScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/ImpactMemoryPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Scenes/GameTitle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Scenes/GameTitle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Script/Title_CHG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Script/Title_CHG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/New Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/New Scene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerControllerHSW.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/PlayerHUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnife.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponKnifeCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/WeaponRevolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Bear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Boar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Boar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Chicken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Chicken.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Cow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Cow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Die.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Die.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Idle.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Idle.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Bomb_Ex.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Bomb_Ex.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Ranged_attack.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Ranged_attack.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_attack.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_attack.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_death.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_death.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_hit.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_hit.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/HSW/Scripts/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/KSH/KSH_Scripts/Animals.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">

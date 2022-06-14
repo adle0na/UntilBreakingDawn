@@ -395,7 +395,7 @@ MonoBehaviour:
   walkTime: 6
   waitTime: 4
   runTime: 5
-  runSpeed: 15
+  runSpeed: 6
   bearAttack: {fileID: 0}
   bearDie: {fileID: 0}
   bearIdle: {fileID: 0}

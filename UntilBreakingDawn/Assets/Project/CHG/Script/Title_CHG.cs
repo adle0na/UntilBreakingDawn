@@ -9,10 +9,9 @@ public class Title_CHG : MonoBehaviour
 
     public static Title_CHG instance;
 
+    public GameObject mainScreen;
     private void Awake()
     {
-
-
         if (instance == null)
         {
             instance = this;
@@ -25,14 +24,13 @@ public class Title_CHG : MonoBehaviour
     //start 버튼
     public void ClickStart()
     {
-        Debug.Log("로딩");
-        SceneManager.LoadScene(sceneName);
+        LoadingSceneController.LoadScene("MainScene");
+        gameObject.SetActive(false);
     }
 
     //exit 버튼
     public void ClickExit()
     {
-        Debug.Log("게임종료");
         Application.Quit();
     }
 }
