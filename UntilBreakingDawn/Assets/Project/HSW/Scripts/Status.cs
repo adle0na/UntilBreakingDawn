@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class HPEvent : UnityEngine.Events.UnityEvent<int, int> { }
-public class HungryEvent : UnityEngine.Events.UnityEvent<int, int> { }
+public class HPEvent : UnityEngine.Events.UnityEvent<float, float> { }
+public class HungryEvent : UnityEngine.Events.UnityEvent<float, float> { }
 public class Status : MonoBehaviour
 {
     [HideInInspector]
@@ -22,17 +22,16 @@ public class Status : MonoBehaviour
 
     [Header("HP")]
     [SerializeField]
-    private int    _maxHP = 100;
+    private float  _maxHP = 100;
     [SerializeField]
-    private int _currentHP;
+    private float  _currentHP;
     public float WalkSpeed => _walkSpeed;
     public float RunSpeed  => _runSpeed;
 
     [Header("Hungry")]
     [SerializeField]
-    private int _maxHungry = 100;
-
-    private int _currentHungry;
+    private float _maxHungry = 100;
+    public float _currentHungry;
 
     private void Awake()
     {
@@ -40,9 +39,22 @@ public class Status : MonoBehaviour
         _currentHungry = _maxHungry;
     }
 
-    public bool DecreaseHP(int damage)
+    private void Update()
     {
-        int previousHP = _currentHP;
+        if (_currentHungry >= 0)
+        {
+            DecreaseHungry(0.5f*Time.deltaTime);
+        }
+        
+        if (_currentHungry == 0)
+        {
+            DecreaseHP(0.5f*Time.deltaTime);
+        }
+    }
+
+    public bool DecreaseHP(float damage)
+    {
+        float previousHP = _currentHP;
 
         _currentHP = _currentHP - damage > 0 ? _currentHP - damage : 0;
         
@@ -56,9 +68,9 @@ public class Status : MonoBehaviour
         return false;
     }
     
-    public bool DecreaseHungry(int time)
+    public bool DecreaseHungry(float time)
     {
-        int previousHungry = _currentHungry;
+        float previousHungry = _currentHungry;
 
         _currentHungry = _currentHungry - time > 0 ? _currentHungry - time : 0;
         
@@ -73,9 +85,9 @@ public class Status : MonoBehaviour
     }
     
 
-    public void IncreaseHP(int hp)
+    public void IncreaseHP(float hp)
     {
-        int previousHP = _currentHP;
+        float previousHP = _currentHP;
         
         _currentHP = _currentHP + hp > _maxHP ? _maxHP : _currentHP + hp;
         
@@ -84,7 +96,7 @@ public class Status : MonoBehaviour
     
     public void IncreaseHungry(int hungry)
     {
-        int previousHungry = _currentHungry;
+        float previousHungry = _currentHungry;
         
         _currentHungry = _currentHungry + hungry > _maxHungry ? _maxHungry : _currentHungry + hungry;
         

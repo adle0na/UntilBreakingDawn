@@ -38,11 +38,10 @@ public class WeaponAssultRifle : WeaponBase
     private CasingMemoryPool _casingMemoryPool;
     private ImpactMemoryPool _impactMemoryPool;
     private Camera           _mainCamera;
-    private bool             _isInspecting;
     private bool             _isgrenadeThrowed;
     public  float            _knifeDelay = 1;
     private bool             _knifeUse;
-
+    
     [Header("Prefabs")]
     public Transform         grenadePrefab;
 
@@ -54,14 +53,13 @@ public class WeaponAssultRifle : WeaponBase
     private void Awake()
     {
         base.Setup();
-
+        _craftManual      = FindObjectOfType<CraftManual>();
         _casingMemoryPool = GetComponent<CasingMemoryPool>();
         _impactMemoryPool = GetComponent<ImpactMemoryPool>();
-        _mainCamera = Camera.main;
+        _mainCamera       = Camera.main;
 
         _weaponSetting._currentMagazine = _weaponSetting._maxMagazine;
         _weaponSetting._currentAmmo = _weaponSetting._maxAmmo;
-
     }
 
     private void OnEnable()
@@ -77,17 +75,17 @@ public class WeaponAssultRifle : WeaponBase
 
     void Update()
     {
-        if (Input.GetKeyDown (KeyCode.Q) && !_knifeUse) 
+        if (Input.GetKeyDown (KeyCode.Q) && !_knifeUse && _craftManual.isActivated == false) 
         {
             _animator.Play ("Knife Attack 1", 0, 0f);
             StartCoroutine("KnifeDelay");
         }
-        if (Input.GetKeyDown (KeyCode.F) && !_knifeUse) 
+        if (Input.GetKeyDown (KeyCode.F) && !_knifeUse && _craftManual.isActivated == false) 
         {
             _animator.Play ("Knife Attack 2", 0, 0f);
             StartCoroutine("KnifeDelay");
         }
-        if (Input.GetKeyDown (KeyCode.G) && !_isInspecting && grenadeCount > 0) 
+        if (Input.GetKeyDown (KeyCode.G) && !_isInspecting && grenadeCount > 0 && _craftManual.isActivated == false) 
         {
             StartCoroutine (GrenadeSpawnDelay ());
             _animator.Play("GrenadeThrow", 0, 0.0f);
@@ -108,8 +106,10 @@ public class WeaponAssultRifle : WeaponBase
         // ???? ?????? ???? ???? X
         if (_isModeChange == true) return;
 
+        if (_craftManual.isActivated == true) return;
+        
         // ???? ?????? ?????? ????
-        if (type == 0)
+        if (type == 0) 
         {
             // ???? ????
             if (_weaponSetting._isAutomaticAttack == true)

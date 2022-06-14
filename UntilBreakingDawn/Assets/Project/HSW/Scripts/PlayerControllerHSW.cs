@@ -28,13 +28,13 @@ public class PlayerControllerHSW : MonoBehaviour
     [SerializeField]
     private AudioClip _audioClipRun;
 
-    private int               _keyNumber;
-    private RotateToMouseHSW  _rotateToMouseHsw;
-    private MovementHSW       _movement;
-    private Status            _status;
-    private AudioSource       _audioSource;
-    private WeaponBase        _weapon;
-    private Inventory         _inventory;
+    private int              _keyNumber;
+    private RotateToMouseHSW _rotateToMouseHsw;
+    private MovementHSW      _movement;
+    private Status           _status;
+    private AudioSource      _audioSource;
+    private WeaponBase       _weapon;
+    private Inventory        _inventory;
 
     public Status Status     => _status;
     public WeaponBase Weapon => _weapon;
@@ -78,7 +78,7 @@ public class PlayerControllerHSW : MonoBehaviour
         {
             bool isRun = false;
             
-            if (z > 0) isRun     = Input.GetKey(_keyCodeRun);
+            if (z > 0 && _status._currentHungry > 0) isRun     = Input.GetKey(_keyCodeRun);
             
             _movement._MoveSpeed = isRun == true ? _status.RunSpeed : _status.WalkSpeed;
             _weapon.Animator._MoveSpeed = isRun == true ? 1 : 0.5f;

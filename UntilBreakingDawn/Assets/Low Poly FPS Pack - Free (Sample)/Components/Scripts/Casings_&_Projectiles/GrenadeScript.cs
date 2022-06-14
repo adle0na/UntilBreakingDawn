@@ -25,9 +25,9 @@ public class GrenadeScript : MonoBehaviour {
 	
 	[Header("Throw Force")]
 	[Tooltip("Minimum throw force")]
-	public float minimumForce = 1500.0f;
+	public float minimumForce = 150.0f;
 	[Tooltip("Maximum throw force")]
-	public float maximumForce = 2500.0f;
+	public float maximumForce = 300.0f;
 	private float throwForce;
 
 	[Header("Audio")]
@@ -87,22 +87,19 @@ public class GrenadeScript : MonoBehaviour {
 			//Add force to nearby rigidbodies
 			if (rb != null)
 				rb.AddExplosionForce (power * 5, explosionPos, radius, 3.0F);
-			
-			//If the explosion hits "Target" tag and isHit is false
-			if (hit.GetComponent<Collider>().tag == "Target" 
-			    	&& hit.gameObject.GetComponent<TargetScript>().isHit == false) 
-			{
-				//Animate the target 
-				hit.gameObject.GetComponent<Animation> ().Play("target_down");
-				//Toggle "isHit" on target object
-				hit.gameObject.GetComponent<TargetScript>().isHit = true;
-			}
-			
+
 			if (hit.GetComponent<Collider>().tag == "Player")
 			{
-				hit.gameObject.GetComponent<Status>().DecreaseHP(50);
+				hit.gameObject.GetComponent<Status>().DecreaseHP(20);
 			}
-
+			if (hit.GetComponent<Collider>().tag == "Enemy")
+			{
+				hit.gameObject.GetComponent<Enemy>().TakeDamage(100);
+			}
+			if (hit.GetComponent<Collider>().tag == "Animal")
+			{
+				hit.gameObject.GetComponent<Animals>().TakeDamage(100);
+			}
 			//If the explosion hits "ExplosiveBarrel" tag
 			if (hit.GetComponent<Collider>().tag == "ExplosiveBarrel") 
 			{

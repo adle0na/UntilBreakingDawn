@@ -42,6 +42,10 @@ public class WeaponKnifeCollider : MonoBehaviour
             other.GetComponent<InteractionObject>().TakeDamage(_damage);
             Debug.Log("Àû Ä®·Î ¶§¸²");
         }
+        else if (other.CompareTag("Animals"))
+        {
+            other.GetComponent<InteractionObject>().TakeDamage(_damage);
+        }
         else if (other.CompareTag("ExplosiveBarrel"))
         {
             other.GetComponent<InteractionObject>().TakeDamage(_damage);

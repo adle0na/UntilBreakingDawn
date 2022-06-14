@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 
-public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3, Enemy = 4, ExplosiveBarrel = 5, }
+public enum ImpactType {Default = 0, Wood = 1, Metal = 2, Stone = 3, Enemy = 4, ExplosiveBarrel = 5, Animals = 6, }
 
 public class ImpactMemoryPool : MonoBehaviour
 {
@@ -47,6 +47,10 @@ public class ImpactMemoryPool : MonoBehaviour
                 OnSpawnImpact(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
                 break;
             
+            case "Animals" :
+                OnSpawnImpact(ImpactType.Animals, hit.point, Quaternion.LookRotation(hit.normal));
+                break;
+            
             case "ExplosiveBarrel" :
                 Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
                 OnSpawnImpact(ImpactType.ExplosiveBarrel, hit.point, Quaternion.LookRotation(hit.normal), color);
@@ -61,6 +65,10 @@ public class ImpactMemoryPool : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             OnSpawnImpact(ImpactType.Enemy, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation));
+        }
+        if (other.CompareTag("Animals"))
+        {
+            OnSpawnImpact(ImpactType.Animals, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation));
         }
         else if (other.CompareTag("ExplosiveBarrel"))
         {

@@ -148,7 +148,7 @@ public class Enemy : InteractionObject
             Physics.SphereCastAll(transform.position, targetRadius,
                                     transform.forward, targetRange, LayerMask.GetMask("Player"));
         // 만약 범위 내에 몬스터가 있을 시 어택 코루틴 실행 
-        if(rayHits.Length > 0)
+        if (!isAttack && rayHits.Length > 0)
         {
             StartCoroutine("Attack");
         }
@@ -160,12 +160,13 @@ public class Enemy : InteractionObject
         isChase = false;
         isAttack = true;
 
-        anim.SetBool("isAttack", true);
-
+        Debug.Log("어택 ");
         // 타입 별로 공격 방식 차별화 
         switch (enemyType)
         {
             case Type.MeleeE:
+
+                anim.SetBool("isAttack", true);
                 yield return new WaitForSeconds(0.2f);
                 meleeArea.enabled = true;
 
@@ -174,6 +175,7 @@ public class Enemy : InteractionObject
 
                 yield return new WaitForSeconds(0.1f);
 
+                anim.SetBool("isAttack", false);
                 break;
 
             case Type.BombE:
@@ -186,19 +188,23 @@ public class Enemy : InteractionObject
                 break;
 
             case Type.RangedE:
+
+                anim.SetBool("isAttack", true);
                 // 투사체를 지정해논 투사체 발사대에 생성한 뒤 힘을 주어 앞으로 던짐 
                 yield return new WaitForSeconds(0.2f);
                 GameObject instantFireBall = Instantiate(Boulder, shoter.position, shoter.rotation);
                 Rigidbody rigidFire = instantFireBall.GetComponent<Rigidbody>();
                 rigidFire.velocity = transform.forward * 20;
-                
+
                 yield return new WaitForSeconds(1f);
+
+                anim.SetBool("isAttack", false);
                 break;
         }
 
+        Debug.Log("어택 끝 ");
         isChase = true;
         isAttack = false;
-        anim.SetBool("isAttack", false);
     }
 
     IEnumerator Explosion()

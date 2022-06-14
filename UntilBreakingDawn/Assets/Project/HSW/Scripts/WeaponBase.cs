@@ -23,8 +23,9 @@ using UnityEngine;
         protected bool                 _isAttack       = false;
         protected AudioSource          _audioSource;
         protected PlayerAnimControlHSW _animator;
-        public    bool                 _isInspecting;
-
+        protected CraftManual          _craftManual;
+        protected bool                 _isInspecting;
+        
         [HideInInspector]
         public AmmoEvent               _onAmmoEvent     = new AmmoEvent();
         [HideInInspector]

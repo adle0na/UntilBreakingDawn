@@ -29,6 +29,7 @@ public class WeaponKnife : WeaponBase
 
         if (_weaponSetting._isAutomaticAttack == true)
         {
+            Debug.Log("Ä®ÁúÇÏ´Â°Å¾Æ´Ô?");
             StartCoroutine("OnAttackLoop", type);
         }
         else
