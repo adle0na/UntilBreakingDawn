@@ -30534,20 +30534,4 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: EnemyAttack
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 7dcf39305ce78495b897ffb2b280f5ee,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.2666667
-    functionName: EnemyAttack
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 7dcf39305ce78495b897ffb2b280f5ee,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

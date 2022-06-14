@@ -7923,7 +7923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHP: 100
   Type: 0
-  curHealth: 3010
+  curHealth: 30
   maxHealth: 2000
   chargingSkillDelay: 50
   fireDamage: 100

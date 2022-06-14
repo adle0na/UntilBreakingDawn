@@ -62010,12 +62010,4 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.3
-    functionName: EnemyHit
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 0bc0bb7e526314dcdaa4e1532e7e5f9b,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
