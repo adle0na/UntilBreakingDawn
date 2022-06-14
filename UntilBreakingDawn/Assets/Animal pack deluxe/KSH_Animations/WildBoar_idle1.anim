@@ -84840,7 +84840,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.5333333
-    functionName: AnimalsIdle
+    functionName: PigIdle
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: abdcdf07baf87445385fb8e76ea5e185,
       type: 3}

@@ -82740,7 +82740,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.76666665
-    functionName: MinoTaunt
+    functionName: BearIdle
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 078f88585b9624fa2a4d44282633bcc5,
       type: 3}

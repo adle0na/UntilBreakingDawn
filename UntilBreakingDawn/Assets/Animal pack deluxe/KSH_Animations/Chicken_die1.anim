@@ -61336,7 +61336,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.23333333
-    functionName: EnemyDie
+    functionName: ChiDie
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: ffa85be40de1c4d39a3a5c2dbf4d9f3d,
       type: 3}

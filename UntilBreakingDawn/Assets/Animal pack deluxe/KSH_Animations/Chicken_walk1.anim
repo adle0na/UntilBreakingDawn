@@ -53344,7 +53344,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.06666667
-    functionName: FootStep
+    functionName: PigStep
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8ec5324bf7e9d4c24a2c4a373117d591,
       type: 3}
@@ -53352,7 +53352,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.7
-    functionName: FootStep
+    functionName: PigStep
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8ec5324bf7e9d4c24a2c4a373117d591,
       type: 3}

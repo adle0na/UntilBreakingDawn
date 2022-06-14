@@ -81804,7 +81804,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.8666667
-    functionName: EnemyAttack
+    functionName: BearAt
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: e6f3076b2d3a649cd96b7309b13cb397,
       type: 3}
@@ -81812,7 +81812,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 1.5
-    functionName: EnemyAttack
+    functionName: BearAt
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: e6f3076b2d3a649cd96b7309b13cb397,
       type: 3}

@@ -79942,7 +79942,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.1
-    functionName: FootStep
+    functionName: meduFoot
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 9b4df2e611b814c4d867a73801cf9bb7,
       type: 3}

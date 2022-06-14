@@ -124839,15 +124839,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.7
-    functionName: EnemyAttack
+    functionName: MedusaAttack
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 84675743f29464928a4f678c1beb04dd,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.73333335
-    functionName: MedusaAttack
+    functionName: meduAt1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
