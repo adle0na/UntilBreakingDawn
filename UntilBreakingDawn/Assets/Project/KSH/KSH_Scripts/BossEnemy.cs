@@ -165,6 +165,9 @@ public class BossEnemy : InteractionObject
 
                 anim.SetBool("isAttack", true);
 
+                GameObject Player = GameObject.FindWithTag("Player");
+                transform.LookAt(Player.transform);
+
                 yield return new WaitForSeconds(2.45f);
 
                 //yield return new WaitForSeconds(0.8f);
