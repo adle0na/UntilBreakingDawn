@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 2682565645883100638}
   - component: {fileID: 465497397782441773}
   - component: {fileID: 8871582864053564419}
-  m_Layer: 18
+  - component: {fileID: 9034702034151867149}
+  m_Layer: 0
   m_Name: MagazineMain
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -109,10 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65b9c8fa43bc8c4eb6c409752b933ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _magazineEffetPrefab: {fileID: 5424584233833323313, guid: a45863da06870eb4b98c97311c049cbd,
-    type: 3}
-  _increaseMagazine: 1
-  _rotateSpeed: 50
+  rotateSpeed: 50
 --- !u!114 &8871582864053564419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +124,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: c5a3e186479e26c479bdb287df57cf1c, type: 2}
+--- !u!54 &9034702034151867149
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945957288216738197}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

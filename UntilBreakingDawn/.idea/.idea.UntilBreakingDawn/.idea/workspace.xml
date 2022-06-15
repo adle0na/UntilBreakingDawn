@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAxe.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAxe.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="게임오버창 추가, 도끼, 곡괭이 수정" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +16,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/CHG/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/MainScene/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/LDG/ItemPrefab/Branch.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
