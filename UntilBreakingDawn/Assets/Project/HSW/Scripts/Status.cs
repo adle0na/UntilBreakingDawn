@@ -36,8 +36,9 @@ public class Status : MonoBehaviour
     public float _currentHungry;
 
     [Header("GameOver")]
-    [SerializeField] private GameObject _gameOver;
-    
+    [SerializeField] public GameObject _gameOver;
+
+
     private void Awake()
     {
         _currentHP     = _maxHP;
@@ -138,9 +139,9 @@ public class Status : MonoBehaviour
     {
         if (_currentHP == 0)
         {
+            _gameOver.SetActive(true);
             Time.timeScale = 0;
             isPaused = true;
-            _gameOver.SetActive(true);
         }
         yield break;
     }

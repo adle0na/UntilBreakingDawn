@@ -17,10 +17,12 @@ public class RotateToMouseHSW : MonoBehaviour
     private float eulerAngleY;
 
     private CraftManual craft;
+    private Status status;
 
     private void Awake()
     {
-        craft = GameObject.Find("CraftTab").GetComponent<CraftManual>();
+        craft  = GameObject.Find("CraftTab").GetComponent<CraftManual>();
+        status = GetComponent<Status>();
     }
 
     public void UpdateRotate(float mouseX, float mouseY)
@@ -29,7 +31,9 @@ public class RotateToMouseHSW : MonoBehaviour
         eulerAngleX -= mouseY * rotCamXAxisSpeed;
 
         eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
-        
+
+        GameObject Exit = status._gameOver.transform.Find("Exit_Image").gameObject;
+
         if (craft.isActivated == true && craft.isPreviewActivated == false)
         {
             Cursor.visible = true;
@@ -46,6 +50,13 @@ public class RotateToMouseHSW : MonoBehaviour
             transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+        }
+        
+        if (status._gameOver.activeSelf == true && Exit.activeSelf == true)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         
     }
