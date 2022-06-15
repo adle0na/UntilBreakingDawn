@@ -60,11 +60,12 @@ public class CraftManual : MonoBehaviour
     private Item items;
 
     // 재료 판별기
-    private int woodCount       = 0;
-    private int rookCount       = 0;
-    private int metalCount      = 0;
-    private int meatCount       = 0;
-    private int cookMeatCount   = 0;
+    private int woodCount               = 0;
+    private int rookCount               = 0;
+    private int metalCount              = 0;
+    private int meatCount               = 0;
+    private int cookMeatCount           = 0;
+    private int AssaultRifleBulletCount = 0;
 
 
     private void Awake()
@@ -115,6 +116,13 @@ public class CraftManual : MonoBehaviour
 
                         break;
                     }
+                    else if (items.name == "magazineMain")
+                    {
+                        metalCount              = inven.GetItemCount("Metal");
+                        AssaultRifleBulletCount = inven.GetItemCount("magazineMain");
+                        Debug.Log(metalCount + " / " + AssaultRifleBulletCount);
+                        break;
+                    }
                 }
 
                 if (items.name == "Cooked_Meat")
@@ -122,11 +130,21 @@ public class CraftManual : MonoBehaviour
                     if (meatCount >= 1)
                     {
                         int meatMiuns = 1;
-                        // 고기 차감할 곳
+                        
                         inven.SetItemCount("RawMeat", meatMiuns);
                         inven.AcquireItem(items);
                     }
-                }  
+                }
+                else if (items.name == "magazineMain")
+                {
+                    if (metalCount >= 1)
+                    {
+                        int metalMiuns = 1;
+
+                        inven.SetItemCount("Metal", metalMiuns);
+                        inven.AcquireItem(items);
+                    }
+                }
             }
             else
             {
