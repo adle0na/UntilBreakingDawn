@@ -1,37 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="StageSetting 오류 수정, 디테일 작업">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/LoadingScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/LoadingScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LoadingSceneController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LoadingSceneController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/UBD_rabel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/UBD_rabel.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar-frame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar-frame.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/HSW/Texture/progress-bar.png.meta" afterDir="false" />
+    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Scenes/GameTitle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Scenes/GameTitle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/CHG/Script/Title_CHG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/CHG/Script/Title_CHG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/New Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/LightingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAssultRifle.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAxe.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponAxe.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Animator/WeaponPickaxe.overrideController" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/HSW/Scripts/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Bear.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Boar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Boar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Chicken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Chicken.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Cow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Prefabs/Animals/Cow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Die.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Die.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Idle.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/1_Animals/Pig Idle.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Bomb_Ex.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Bomb_Ex.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Ranged_attack.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_Ranged_attack.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_attack.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_attack.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_death.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_death.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_hit.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KSH/KSH_Sound/Enemy_hit.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/MainScene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +24,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/HSW/Scripts/Timer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/HSW/Scripts/WeaponAssultRifle.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/KSH/KSH_Scripts/Animals.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -135,6 +108,7 @@
       <workItem from="1654750615763" duration="184000" />
       <workItem from="1654774268047" duration="4696000" />
       <workItem from="1655180413050" duration="19036000" />
+      <workItem from="1655277632370" duration="870000" />
     </task>
     <servers />
   </component>

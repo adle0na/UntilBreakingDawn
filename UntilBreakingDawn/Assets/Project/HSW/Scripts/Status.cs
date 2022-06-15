@@ -28,15 +28,21 @@ public class Status : MonoBehaviour
     public float WalkSpeed => _walkSpeed;
     public float RunSpeed  => _runSpeed;
 
+    public bool isPaused = false;
+
     [Header("Hungry")]
     [SerializeField]
     private float _maxHungry = 100;
     public float _currentHungry;
 
+    [Header("GameOver")]
+    [SerializeField] private GameObject _gameOver;
+    
     private void Awake()
     {
         _currentHP     = _maxHP;
         _currentHungry = _maxHungry;
+        _gameOver.SetActive(false);
     }
 
     private void Update()
@@ -61,10 +67,7 @@ public class Status : MonoBehaviour
         
         _onHPEvent.Invoke(previousHP, _currentHP);
 
-        if (_currentHP == 0)
-        {
-            return true;
-        }
+        StartCoroutine("PlayerDeadCheck");
 
         return false;
     }
@@ -129,5 +132,16 @@ public class Status : MonoBehaviour
     public void FireSkill(int fireDamage)
     {
         DecreaseHP(fireDamage);
+    }
+    
+    IEnumerator PlayerDeadCheck()
+    {
+        if (_currentHP == 0)
+        {
+            Time.timeScale = 0;
+            isPaused = true;
+            _gameOver.SetActive(true);
+        }
+        yield break;
     }
 }

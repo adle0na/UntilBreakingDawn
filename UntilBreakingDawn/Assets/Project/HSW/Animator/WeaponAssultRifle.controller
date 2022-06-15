@@ -313,7 +313,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: take_out_weapon@assault_rifle_01
+  m_Name: TakeOutWeapon
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -685,7 +685,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: reload_out_of_ammo@assault_rifle_01
+  m_Name: Reload
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -872,7 +872,7 @@ AnimatorStateMachine:
     m_Position: {x: 350, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8080350946382783158}
-    m_Position: {x: 730, y: 310, z: 0}
+    m_Position: {x: 730, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1818722202577548230}
     m_Position: {x: 350, y: 350, z: 0}
