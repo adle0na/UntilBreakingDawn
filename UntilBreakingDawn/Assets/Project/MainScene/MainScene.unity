@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07862354, g: 0.23083758, b: 0.65538853, a: 1}
+  m_IndirectSpecularColor: {r: 0.0786236, g: 0.23083758, b: 0.65538853, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10554,6 +10554,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8659803509545504255, guid: b8cc079d1b3b580498c6262f897a98a3,
         type: 3}
+    - target: {fileID: 3797534447159428364, guid: 2cda8fdbe9730504f8796fd34a2d4064,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 5081460295168692425, guid: 2cda8fdbe9730504f8796fd34a2d4064,
         type: 3}
       propertyPath: ResourcePrefabs.Array.size

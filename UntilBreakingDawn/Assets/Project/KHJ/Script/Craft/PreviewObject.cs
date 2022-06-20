@@ -16,11 +16,6 @@ public class PreviewObject : MonoBehaviour
     [SerializeField]
     private Material red;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         ChangeColor();

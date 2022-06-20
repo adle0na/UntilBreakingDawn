@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="게임오버창 추가, 도끼, 곡괭이 수정" />
+    <list default="true" id="e3ff700a-48a6-4d08-9c17-8c75b50948c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntilBreakingDawn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Item Setup.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Item Setup/Stake.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Item Setup/Stake.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Stake.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Stake.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Stake_Preview.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Prefabs/Item/Stake_Preview.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/Craft/PreviewObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/KHJ/Script/Craft/PreviewObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/DayNight.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/DayNight/DayAndNight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/DayNight/DayAndNight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/Player/PlayerController_KHJ.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/KHJ/Script/Player/PlayerController_KHJ.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +33,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/CHG/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/MainScene/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity/UntilBreakingDawn/UntilBreakingDawn/Assets/Project/LDG/ItemPrefab/Branch.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -105,6 +119,7 @@
       <workItem from="1654774268047" duration="4696000" />
       <workItem from="1655180413050" duration="19036000" />
       <workItem from="1655277632370" duration="870000" />
+      <workItem from="1655726677374" duration="1341000" />
     </task>
     <servers />
   </component>
