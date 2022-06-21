@@ -38,7 +38,6 @@ public class Status : MonoBehaviour
     [Header("GameOver")]
     [SerializeField] public GameObject _gameOver;
 
-
     private void Awake()
     {
         _currentHP     = _maxHP;
