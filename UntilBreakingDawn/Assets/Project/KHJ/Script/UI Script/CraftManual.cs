@@ -107,124 +107,146 @@ public class CraftManual : MonoBehaviour
         {
             if (items != null && items.itemType != Item.ItemType.Equipment)
             {
-                for (int i = 0; i < slots.Length; i++)
-                {
-                    if (items.name == "Cooked_Meat")
-                    {
-                        meatCount       = inven.GetItemCount("RawMeat");
-                        cookMeatCount   = inven.GetItemCount("CookedMeat");
-
-                        break;
-                    }
-                    else if (items.name == "magazineMain")
-                    {
-                        metalCount              = inven.GetItemCount("Metal");
-                        AssaultRifleBulletCount = inven.GetItemCount("magazineMain");
-                        Debug.Log(metalCount + " / " + AssaultRifleBulletCount);
-                        break;
-                    }
-                }
-
-                if (items.name == "Cooked_Meat")
-                {
-                    if (meatCount >= 1)
-                    {
-                        int meatMiuns = 1;
-                        
-                        inven.SetItemCount("RawMeat", meatMiuns);
-                        inven.AcquireItem(items);
-                    }
-                }
-                else if (items.name == "magazineMain")
-                {
-                    if (metalCount >= 1)
-                    {
-                        int metalMiuns = 1;
-
-                        inven.SetItemCount("Metal", metalMiuns);
-                        inven.AcquireItem(items);
-                    }
-                }
+                ItemCheck();
+                ItemUse();
             }
             else
             {
                 go_Prefab = craftTab[TabSelectNumber].crafts[_slotNumber].go_Prefab;
 
-                for (int i = 0; i < slots.Length; i++)
-                {
-                    if (go_Prefab.name == "WoodWall")
-                    {
-                        woodCount = inven.GetItemCount("Log");
-                        break;
-                    }
-                    else if (go_Prefab.name == "StoneWall")
-                    {
-                        rookCount = inven.GetItemCount("Rook");
-                        break;
-                    }
-                    else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
-                    {
-                        metalCount = inven.GetItemCount("Metal");
-                        rookCount  = inven.GetItemCount("Rook");
-                        break;
-                    }
-                }
-
-                if (go_Prefab.name == "WoodWall")
-                {
-                    if (woodCount >= 4)
-                    {
-                        go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
-                                                        tf_Player.position + tf_Player.forward,
-                                                        Quaternion.identity);
-
-                        int woodMinus = 4;
-
-                        inven.SetItemCount("Log", woodMinus);
-
-                        isPreviewActivated = true;
-                        go_BaseUI.SetActive(false);
-                    }
-                }
-                else if (go_Prefab.name == "StoneWall")
-                {
-                    if (rookCount >= 4)
-                    {
-                        go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
-                                                        tf_Player.position + tf_Player.forward,
-                                                        Quaternion.identity);
-
-                        int rookMinus = 4;
-
-                        inven.SetItemCount("Rook", rookMinus);
-
-                        isPreviewActivated = true;
-                        go_BaseUI.SetActive(false);
-                    }
-                }
-                else if (go_Prefab.name == "ExplosiveBarrel_KHJ_Pivot")
-                {
-                    if (metalCount >= 2 && rookCount >=2)
-                    {
-                        go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
-                                                        tf_Player.position + tf_Player.forward,
-                                                        Quaternion.identity);
-
-                        int metalMinus = 2;
-                        int rookMinus  = 2;
-
-                        inven.SetItemCount("Metal", metalMinus);
-                        inven.SetItemCount("Rook", rookMinus);
-
-                        isPreviewActivated = true;
-                        go_BaseUI.SetActive(false);
-                    }
-                }
+                ObjectCheck();
+                ObjectUse(_slotNumber); 
             }
         }
     }
 
-    void Update()
+    private void ItemCheck()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            switch (items.name)
+            {
+                case "Cooked_Meat":
+                    meatCount = inven.GetItemCount("RawMeat");
+                    cookMeatCount = inven.GetItemCount("CookedMeat");
+                    break;
+                case "magazineMain":
+                    metalCount = inven.GetItemCount("Metal");
+                    AssaultRifleBulletCount = inven.GetItemCount("magazineMain");
+                    Debug.Log(metalCount + " / " + AssaultRifleBulletCount);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void ItemUse()
+    {
+        switch (items.name)
+        {
+            case "Cooked_Meat":
+                if (meatCount >= 1)
+                {
+                    int meatMiuns = 1;
+
+                    inven.SetItemCount("RawMeat", meatMiuns);
+                    inven.AcquireItem(items);
+                }
+                break;
+            case "magazineMain":
+                if (metalCount >= 1)
+                {
+                    int metalMiuns = 1;
+
+                    inven.SetItemCount("Metal", metalMiuns);
+                    inven.AcquireItem(items);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ObjectCheck()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            switch (go_Prefab.name)
+            {
+                case "WoodWall":
+                    woodCount = inven.GetItemCount("Log");
+                    break;
+                case "StoneWall":
+                    rookCount = inven.GetItemCount("Rook");
+                    break;
+                case "ExplosiveBarrel_KHJ_Pivot":
+                    metalCount = inven.GetItemCount("Metal");
+                    rookCount = inven.GetItemCount("Rook");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void ObjectUse(int _slotNumber)
+    {
+        switch (go_Prefab.name)
+        {
+            case "WoodWall":
+                if (woodCount >= 4)
+                {
+                    go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                                    tf_Player.position + tf_Player.forward,
+                                                    Quaternion.identity);
+
+                    int woodMinus = 4;
+
+                    inven.SetItemCount("Log", woodMinus);
+
+                    isPreviewActivated = true;
+                    go_BaseUI.SetActive(false);
+                }
+                break;
+            case "StoneWall":
+                if (rookCount >= 4)
+                {
+                    go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                                    tf_Player.position + tf_Player.forward,
+                                                    Quaternion.identity);
+
+                    int rookMinus = 4;
+
+                    inven.SetItemCount("Rook", rookMinus);
+
+                    isPreviewActivated = true;
+                    go_BaseUI.SetActive(false);
+                }
+                break;
+            case "ExplosiveBarrel_KHJ_Pivot":
+                if (metalCount >= 2 && rookCount >= 2)
+                {
+                    go_Preview = Instantiate(craftTab[TabSelectNumber].crafts[_slotNumber].go_PreviewPrefab,
+                                                    tf_Player.position + tf_Player.forward,
+                                                    Quaternion.identity);
+
+                    int metalMinus = 2;
+                    int rookMinus = 2;
+
+                    inven.SetItemCount("Metal", metalMinus);
+                    inven.SetItemCount("Rook", rookMinus);
+
+                    isPreviewActivated = true;
+                    go_BaseUI.SetActive(false);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && !isPreviewActivated)
         {
